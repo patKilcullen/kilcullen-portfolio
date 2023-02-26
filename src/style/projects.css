@@ -1,0 +1,57 @@
+
+.pageTitle {
+    color: white;
+    font-size: 75px;
+    
+}
+.mainProjectContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-left: 125px;
+    margin-top: -50px;
+}
+
+.projectContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    max-width: 25vw;
+    gap: 10px;
+}
+.name{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.description {
+    color: white;
+    font-size: 20px;
+    min-height: 7vh;
+}
+
+.projectPic {
+    height: 30vh;
+    border-radius: 25px;
+    max-width: 25vw;
+    border: 4px solid black;
+}
+.projectAbout {
+    overflow: auto;
+    width: 100%;
+    max-width: 25vw;
+    max-height: 10vh;
+   
+    /* text-align: center; */
+  margin-left: 70px;
+    margin-bottom: 5px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 0;
+}
+
