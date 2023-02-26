@@ -51,6 +51,13 @@
     color: white;
     height: 2px;
   }
+  .tech {
+    
+  }
+  .techIntro{
+      text-align: left;
+  
+  }
 
 .buttons {
     display: flex;
@@ -62,16 +69,14 @@
 }
 .button-text { 
     font-style: italic;
-    color: white
+    color: rgb(255, 255, 255)
 }
 
 @media only screen and (max-width: 600px) {
     .mainContainer {
         flex-direction: column;
     }
-    .tech {
-        
-    }
+  
     
     .buttons {
         display: flex;

@@ -31,8 +31,8 @@ const Home = () => {
         
         {/* <hr className="divider" /> */}
    <div className="tech">
-        <h3 >I've build various apps using...</h3>
-        <h2 > Javascript | Node.js | React | Redux | PostgresSQL | Sequelize | Express | PERN stack | Material UI | HTML | CSS</h2>
+        <h3 className="techIntro" >I've build various apps using...<h2 > Javascript | Node.js | React | Redux | PostgresSQL | Sequelize | Express | PERN stack | Material UI | HTML | CSS</h2></h3>
+        
         </div>
         <hr className="divider" />
         <div className="buttons">
