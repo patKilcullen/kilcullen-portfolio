@@ -18,7 +18,7 @@ const Projects = () => {
                 <div className='projectContainer' key={idx}>
                     <div className='name'>{project.name}</div>
                     <div className='description'>{project.description}</div>
-                    <img className='projectPic' src={project.pic}/>
+                    <img className='projectPic' src={project.pic} alt="screenshot of project"/>
                     <div className='projectAbout'> {project.about}</div>
                     <div className='buttons'>
               <Link to={project.demo} target="_blank" rel="noopener noreferrer"> <Button className="button" variant="contained" sx={{color:'#81567a', backgroundColor: 'white', fontWeight: "bold", borderRadius: '20px', border: "2px solid black"}}>Demo</Button></Link> 

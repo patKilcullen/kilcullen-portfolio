@@ -15,7 +15,7 @@ const Home = () => {
      
         {/* <img id="profilePic" src={profilePic} />  */}
         <div className="mainContainer">
-        <img className="profilePic" src={profilePic} /> 
+        <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} /> 
         
         <h1 className="about">
           Hi, I'm Patrick Kilcullen, a software developer with a passion for
