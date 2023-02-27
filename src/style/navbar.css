@@ -30,13 +30,17 @@
     z-index: 1 ;
     display: flex;
     justify-content: space-around;
-    color: white
+    color: white;
+    align-items: center;
   }
 
-.name {
+.navName {
   /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    */
+   
+   font-size: 50px;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
 }
   .divider {
     width: 75%;
@@ -51,11 +55,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
   }
   
   .navbar a {
-    /* color: rgb(185, 33, 33); */
+
     color: white;
     text-decoration: none;
     margin: 20px;
@@ -131,11 +134,8 @@
 
 
 
-  nav a {
-  /* display: inline-block;
-  margin: 1em;
-  padding: 4px 2px;
-  transition: 0.3s; */
+  /* nav a {
+  
   color: whitesmoke;
   display: inline-block;
   position: relative;
@@ -143,9 +143,9 @@
   margin: 1em;
   padding: 4px 4px;
  
-}
+} */
 
-nav a::before {
+/* nav a::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -158,12 +158,11 @@ nav a::before {
   transform: scaleX(0);
   transition: transform .3s ease-in-out;
   display: inline-block;
-}
+} */
 
-nav a:hover::before {
+/* nav a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
-  /* margin: 1em; */
   display: inline-block;
 
-}
+} */

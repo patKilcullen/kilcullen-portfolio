@@ -11,7 +11,7 @@ const Projects = () => {
         }, []);
   return (
     <div id="main" >
-        <h1 className='pageTitle'>Projects</h1>
+        <h1 className='projectsPageTitle'>Projects</h1>
         <div id="mainContent">
         
             <div className='mainProjectContainer'>
