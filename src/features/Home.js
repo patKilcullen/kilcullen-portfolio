@@ -38,7 +38,7 @@ const Home = () => {
         <div className="buttons">
             <h1 className="button-text" > Learn more about what I've done... </h1>
         <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color:'#81567a', backgroundColor: 'white', fontWeight: "bold", borderRadius: '20px', border: "2px solid white"}}> Projects</Button>
-        <Button onClick={()=>navigate('/experience')} className="button" variant="contained"sx={{color:'#81567a', backgroundColor: 'white', fontWeight: "bold", borderRadius: '20px', border: "2px solid white"}}> Experience</Button>
+        {/* <Button onClick={()=>navigate('/experience')} className="button" variant="contained"sx={{color:'#81567a', backgroundColor: 'white', fontWeight: "bold", borderRadius: '20px', border: "2px solid white"}}> Experience</Button> */}
         </div>
       </div>
       

@@ -14,6 +14,7 @@ console.log("SMALL VAV: ", smallNav)
 
 
     <div className="navbar" id={smallNav ? "open" : "close"}>
+        <h1>Patrick Kilcullen</h1>
     <div className="toggleButton">
       <button
         onClick={() => {
@@ -31,7 +32,7 @@ console.log("SMALL VAV: ", smallNav)
       <Link > Resume </Link> */}
       
     </div>
-    <hr className="divider" />
+    <hr className="divider"/>
     </div>
     
   </div>

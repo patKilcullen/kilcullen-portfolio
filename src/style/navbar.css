@@ -27,13 +27,16 @@
     /* background: #21325e; */
     background-color:#81567a;
     /* position: fixed; */
-    z-index: 1 
+    z-index: 1 ;
+    display: flex;
+    justify-content: space-around;
+    color: white
   }
 
 
   .divider {
     width: 75%;
-    color: white;
+    color: rgb(137, 11, 11);
     height: 2px;
   }
 
