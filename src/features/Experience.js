@@ -23,7 +23,7 @@ function Experience() {
           <h3 className="vertical-timeline-element-title">
             Fullstack Academy
           </h3>
-          <img className="fullstack" src={fullstack}/>
+          <img className="fullstack" src={fullstack} alt="Fullstack Academy Certificate"/>
       <p>Software Engineering Emmerisve Full-Time Bootcamp</p>
         </VerticalTimelineElement>
         
