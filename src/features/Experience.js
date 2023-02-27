@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -11,6 +11,11 @@ import fullstack from '../FullstackCertificate.png'
 import '../style/experience.css'
 
 function Experience() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <div className="experience">
       <VerticalTimeline lineColor="#3e497a">

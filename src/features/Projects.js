@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { projects } from './projectInfo'
 
@@ -6,6 +6,9 @@ import '../style/projects.css'
 import Button from '@mui/material/Button';
 
 const Projects = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page when component renders
+        }, []);
   return (
     <div id="main" >
         <h1 className='pageTitle'>Projects</h1>
