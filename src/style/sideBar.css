@@ -16,10 +16,11 @@
     justify-content: space-between;
     align-items: center;
   
-    background-color:#81567a;
+    /* background-color:#81567a; */
  
     width: 10%;
     height: 100vh;
+    margin-top: -10vh;
     position: fixed;
     
     
@@ -46,6 +47,9 @@
   }
   
   @media only screen and (max-width: 600px) {
+    .sideBar {
+      margin-left: 75vw;
+    }
     .sideBar svg {
       font-size: 50px;
     }

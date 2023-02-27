@@ -40,11 +40,14 @@
     color: #f0f0f0;
     float: left;
     margin-bottom: 55px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
   }
   .tech {
     color: #f0f0f0;
-    width: 50%;
+    width: 75%;
     margin: 5px;
+    margin-right: -5%;
   }
   .divider {
     width: 75%;
@@ -75,6 +78,7 @@
 @media only screen and (max-width: 600px) {
     .mainContainer {
         flex-direction: column;
+        margin-left: 1vw;
     }
   
     

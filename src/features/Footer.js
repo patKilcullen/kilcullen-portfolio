@@ -4,7 +4,7 @@ import "../style/footer.css"
 const Footer = () => {
   return (
     <div className='footer'>
-    <p> &copy; patrick-kilcullen.com</p>
+    {/* <p> &copy; patrick-kilcullen.com</p> */}
     </div>
   )
 }

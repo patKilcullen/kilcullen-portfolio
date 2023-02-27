@@ -12,7 +12,7 @@ useEffect(()=>{
 console.log("SMALL VAV: ", smallNav)
   return (
 
-
+<div>
     <div className="navbar" id={smallNav ? "open" : "close"}>
         <h1>Patrick Kilcullen</h1>
     <div className="toggleButton">
@@ -32,12 +32,12 @@ console.log("SMALL VAV: ", smallNav)
       <Link > Resume </Link> */}
       
     </div>
-    <hr className="divider"/>
+    
     </div>
     
   </div>
-  
-
+  <hr className="divider"/>
+</div>
   )
 }
 
