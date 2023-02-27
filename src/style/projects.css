@@ -43,9 +43,10 @@
     width: 100%;
     max-width: 25vw;
     max-height: 10vh;
+    color: white;
    
     /* text-align: center; */
-  margin-left: 70px;
+  
     margin-bottom: 5px;
 }
 .buttons {
@@ -53,5 +54,27 @@
     flex-direction: row;
     align-self: center;
     margin-top: 0;
+    margin-left: -1vw;
 }
 
+@media only screen and (max-width: 600px) {
+    .mainProjectContainer {
+        margin-left: -45vw;
+        
+       
+    }
+    .projectContainer {
+        min-width: 50vw;
+    }
+    .projectAbout {
+        overflow: auto;
+        width: 100%;
+        min-width: 50vw;
+        max-height: 10vh;
+       
+        /* text-align: center; */
+      margin-left: 0px;
+        margin-bottom: 5px;
+        color: white;
+    }
+  }

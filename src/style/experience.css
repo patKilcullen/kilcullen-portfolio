@@ -1,0 +1,11 @@
+.experience {
+    max-width: 75vw;
+    margin-left: 20vw;
+}
+.experienceBox {
+    border-radius: 50px;
+}
+
+.fullstack {
+    max-height: 50vh;
+}
