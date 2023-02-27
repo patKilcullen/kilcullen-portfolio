@@ -14,7 +14,7 @@ console.log("SMALL VAV: ", smallNav)
 
 <div>
     <div className="navbar" id={smallNav ? "open" : "close"}>
-        <h1>Patrick Kilcullen</h1>
+        <h1 className='name'>Patrick Kilcullen</h1>
     <div className="toggleButton">
       <button
         onClick={() => {

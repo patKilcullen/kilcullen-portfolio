@@ -17,8 +17,8 @@ const Home = () => {
         <div className="mainContainer">
           <div >
         <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} /> 
-        
-        <h1 className="about">
+        <div className="scroll">
+        <h1 className="homeAbout">
           Hi, I'm Patrick Kilcullen, a software developer with a passion for
           creating innovative and efficient applications. I love learning about
           new technologies and discovering how they can be used to solve all kinds of
@@ -27,6 +27,7 @@ const Home = () => {
           technologies. If you're looking for a dedicated software
           developer who's alwasy excited to overcome challenges learn, I'm your guy!
         </h1>
+        </div>
         </div>
         </div>
         

@@ -18,6 +18,7 @@ function Experience() {
   
   return (
     <div className="experience">
+      <h1 className='pageTitle'>Experience</h1>
       <VerticalTimeline lineColor="#3e497a">
         <VerticalTimelineElement
           className="experienceBox"

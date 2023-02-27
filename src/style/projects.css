@@ -1,7 +1,9 @@
 
 .pageTitle {
     color: white;
-    font-size: 75px;
+    font-size: 60px;
+    text-decoration: underline;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     
 }
 .mainProjectContainer {
