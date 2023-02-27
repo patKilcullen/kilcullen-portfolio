@@ -8,4 +8,15 @@
 
 .fullstack {
     max-height: 50vh;
+    max-width: 25vw;
 }
+
+
+@media only screen and (max-width: 600px) {
+   .experience {
+    margin-left: 0vw;
+   }
+   .fullstack {
+    max-width: 50vw;
+   }
+  }

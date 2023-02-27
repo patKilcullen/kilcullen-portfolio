@@ -58,7 +58,7 @@
   text-align: left;
 }
 
-.buttons {
+.homeButtons {
   display: flex;
   justify-self: space-between;
   gap: 50px;
@@ -129,6 +129,14 @@
   }
    */
 @media only screen and (max-width: 600px) {
+  .homeButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    width: 50vw;
+  }
   .about h2 {
     font-size: 40px;
   }
@@ -149,4 +157,5 @@
   .skills h2 {
     font-size: 30px;
   }
+  
 }

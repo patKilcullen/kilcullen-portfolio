@@ -77,4 +77,8 @@
         margin-bottom: 5px;
         color: white;
     }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+    }
   }

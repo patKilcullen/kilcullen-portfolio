@@ -24,24 +24,9 @@ function Experience() {
             Fullstack Academy
           </h3>
           <img className="fullstack" src={fullstack}/>
-          <p> High School Diploma</p>
+      <p>Software Engineering Emmerisve Full-Time Bootcamp</p>
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="experienceBox"
-          date="2014 - 2018"
-          iconStyle={{ background: "#3e497a", color: "white" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            My Cool University, Vancouver, British Columbia
-          </h3>
-
-          <h4 className="vertical-timeline-element-subtitle">
-            Bachelor's Degree
-          </h4>
-
-          <p> Computer Science</p>
-        </VerticalTimelineElement>
+        
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2018 - 2020"
@@ -105,6 +90,24 @@ function Experience() {
   <li>Maintained an ever-changing schedule for myself and walkers and kept careful track of payments and invoices</li>
 </ul>
           </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+          className="experienceBox"
+          date="2014 - 2018"
+          dateStyle={{color: "white"}}
+          iconStyle={{ background: "#3e497a", color: "white" }}
+          icon={<SchoolIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">
+            Columbia College Chicago
+          </h3>
+
+          <h4 className="vertical-timeline-element-subtitle">
+            Bachelor of Fine Arts - Fiction Writing
+          </h4>
+
+          <p> GPA - 3.7</p>
+        </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
   );
