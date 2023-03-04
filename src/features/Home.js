@@ -25,7 +25,7 @@ const Home = () => {
           problems. I have experience building apps with
           the PERN stack, but I'm always eager to learn more and explore new
           technologies. If you're looking for a dedicated software
-          developer who's alwasy excited to overcome challenges learn, I'm your guy!
+          developer who's always  excited to overcome challenges learn, I'm your guy!
         </h1>
         </div>
         </div>
