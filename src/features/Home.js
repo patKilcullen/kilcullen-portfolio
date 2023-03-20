@@ -19,7 +19,7 @@ const Home = () => {
         <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} /> 
         <div className="scroll">
         <h1 className="homeAbout">
-          Hi, I am Patrick Kilcullen, a software developer with a passion for
+          Hi, I'm Patrick Kilcullen, a software developer with a passion for
           creating innovative and efficient applications. I love learning about
           new technologies and discovering how they can be used to solve all kinds of
           problems. I have experience building apps with
