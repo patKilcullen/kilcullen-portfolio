@@ -11,7 +11,7 @@ export const projects = [
     description: "An app that connects freelancers to clients.",
     about: "I worked extensively with my group to build this highly functional, sleek app from start to finish. I played an important role in the ideation fo the app and its many features, I put a lot of time into the database schema, which icluded 7 models, I probably spent most of my time implementing info from the database in react components, and I aided in the site's design. ",
     code: "https://github.com/patKilcullen/EZ-Stack",
-    demo: "https://www.youtube.com/watch?v=ZaRFGYO2HQ4&list=PLx0iOsdUOUmkAw0zV4kJO8Ci80W5muK7R&index=16",
+    demo: "https://youtu.be/4eurtRFDq0s",
     tech: "Node.js, PostgreSQL, Express, React, Redux, Material UI, CSS, Cloudinary, JWT",
     pic: EZStackPic
 },
