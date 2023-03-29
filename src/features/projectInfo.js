@@ -34,8 +34,8 @@ export const projects = [
     pic: balderdashPic
 },
 {
-    name: "My First Full Stack App",
-    description: "The title says it all! This was the first full stack app I ever made.",
+    name: "Full Stack App",
+    description: "This was the first full stack app I ever made!",
     about: "It may not look like much, but I was proud of my first full stap, CRUD app. I received the highest grade in my cohort of 60+ students, and my instructor described it as the 'Best project I have seen yet!' I put a lot of effort into it, and thoroughly searched for and eliminated manny bugs.",
     code: "https://github.com/patKilcullen/jpfp-template-V2-a",
     demo: "https://youtu.be/yNKRxSyjyG8",

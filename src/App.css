@@ -122,7 +122,8 @@ body{
 
 #main{
 margin-top: 0vh;
-  border: 2px solid #81567a;
+  /* border: 2px solid #81567a; */
+ 
   background-color:#81567a;
   /* height: 100vh; */
   

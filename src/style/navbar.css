@@ -43,7 +43,8 @@
    
 }
   .divider {
-    width: 75%;
+    /* width: 75%; */
+    width: 100vw;
     color: rgb(137, 11, 11);
     height: 2px;
   }
