@@ -25,7 +25,7 @@ const Home = () => {
      
         {/* <img id="profilePic" src={profilePic} />  */}
         <div className="mainContainer">
-          <div >
+          <div className="about-and-pic">
         <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} /> 
         <div className="scroll">
         <h1 className="homeAbout">
@@ -44,14 +44,16 @@ const Home = () => {
         
         {/* <hr className="divider" /> */}
    <div className="tech">
-        <h3 className="techIntro" >I've build various apps using...<h2 > Javascript <img alt="NOde Icon" className="node-icon" src={javascriptIcon} style={{height: "100px"}}/>| Node.js <img alt="NOde Icon" className="node-icon" src={nodeSVG} style={{height: "100px"}}/> | React <img alt="NOde Icon" className="node-icon" src={reactIcon} style={{height: "100px"}}/>| Redux <img alt="NOde Icon" className="node-icon" src={reduxIcon} style={{height: "100px"}}/>| PostgresSQL <img alt="NOde Icon" className="node-icon" src={postgresIcon} style={{height: "100px"}}/>| Sequelize <img alt="NOde Icon" className="node-icon" src={sequelizeIcon} style={{height: "100px"}}/>| Express <img alt="NOde Icon" className="node-icon" src={expressIcon} style={{height: "100px"}}/>| PERN stack | Material UI <img alt="NOde Icon" className="node-icon" src={materialIcon} style={{height: "100px"}}/>| HTML <img alt="NOde Icon" className="node-icon" src={htmlIcon} style={{height: "100px"}}/>| CSS<img alt="NOde Icon" className="node-icon" src={cssIcon} style={{height: "100px"}}/></h2></h3>
+        <h2 className="techIntro" >I've build various apps using...<h3 > Javascript <img alt="NOde Icon" className="node-icon" src={javascriptIcon} style={{height: "100px"}}/>| Node.js <img alt="NOde Icon" className="node-icon" src={nodeSVG} style={{height: "100px"}}/> | React <img alt="NOde Icon" className="node-icon" src={reactIcon} style={{height: "100px"}}/>| Redux <img alt="NOde Icon" className="node-icon" src={reduxIcon} style={{height: "100px"}}/>| PostgresSQL <img alt="NOde Icon" className="node-icon" src={postgresIcon} style={{height: "100px"}}/>| Sequelize <img alt="NOde Icon" className="node-icon" src={sequelizeIcon} style={{height: "100px"}}/>| Express <img alt="NOde Icon" className="node-icon" src={expressIcon} style={{height: "100px"}}/>| Material UI <img alt="NOde Icon" className="node-icon" src={materialIcon} style={{height: "100px"}}/>| HTML <img alt="NOde Icon" className="node-icon" src={htmlIcon} style={{height: "100px"}}/>| CSS<img alt="NOde Icon" className="node-icon" src={cssIcon} style={{height: "100px"}} /> |   ...and more!</h3></h2>
         
         </div>
         <hr className="divider" />
         <div className="homeButtons">
             <h1 className="button-text" > Learn more about what I've done... </h1>
-        <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color:'#81567a', backgroundColor: 'white', fontWeight: "bold", borderRadius: '20px', border: "2px solid white"}}> Projects</Button>
-        <Button onClick={()=>navigate('/experience')} className="button" variant="contained"sx={{color:'#81567a', backgroundColor: 'white', fontWeight: "bold", borderRadius: '20px', border: "2px solid white"}}> Experience</Button>
+        <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color: "#3e497a", backgroundColor: "#d8a2a2", fontWeight: "bold", fontSize: "30px",
+  boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)", fontWeight: "bold", borderRadius: '20px', border: "2px solid white"}}> Projects</Button>
+        <Button onClick={()=>navigate('/experience')} className="button" variant="contained"sx={{color: "#3e497a", backgroundColor: "#d8a2a2",fontWeight: "bold", fontSize: "30px",
+  boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)", fontWeight: "bold", borderRadius: '20px', border: "2px solid white"}}> Experience</Button>
         </div>
       </div>
       

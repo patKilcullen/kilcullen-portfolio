@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+    color: #d8a2a2;
     /* background-color:#81567a; */
  
     width: 10%;
@@ -31,10 +31,13 @@
     font-size: 100px;
   }
   .socialMedia svg {
-    color: white;
+    /* color: white; */
+    color: #d8a2a2;
     margin: 20px;
     font-size: 50px;
     cursor: pointer;
+    background-color: rgba(103, 62, 166, 0.1);
+    box-shadow: 4px 4px 8px 4px rgba(234, 238, 111, 0.5);
   }
   
   /* .sideBar ul li {
@@ -43,7 +46,8 @@
   } */
 
   .sideBar p {
-    color: white;
+    /* color: white; */
+    color: #d8a2a2;
   }
   
   @media only screen and (max-width: 600px) {

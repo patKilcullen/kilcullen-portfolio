@@ -10,10 +10,10 @@ const SideNav = () => {
     <div className='socialMedia'>
         <p>Connect with me:</p>
         <hr className="divider"/>
-       <a href='https://github.com/patKilcullen?tab=repositories' target="_blank" rel="noopener noreferrer"> <GitHub /></a>
-      <a href='https://www.linkedin.com/in/patrick-kilcullen-264ba61a4/' target="_blank" rel="noopener noreferrer"> <LinkedIn/></a> 
+       <a href='https://github.com/patKilcullen?tab=repositories' target="_blank" rel="noopener noreferrer" style={{color: "red"}}> <GitHub style={{color: "#d8a2a2"}} /></a>
+      <a href='https://www.linkedin.com/in/patrick-kilcullen-264ba61a4/' target="_blank" rel="noopener noreferrer"> <LinkedIn style={{color: "#d8a2a2"}} /></a> 
       <a href='mailto:patrickjkilcullen@gmail.com'  >
-          <Email />
+          <Email style={{color: "#d8a2a2"}} />
         </a>
     </div>
   
