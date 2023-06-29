@@ -95,21 +95,24 @@ nav a:hover::before {
 
 .App {
   
-  background-color:#81567a;
+  /* background-color:#81567a; */
+  background-color:#16103b;
   text-align: center;
+  font-family: "Copperplate", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 body{
    padding: 0;
    margin: 0;
-   background-color:#81567a;
- 
+   /* background-color:#81567a; */
+   /* background-color:#292067; */
 }
 
 #navbarBox {
   display: flex-end;
   justify-content: space-between;
-  background-color:#81567a;
+ /* background-color:#81567a;  */
+ /* background-color:#292067;  */
   margin-top: 0;
   min-height: 8vh;
    /* position: fixed;  */
@@ -124,7 +127,8 @@ body{
 margin-top: 0vh;
   /* border: 2px solid #81567a; */
  
-  background-color:#81567a;
+  /* background-color:#81567a; */
+  /* background-color:#292067; */
   /* height: 100vh; */
   
 }
