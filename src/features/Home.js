@@ -20,34 +20,7 @@ const Home = () => {
     const navigate = useNavigate()
 
 
-    const targetRef = useRef(null);
-
-    useEffect(() => {
-      const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5, // Adjust the threshold value as needed
-      };
-  
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.focus();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, options);
-  
-      if (targetRef.current) {
-        observer.observe(targetRef.current);
-      }
-  
-      return () => {
-        if (targetRef.current) {
-          observer.unobserve(targetRef.current);
-        }
-      };
-    }, []);
+ 
 
 
 
@@ -58,7 +31,7 @@ const Home = () => {
      
         {/* <img id="profilePic" src={profilePic} />  */}
         <div className="mainContainer">
-          <div className="about-and-pic" ref={targetRef} tabIndex={-1}>
+          <div className="about-and-pic" >
         <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} /> 
         <div className="scroll">
         <h1 className="homeAbout">
