@@ -85,6 +85,8 @@
 .button{
 /* background-color: rgba(103, 62, 166, 0.1); */
   box-shadow: 4px 4px 8px 4px rgba(234, 238, 111, 0.5);
+  font-size: 30px;
+  
  
 }
 .button-text {
@@ -122,6 +124,7 @@
   }
   .button {
     width: 50vw;
+    font-size: 20px;
   }
   .tech {
     margin-left: -20vw;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import '../style/home.css'
 import { useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
@@ -18,6 +18,39 @@ import profilePic from "../ProfilePic.PNG"
 
 const Home = () => {
     const navigate = useNavigate()
+
+
+    const targetRef = useRef(null);
+
+    useEffect(() => {
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5, // Adjust the threshold value as needed
+      };
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.focus();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+  
+      if (targetRef.current) {
+        observer.observe(targetRef.current);
+      }
+  
+      return () => {
+        if (targetRef.current) {
+          observer.unobserve(targetRef.current);
+        }
+      };
+    }, []);
+
+
+
   return (
     <div id="main">
       {/* <div id="mainContent"> */}
@@ -25,7 +58,7 @@ const Home = () => {
      
         {/* <img id="profilePic" src={profilePic} />  */}
         <div className="mainContainer">
-          <div className="about-and-pic">
+          <div className="about-and-pic" ref={targetRef} tabIndex={-1}>
         <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} /> 
         <div className="scroll">
         <h1 className="homeAbout">
@@ -61,9 +94,9 @@ const Home = () => {
         <hr className="divider" />
         <div className="homeButtons">
             <h1 className="button-text" > Learn more about what I've done... </h1>
-        <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color: "#3e497a", backgroundColor: "#d8a2a2", fontWeight: "bold", fontSize: "30px",
+        <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color: "#3e497a", backgroundColor: "#d8a2a2", fontWeight: "bold", fontSize: "25px",
   boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Projects</Button>
-        <Button onClick={()=>navigate('/experience')} className="button" variant="contained"sx={{color: "#3e497a", backgroundColor: "#d8a2a2",fontWeight: "bold", fontSize: "30px",
+        <Button onClick={()=>navigate('/experience')} className="button" variant="contained"sx={{color: "#3e497a", backgroundColor: "#d8a2a2",fontWeight: "bold", fontSize: "25px",
   boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Experience</Button>
         </div>
       </div>

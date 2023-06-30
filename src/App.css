@@ -1,64 +1,5 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
-/* body {
-   width: 100%;
-   background-size: cover;
-  } */
-/* #body {
-  font-family: sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
-
-} */
-
-
-
 
 nav a {
-  /* display: inline-block;
-  margin: 1em;
-  padding: 4px 2px;
-  transition: 0.3s; */
   color: whitesmoke;
   display: inline-block;
   position: relative;
@@ -86,7 +27,6 @@ nav a::before {
 nav a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
-  /* margin: 1em; */
   display: inline-block;
 
 }
@@ -96,7 +36,8 @@ nav a:hover::before {
 .App {
   
   /* background-color:#81567a; */
-  background-color:#16103b;
+  /* background-color:#16103b; */
+  background-color:#332e56;
   text-align: center;
   font-family: "Copperplate", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
