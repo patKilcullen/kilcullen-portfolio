@@ -60,6 +60,11 @@
   color: white;
   height: 2px;
 }
+.title-divider {
+  width: 10%;
+  color: white;
+  height: 2px;
+}
 .tech {
   /* background-color: rgba(103, 62, 166, 0.1);
   box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3); */
@@ -75,9 +80,11 @@
 
 .homeButtons {
   display: flex;
+  
   justify-self: space-between;
   gap: 50px;
   margin-top: 15px;
+  width: 80%;
   
   /* background-color: rgba(103, 62, 166, 0.1);
   box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3); */
@@ -93,6 +100,18 @@
   font-style: italic;
   /* color: rgb(255, 255, 255); */
   color: #d8a2a2;
+}
+
+@media only screen and (max-width: 1050px){
+.homeButtons{
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.button {
+  width: 20vw;
+  font-size: 20px;
+}
 }
 
 @media only screen and (max-width: 600px) {
