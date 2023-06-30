@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React from "react";
 import '../style/home.css'
 import { useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
