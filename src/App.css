@@ -152,11 +152,13 @@ margin-top: 0vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
+    
   }
   #navbar-right {
     display:flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
+    
   }
 }

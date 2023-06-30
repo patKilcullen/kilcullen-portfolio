@@ -79,10 +79,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  
   }
   
   .toggleButton svg {
     font-size: 50px;
+    color: #d8a2a2;
   }
   .toggleButton button {
     margin-right: 20px;
@@ -125,18 +127,22 @@
   @media only screen and (min-width: 600px) {
     .toggleButton {
       display: none;
+      
     }
   
     .hiddenLinks {
       display: none;
+      
     }
   
     #open {
       height: 100px;
+    
     }
   
     #open .links {
       flex-direction: row;
+      
     }
   }
 
