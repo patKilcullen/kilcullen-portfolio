@@ -44,7 +44,18 @@ const Home = () => {
         
         {/* <hr className="divider" /> */}
    <div className="tech">
-        <h2 className="techIntro" >I've build various apps using...<h3 > Javascript <img alt="NOde Icon" className="node-icon" src={javascriptIcon} style={{height: "100px"}}/>| Node.js <img alt="NOde Icon" className="node-icon" src={nodeSVG} style={{height: "100px"}}/> | React <img alt="NOde Icon" className="node-icon" src={reactIcon} style={{height: "100px"}}/>| Redux <img alt="NOde Icon" className="node-icon" src={reduxIcon} style={{height: "100px"}}/>| PostgresSQL <img alt="NOde Icon" className="node-icon" src={postgresIcon} style={{height: "100px"}}/>| Sequelize <img alt="NOde Icon" className="node-icon" src={sequelizeIcon} style={{height: "100px"}}/>| Express <img alt="NOde Icon" className="node-icon" src={expressIcon} style={{height: "100px"}}/>| Material UI <img alt="NOde Icon" className="node-icon" src={materialIcon} style={{height: "100px"}}/>| HTML <img alt="NOde Icon" className="node-icon" src={htmlIcon} style={{height: "100px"}}/>| CSS<img alt="NOde Icon" className="node-icon" src={cssIcon} style={{height: "100px"}} /> |   ...and more!</h3></h2>
+        <h2 className="techIntro" >I've build applications using a variety of technologies, inclucing...<h3 style={{display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "flex-end"}} >
+          <div><img alt="language-icon" className="language-icon" src={javascriptIcon} style={{height: "100px"}}/>Javascript, </div>
+        <div> <img alt="language-icon" className="node-icon" src={nodeSVG} style={{height: "100px"}}/>Node.js, </div>
+        <div><img alt="language-icon" className="node-icon" src={reactIcon} style={{height: "100px"}}/>React, </div>
+        <div>  <img alt="language-icon" className="node-icon" src={reduxIcon} style={{height: "100px"}}/>Redux, </div>
+      <div> <img alt="language-icon" className="node-icon" src={postgresIcon} style={{height: "100px"}}/>PostgreSQL, </div>
+        <div><img alt="language-icon" className="node-icon" src={sequelizeIcon} style={{height: "100px"}}/>Sequelize, </div>
+        <div><img alt="language-icon" className="node-icon" src={expressIcon} style={{height: "100px"}}/>Express, </div>
+        <div><img alt="language-icon" className="node-icon" src={materialIcon} style={{height: "100px"}}/>MaterialUI, </div>
+       <div> <img alt="language-icon" className="node-icon" src={htmlIcon} style={{height: "100px"}}/>HTML, </div>
+       <div><img alt="language-icon" className="node-icon" src={cssIcon} style={{height: "100px"}} /> CSS          </div>  
+       </h3></h2>
         
         </div>
         <hr className="divider" />

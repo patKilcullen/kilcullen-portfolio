@@ -48,8 +48,6 @@
 .about-and-pic{
   background-color: rgba(103, 62, 166, 0.1);
   box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3);
-
-  /* width: 85%; */
 }
 .tech {
   color: #f0f0f0;
@@ -69,6 +67,10 @@
 .techIntro {
   text-align: left;
   color: #d8a2a2;
+
+}
+.language-icon{
+  font-size: 10px;
 }
 
 .homeButtons {
@@ -95,13 +97,19 @@
   .mainContainer {
     flex-direction: column;
     margin-left: 1vw;
+   
   }
+  /* .about-and-pic{
+    background-color: rgba(103, 62, 166, 0.1);
+    box-shadow: -4px 4px 8px 4px rgba(168, 128, 128, 0.3);
+  } */
   /* .scroll {
     overflow: scroll;
   } */
   .profilePic {
     float: none;
   }
+  
   .homeAbout {
   overflow: scroll;
   max-height: 50vh;
