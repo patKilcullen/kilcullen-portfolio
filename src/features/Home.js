@@ -55,16 +55,16 @@ const Home = () => {
         {/* <hr className="divider" /> */}
    <div className="tech">
         <h2 className="techIntro" >I've build applications using a variety of technologies, inclucing...<h3 style={{display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "flex-end"}} >
-          <div><img alt="language-icon" className="language-icon" src={javascriptIcon} style={{height: "100px"}}/>Javascript, </div>
-        <div> <img alt="language-icon" className="node-icon" src={nodeSVG} style={{height: "100px"}}/>Node.js, </div>
-        <div><img alt="language-icon" className="node-icon" src={reactIcon} style={{height: "100px"}}/>React, </div>
-        <div>  <img alt="language-icon" className="node-icon" src={reduxIcon} style={{height: "100px"}}/>Redux, </div>
-      <div> <img alt="language-icon" className="node-icon" src={postgresIcon} style={{height: "100px"}}/>PostgreSQL, </div>
-        <div><img alt="language-icon" className="node-icon" src={sequelizeIcon} style={{height: "100px"}}/>Sequelize, </div>
-        <div><img alt="language-icon" className="node-icon" src={expressIcon} style={{height: "100px"}}/>Express, </div>
-        <div><img alt="language-icon" className="node-icon" src={materialIcon} style={{height: "100px"}}/>MaterialUI, </div>
-       <div> <img alt="language-icon" className="node-icon" src={htmlIcon} style={{height: "100px"}}/>HTML, </div>
-       <div><img alt="language-icon" className="node-icon" src={cssIcon} style={{height: "100px"}} /> CSS          </div>  
+          <div><img alt="language-icon" className="language-icon" src={javascriptIcon} style={{height: "60px"}}/>Javascript, </div>
+        <div> <img alt="language-icon" className="node-icon" src={nodeSVG} style={{height: "60px"}}/>Node.js, </div>
+        <div><img alt="language-icon" className="node-icon" src={reactIcon} style={{height: "60px"}}/>React, </div>
+        <div>  <img alt="language-icon" className="node-icon" src={reduxIcon} style={{height: "60px"}}/>Redux, </div>
+      <div> <img alt="language-icon" className="node-icon" src={postgresIcon} style={{height: "60px"}}/>PostgreSQL, </div>
+        <div><img alt="language-icon" className="node-icon" src={sequelizeIcon} style={{height: "60px"}}/>Sequelize, </div>
+        <div><img alt="language-icon" className="node-icon" src={expressIcon} style={{height: "60px"}}/>Express, </div>
+        <div><img alt="language-icon" className="node-icon" src={materialIcon} style={{height: "60px"}}/>MaterialUI, </div>
+       <div> <img alt="language-icon" className="node-icon" src={htmlIcon} style={{height: "60px"}}/>HTML, </div>
+       <div><img alt="language-icon" className="node-icon" src={cssIcon} style={{height: "60px"}} /> CSS          </div>  
        </h3></h2>
         
         </div>

@@ -30,7 +30,9 @@
   flex: 0 0 auto;
   margin-right: 20px;
   float: left;
-  box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3);
+  /* box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3); */
+  /* box-shadow: 4px 4px 8px 4px rgb(153, 151, 157); */
+  box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
 }
 
 
@@ -141,10 +143,12 @@ color: #3e497a;
 background-color: #d8a2a2;
 font-weight: bold;
 font-size: 23px;
-box-shadow: 4px 4px 8px 4px rgba(234, 238, 111, 0.5);
+/* box-shadow: 4px 4px 8px 4px rgba(234, 238, 111, 0.5); */
+
+box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
 border-radius: 20px;
 border: 2px solid white;
-animation: pulse 5s infinite;
+animation: pulse 10s infinite;
 }
 @keyframes pulse {
   0% {
