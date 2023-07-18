@@ -177,7 +177,20 @@ animation: pulse 10s infinite;
   width: 20vw;
   font-size: 20px;
 }
+/* .about-and-pic{
+  display: flex;
+  flex-direction: column;
+} */
+/* .profilePic {
+  float: none;
+} */
 }
+@media only screen and (max-width: 900px){
+  .profilePic {
+    float: none; 
+    margin-left: -20vw;
+  }
+  }
 
 @media only screen and (max-width: 600px) {
   .mainContainer {
@@ -185,15 +198,13 @@ animation: pulse 10s infinite;
     margin-left: 1vw;
    
   }
-  .about-and-pic{
-    background-color: rgba(103, 62, 166, 0.1);
-    box-shadow: -4px 4px 8px 4px rgba(168, 128, 128, 0.3);
-  }
+ 
   /* .scroll {
     overflow: scroll;
   } */
   .profilePic {
     float: none;
+   
   }
   
   .homeAbout {
