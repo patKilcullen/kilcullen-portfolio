@@ -133,16 +133,33 @@
   /* background-color: rgba(103, 62, 166, 0.1);
   box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3); */
 }
-.button{
-/* background-color: rgba(103, 62, 166, 0.1); */
-  box-shadow: 4px 4px 8px 4px rgba(234, 238, 111, 0.5);
-  font-size: 30px;
-  
- 
+
+
+#button{
+
+color: #3e497a;
+background-color: #d8a2a2;
+font-weight: bold;
+font-size: 23px;
+box-shadow: 4px 4px 8px 4px rgba(234, 238, 111, 0.5);
+border-radius: 20px;
+border: 2px solid white;
+animation: pulse 5s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .button-text {
   font-style: italic;
-  /* color: rgb(255, 255, 255); */
+
   color: #d8a2a2;
 }
 

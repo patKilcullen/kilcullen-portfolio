@@ -71,10 +71,13 @@ const Home = () => {
         <hr className="divider" />
         <div className="homeButtons">
             <h1 className="button-text" > Learn more about what I've done... </h1>
-        <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color: "#3e497a", backgroundColor: "#d8a2a2", fontWeight: "bold", fontSize: "23px",
+        {/* <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color: "#3e497a", backgroundColor: "#d8a2a2", fontWeight: "bold", fontSize: "23px",
   boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Projects</Button>
         <Button onClick={()=>navigate('/experience')} className="button" variant="contained"sx={{color: "#3e497a", backgroundColor: "#d8a2a2",fontWeight: "bold", fontSize: "23px",
-  boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Experience</Button>
+  boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Experience</Button> */}
+
+<Button onClick={()=>navigate('/projects')} id="button" > Projects</Button>
+<Button onClick={()=>navigate('/experience')} id="button" > Experience</Button>
         </div>
       </div>
       
