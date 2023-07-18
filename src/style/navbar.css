@@ -89,18 +89,25 @@
   }
   
   #open {
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+  
+
   }
   
   #open .links {
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 100px;
+  
   }
   
   #open a {
     width: 100%;
     text-align: center;
+  
   }
   
   @media only screen and (max-width: 1200px) {
@@ -151,6 +158,7 @@
   
     #open .links {
       flex-direction: row;
+   
       
     }
   }
