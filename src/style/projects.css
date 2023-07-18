@@ -18,7 +18,8 @@ margin-left: 12vw;
 }
 
 .pageTitle {
-    color: white;
+    /* color: white; */
+    color: #d8a2a2;
     font-size: 60px;
     text-decoration: underline;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -57,8 +58,20 @@ margin-left: 12vw;
     align-content: center;
     max-width: 25vw;
     gap: 10px;
+    /* display: inline-block; */
+    overflow: hidden;
+    animation: slideInAnimation 1s forwards;
   
 }
+
+@keyframes slideInAnimation {
+    0% {
+      transform: translateY(200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 .name{
     /* color: white; */
     color: #d8a2a2;
