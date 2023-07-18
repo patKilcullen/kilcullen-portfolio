@@ -26,7 +26,8 @@ margin-left: 12vw;
     
 }
 .projectsPageTitle {
-    color: white;
+    /* color: white; */
+    color: #d8a2a2;
     font-size: 60px;
     text-decoration: underline;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -59,12 +60,14 @@ margin-left: 12vw;
   
 }
 .name{
-    color: white;
-    font-size: 30px;
+    /* color: white; */
+    color: #d8a2a2;
+    font-size: 40px;
     font-weight: bold;
 }
 .description {
-    color: white;
+    /* color: white; */
+    color: #d8a2a2;
     font-size: 20px;
     min-height: 7vh;
 }
@@ -80,7 +83,8 @@ margin-left: 12vw;
     width: 100%;
     max-width: 25vw;
     max-height: 10vh;
-    color: white;
+    /* color: white; */
+    color: #d8a2a2;
    
     /* text-align: center; */
   

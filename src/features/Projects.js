@@ -41,19 +41,9 @@ const Projects = () => {
                     rel="noopener noreferrer"
                   >
                     {" "}
-                    <Button
-                      className="button"
-                      variant="contained"
-                      sx={{
-                        color: "#81567a",
-                        backgroundColor: "white",
-                        fontWeight: "bold",
-                        borderRadius: "20px",
-                        border: "2px solid black",
-                      }}
-                    >
-                      Demo
-                    </Button>
+                 
+                    <Button className="button" variant="contained"sx={{color: "#3e497a", backgroundColor: "#d8a2a2",fontWeight: "bold", fontSize: "23px",
+  boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Demo</Button>
                   </Link>
                   <Link
                     to={project.code}
@@ -61,19 +51,8 @@ const Projects = () => {
                     rel="noopener noreferrer"
                   >
                     {" "}
-                    <Button
-                      className="button"
-                      variant="contained"
-                      sx={{
-                        color: "#81567a",
-                        backgroundColor: "white",
-                        fontWeight: "bold",
-                        borderRadius: "20px",
-                        border: "2px solid black",
-                      }}
-                    >
-                      Code
-                    </Button>
+                    <Button className="button" variant="contained"sx={{color: "#3e497a", backgroundColor: "#d8a2a2",fontWeight: "bold", fontSize: "23px",
+  boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Code</Button>
                   </Link>
                 </div>
               </div>

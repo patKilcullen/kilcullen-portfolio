@@ -27,9 +27,17 @@
     
  
   }
+
   .list {
     font-size: 100px;
   }
+
+
+
+  
+  /* .pulse {
+    animation: pulse 2s infinite;
+  } */
   .socialMedia svg {
     /* color: white; */
     color: #d8a2a2;
@@ -38,8 +46,20 @@
     cursor: pointer;
     background-color: rgba(103, 62, 166, 0.1);
     box-shadow: 4px 4px 8px 4px rgba(234, 238, 111, 0.5);
+    animation: pulse 5s infinite;
   }
   
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   /* .sideBar ul li {
     font-size: 100px;
     list-style-type: none;

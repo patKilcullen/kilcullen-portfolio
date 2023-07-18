@@ -33,6 +33,7 @@
   box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3);
 }
 
+
 .homeAbout {
   /* flex: 1 1 auto; */
   text-align: left;
@@ -45,6 +46,49 @@
  
   font-size: 30px;
 }
+
+.name-in-text-left{
+  color: rgb(228, 225, 225);
+  font-size: 50px;
+  font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+
+  display: inline-block;
+  overflow: hidden;
+  animation: slideInAnimationLeft 1s forwards;
+  
+ }
+ @keyframes slideInAnimationLeft {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.name-in-text-right{
+  color: rgb(228, 225, 225);
+  font-size: 50px;
+  font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+
+  display: inline-block;
+  overflow: hidden;
+  animation: slideInAnimationRight 1s forwards;
+  
+ }
+ @keyframes slideInAnimationRight {
+  0% {
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
 .about-and-pic{
   background-color: rgba(103, 62, 166, 0.1);
   box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3);
