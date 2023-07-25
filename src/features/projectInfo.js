@@ -6,6 +6,16 @@ import JuniorPhasePic from './juniorPhasePic.png'
 
 export const projects = [
 
+    {
+        name: "Balderdash",
+        description: "An interactive word game to play alone or with friends.",
+        about: "I based this app off the somewhat obscure word game also called Balderdash. Played alone, a user can see how many definition they can guess correctly out of a certain number. Played with others, one user sees the correct definition of the word, and the others have to guess. \n This app is currently under development. It was built as a challenge to see what I could build in a single weekend. It's current state was built in that time frame, but I look forward to adding to it.",
+        code: "https://github.com/patKilcullen/Balderdash",
+        demo: "https://www.youtube.com/watch?v=CF5TT-MY4oY",
+        tech: "Node.js, PostgreSQL, Express, React, Redux",
+        pic: balderdashPic
+    },
+
 {
     name: "EZ-Stack",
     description: "An app that connects freelancers to clients.",
@@ -24,15 +34,7 @@ export const projects = [
     tech: "Node.js, PostgreSQL, Express, React, Redux, Tailwind CSS, JWT",
     pic: GraceShopperPic
 },
-{
-    name: "Balderdash",
-    description: "An interactive word game to play alone or with friends.",
-    about: "I based this app off the somewhat obscure word game also called Balderdash. Played alone, a user can see how many definition they can guess correctly out of a certain number. Played with others, one user sees the correct definition of the word, and the others have to guess. \n This app is currently under development. It was built as a challenge to see what I could build in a single weekend. It's current state was built in that time frame, but I look forward to adding to it.",
-    code: "https://github.com/patKilcullen/Balderdash",
-    demo: "https://youtu.be/X0WvwwF1Ux4",
-    tech: "Node.js, PostgreSQL, Express, React, Redux",
-    pic: balderdashPic
-},
+
 {
     name: "Full Stack App",
     description: "This was the first full stack app I ever made!",
