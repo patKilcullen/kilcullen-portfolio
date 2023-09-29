@@ -11,6 +11,13 @@ import NavBar from "../NavBar";
 
 import Tech from "./Tech";
 
+import forest from "./forest.png";
+import mountains from "./mountains.png";
+import waterfall from "./waterfall.png";
+import trees from "./trees.png";
+import computer from "./computer.png";
+
+
 import moon from "./moon.jpg";
 import bloodMoon from "./bloodMoon.png";
 
@@ -38,21 +45,56 @@ const NewHome2 = () => {
   return (
     <div>
       NewHome
-      <Parallax pages={6} style={{ zIndex: 2 }}>
+      <Parallax pages={4} style={{ zIndex: 2 }}>
+        <ParallaxLayer
+          offset={0.9}
+          factor={1}
+          speed={2}
+          // sticky={{ start: 1, end: 0.5 }}
+          style={{ zIndex: 100, left: "-20vw", marginTop: "1000px" }}
+        >
+          <Projects2></Projects2>
+        </ParallaxLayer>
+
         <ParallaxLayer
           style={{ backgroundImage: `url(${ai})`, backgroundSize: "cover" }}
-          factor={5}
+          factor={3.1}
         ></ParallaxLayer>
 
         <ParallaxLayer
-          offset={3}
-          factor={1}
-          style={{ backgroundColor: "black" }}
+          style={{
+            backgroundImage: `url(${mountains})`,
+            backgroundSize: "cover",
+          }}
+          factor={4}
+          offset={1.9}
+          speed={1.5}
         ></ParallaxLayer>
+
         <ParallaxLayer
-          sticky={{ start: 0.3, end: 4 }}
+          style={{
+            backgroundImage: `url(${trees})`,
+            backgroundSize: "cover",
+          }}
+          factor={3}
+          offset={2.2}
+          speed={1.3}
+        ></ParallaxLayer>
+
+        <ParallaxLayer
+          style={{
+            backgroundImage: `url(${computer})`,
+            backgroundSize: "contain",
+          }}
+          factor={2}
+          offset={3}
+          speed={1.3}
+        ></ParallaxLayer>
+
+        <ParallaxLayer
+          sticky={{ start: 0.3, end: 0.3 }}
           speed={1}
-          style={{ left: "-20vw", zIndex: 10 }}
+          style={{ left: "-20vw", zIndex: 30 }}
         >
           <div style={{ backgroundColor: "black", fontSize: "8vh" }}>
             <span
@@ -66,7 +108,6 @@ const NewHome2 = () => {
               style={{
                 backgroundColor: "black",
                 fontSize: "10vh",
-                alignItems: "center",
               }}
               className="name-in-text-right"
             >
@@ -94,31 +135,34 @@ const NewHome2 = () => {
           <Home2></Home2>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={.9}
-          speed={3}
+          offset={0.9}
+          speed={1}
           factor={0.5}
-          style={{ left: "45vw", marginTop:"800px" }}
+          style={{ left: "45vw", marginTop: "800px" }}
         >
-          
           <Tech></Tech>
-      
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 1.4, end: 4 }}>
+        <ParallaxLayer sticky={{ start: 2, end: 4 }}>
           <SideNav></SideNav>
         </ParallaxLayer>
 
-        <ParallaxLayer
+        {/* <ParallaxLayer
           // offset={2}
           // factor={1}
           // speed={2}
-          sticky={{ start: 1.3, end: 1.3 }}
-          style={{ zIndex: 20 }}
+          sticky={{ start: 1, end: 0.5 }}
+          style={{ zIndex: 20, left: "-20vw", marginTop: "200px" }}
         >
           <Projects2></Projects2>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
-        <ParallaxLayer offset={2} factor={1} speed={2}>
+        <ParallaxLayer
+          offset={2.8}
+          factor={1}
+          speed={1.5}
+          style={{ zIndex: 30 }}
+        >
           <Experience2></Experience2>
         </ParallaxLayer>
       </Parallax>
