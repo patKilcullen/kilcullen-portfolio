@@ -27,14 +27,21 @@ const Home = () => {
   return (
     <div id="main">
       {/* <div id="mainContent"> */}
-      <div className="mainContent">
-     
+      <div className="mainContent" style={{ border: "2px solid red" }}>
+        <div
+          className="about-and-pic"
+          style={{ border: "2px solid green", display: "flex" }}
+        >
+          <h1 style={{ color: "white" }}>Patrick Kilcullen</h1>
+          <h2 style={{ color: "white" }}>Software Engineer</h2>
+        </div>
+
         {/* <img id="profilePic" src={profilePic} />  */}
         <div className="mainContainer">
-          <div className="about-and-pic" >
-        <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} /> 
-        <div className="scroll">
-        {/* <h1 className="homeAbout">
+          <div className="about-and-pic">
+            {/* <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} />  */}
+            <div className="scroll">
+              {/* <h1 className="homeAbout">
           Hi, I'm <span id="name-in-text">Patrick Kilcullen</span>, a software developer with a passion for
           creating forward-thinking and efficient applications. I love learning about
           new technologies and discovering how they can be used to solve all kinds of
@@ -44,45 +51,151 @@ const Home = () => {
           developer who's always excited to overcome challenges with innovative solutions, I'm your guy!
         </h1> */}
 
-        <h1 className="homeAbout">
-            Hi, I'm <span className="name-in-text-left">Patrick</span> <span className="name-in-text-right">Kilcullen</span>, a software developer with a passion for creating forward-thinking and efficient applications. I love learning about new technologies and discovering how they can be used to solve all kinds of problems. I have experience building apps with the PERN stack, but I'm always eager to learn more and explore new technologies. If you're looking for a dedicated software developer who's always excited to overcome challenges with innovative solutions, I'm your guy!
-          </h1>
-   
+              <h1 className="homeAbout">
+                Hi, I'm <span className="name-in-text-left">Patrick</span>{" "}
+                <span className="name-in-text-right">Kilcullen</span>, a
+                software developer with a passion for creating forward-thinking
+                and efficient applications. I love learning about new
+                technologies and discovering how they can be used to solve all
+                kinds of problems. I have experience building apps with the PERN
+                stack, but I'm always eager to learn more and explore new
+                technologies. If you're looking for a dedicated software
+                developer who's always excited to overcome challenges with
+                innovative solutions, I'm your guy!
+              </h1>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
-        
+
         {/* <hr className="divider" /> */}
-   <div className="tech">
-        <h2 className="techIntro" >I've build applications using a variety of technologies, inclucing...<h3 style={{display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "flex-end"}} >
-          <div><img alt="language-icon" className="language-icon" src={javascriptIcon} style={{height: "60px"}}/>Javascript, </div>
-        <div> <img alt="language-icon" className="node-icon" src={nodeSVG} style={{height: "60px"}}/>Node.js, </div>
-        <div><img alt="language-icon" className="node-icon" src={reactIcon} style={{height: "60px"}}/>React, </div>
-        <div>  <img alt="language-icon" className="node-icon" src={reduxIcon} style={{height: "60px"}}/>Redux, </div>
-      <div> <img alt="language-icon" className="node-icon" src={postgresIcon} style={{height: "60px"}}/>PostgreSQL, </div>
-        <div><img alt="language-icon" className="node-icon" src={sequelizeIcon} style={{height: "60px"}}/>Sequelize, </div>
-        <div><img alt="language-icon" className="node-icon" src={expressIcon} style={{height: "60px"}}/>Express, </div>
-        <div><img alt="language-icon" className="node-icon" src={materialIcon} style={{height: "60px"}}/>MaterialUI, </div>
-       <div> <img alt="language-icon" className="node-icon" src={htmlIcon} style={{height: "60px"}}/>HTML, </div>
-       <div><img alt="language-icon" className="node-icon" src={cssIcon} style={{height: "60px"}} /> CSS          </div>  
-       </h3></h2>
-        
+        <div className="tech">
+          <h2 className="techIntro">
+            I've build applications using a variety of technologies,
+            inclucing...
+            <h3
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                alignItems: "flex-end",
+              }}
+            >
+              <div>
+                <img
+                  alt="language-icon"
+                  className="language-icon"
+                  src={javascriptIcon}
+                  style={{ height: "60px" }}
+                />
+                Javascript,{" "}
+              </div>
+              <div>
+                {" "}
+                <img
+                  alt="language-icon"
+                  className="node-icon"
+                  src={nodeSVG}
+                  style={{ height: "60px" }}
+                />
+                Node.js,{" "}
+              </div>
+              <div>
+                <img
+                  alt="language-icon"
+                  className="node-icon"
+                  src={reactIcon}
+                  style={{ height: "60px" }}
+                />
+                React,{" "}
+              </div>
+              <div>
+                {" "}
+                <img
+                  alt="language-icon"
+                  className="node-icon"
+                  src={reduxIcon}
+                  style={{ height: "60px" }}
+                />
+                Redux,{" "}
+              </div>
+              <div>
+                {" "}
+                <img
+                  alt="language-icon"
+                  className="node-icon"
+                  src={postgresIcon}
+                  style={{ height: "60px" }}
+                />
+                PostgreSQL,{" "}
+              </div>
+              <div>
+                <img
+                  alt="language-icon"
+                  className="node-icon"
+                  src={sequelizeIcon}
+                  style={{ height: "60px" }}
+                />
+                Sequelize,{" "}
+              </div>
+              <div>
+                <img
+                  alt="language-icon"
+                  className="node-icon"
+                  src={expressIcon}
+                  style={{ height: "60px" }}
+                />
+                Express,{" "}
+              </div>
+              <div>
+                <img
+                  alt="language-icon"
+                  className="node-icon"
+                  src={materialIcon}
+                  style={{ height: "60px" }}
+                />
+                MaterialUI,{" "}
+              </div>
+              <div>
+                {" "}
+                <img
+                  alt="language-icon"
+                  className="node-icon"
+                  src={htmlIcon}
+                  style={{ height: "60px" }}
+                />
+                HTML,{" "}
+              </div>
+              <div>
+                <img
+                  alt="language-icon"
+                  className="node-icon"
+                  src={cssIcon}
+                  style={{ height: "60px" }}
+                />{" "}
+                CSS{" "}
+              </div>
+            </h3>
+          </h2>
         </div>
         <hr className="divider" />
         <div className="homeButtons">
-            <h1 className="button-text" > Learn more about what I've done... </h1>
-        {/* <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color: "#3e497a", backgroundColor: "#d8a2a2", fontWeight: "bold", fontSize: "23px",
+          <h1 className="button-text"> Learn more about what I've done... </h1>
+          {/* <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color: "#3e497a", backgroundColor: "#d8a2a2", fontWeight: "bold", fontSize: "23px",
   boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Projects</Button>
         <Button onClick={()=>navigate('/experience')} className="button" variant="contained"sx={{color: "#3e497a", backgroundColor: "#d8a2a2",fontWeight: "bold", fontSize: "23px",
   boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Experience</Button> */}
 
-<Button onClick={()=>navigate('/projects')} id="button" > Projects</Button>
-<Button onClick={()=>navigate('/experience')} id="button" > Experience</Button>
+          <Button onClick={() => navigate("/projects")} id="button">
+            {" "}
+            Projects
+          </Button>
+          <Button onClick={() => navigate("/experience")} id="button">
+            {" "}
+            Experience
+          </Button>
         </div>
       </div>
-      
-      </div>
-   
+    </div>
   );
 };
 
