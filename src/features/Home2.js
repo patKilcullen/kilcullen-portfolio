@@ -34,14 +34,7 @@ const Home = () => {
             {/* <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} />  */}
             <div className="scroll">
               <h1 className="homeAbout" style={{ width: "50vw" }}>
-                Hi, I'm a software developer with a passion for creating
-                forward-thinking and efficient applications. I love learning
-                about new technologies and discovering how they can be used to
-                solve all kinds of problems. I have experience building apps
-                with the PERN stack, but I'm always eager to learn more and
-                explore new technologies. If you're looking for a dedicated
-                software developer who's always excited to overcome challenges
-                with innovative solutions, I'm your guy!
+                I specialize in Full Stck
               </h1>
             </div>
           </div>
