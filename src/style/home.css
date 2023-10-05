@@ -167,6 +167,22 @@ animation: pulse 10s infinite;
   color: #d8a2a2;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1050px){
 .homeButtons{
   flex-direction: column;

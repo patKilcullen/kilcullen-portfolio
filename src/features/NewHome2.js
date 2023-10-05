@@ -1,6 +1,12 @@
 import React, {useEffect, useState} from "react";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
+
+import { useInView } from "react-intersection-observer";
+
+
+
 import Home from "./Home";
 import Home2 from "./Home2";
 import Projects2 from "./Projects2";
@@ -17,6 +23,7 @@ import waterfall from "./waterfall.png";
 import trees from "./trees.png";
 import trees2 from "./trees2.png";
 import computer from "./computer.png";
+import laptop from "./laptop.png";
 import clouds from "./clouds.png";
 import clouds2 from "./clouds2.png";
 import clouds3 from "./clouds3.png";
@@ -55,32 +62,31 @@ const NewHome2 = () => {
 
 
 
- const [scrollPosition, setScrollPosition] = useState(0);
- const [opacity, setOpacity] = useState(1);
+ 
 
- useEffect(() => {
-   const handleScroll = () => {
-     const currentPosition = window.pageYOffset;
-     setScrollPosition(currentPosition);
 
-     // Calculate the opacity based on scroll position
-     const maxOpacity = 1; // Maximum opacity
-     const minScroll = 200; // The scroll position at which the element starts to disappear
-     const maxScroll = 400; // The scroll position at which the element is fully disappeared
-     const opacityRange = maxScroll - minScroll;
-     const newOpacity =
-       maxOpacity - (currentPosition - minScroll) / opacityRange;
 
-     // Ensure opacity is within the bounds
-     setOpacity(Math.min(maxOpacity, Math.max(0, newOpacity)));
-   };
+  const textToType = "Patrick Kilcullen, software developer.";
+  const [typedText, setTypedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [ref, inView] = useInView();
 
-   window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    if (inView) {
+      const typingInterval = setInterval(() => {
+        if (currentIndex < textToType.length) {
+          setTypedText(textToType.slice(0, currentIndex + 1));
+          setCurrentIndex(currentIndex + 1);
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 100); // Adjust the typing speed (interval) as needed
 
-   return () => {
-     window.removeEventListener("scroll", handleScroll);
-   };
- }, []);
+      return () => {
+        clearInterval(typingInterval);
+      };
+    }
+  }, [currentIndex, inView]);
 
 
 
@@ -94,7 +100,7 @@ const NewHome2 = () => {
           id={"bummyboy"}
           sticky={{ start: 0.19, end: 0.2 }}
           speed={2}
-           style={{ height: "15vw" }}
+          style={{ height: "15vw" }}
         >
           <div style={{ backgroundColor: "black", left: "-5vw" }}>
             <span
@@ -122,11 +128,11 @@ const NewHome2 = () => {
 
         <ParallaxLayer
           id={"ssofware-enginerr"}
-          sticky={{ start: 0.32, end: 0.3 }}
+          sticky={{ start: 0.39, end: 0.4 }}
           speed={2}
           style={{ left: "20vw", height: "10vh" }}
         >
-          <div style={{ zIndex: 2, opacity: opacity }}>
+          <div style={{ zIndex: 2 }}>
             <span className="name-in-text-left">Software Developer</span>
           </div>
         </ParallaxLayer>
@@ -323,7 +329,7 @@ const NewHome2 = () => {
           speed={2}
         ></ParallaxLayer>
 
-        {/* <ParallaxLayer
+        <ParallaxLayer
           style={{
             backgroundImage: `url(${computer})`,
             backgroundSize: "contain",
@@ -331,7 +337,19 @@ const NewHome2 = () => {
           factor={2}
           offset={2}
           speed={1.3}
-        ></ParallaxLayer> */}
+        >
+          <div
+            // className="typing-effect-container"
+            ref={ref}
+          >
+            <div
+              style={{ color: "white", marginTop: "15vh", fontSize: "10vh" }}
+              // className="typing-effect-text"
+            >
+              {typedText}
+            </div>
+          </div>
+        </ParallaxLayer>
 
         {/* <ParallaxLayer
           sticky={{ start: 0.3, end: 0.3 }}
