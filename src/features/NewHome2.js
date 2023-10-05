@@ -66,13 +66,28 @@ const NewHome2 = () => {
 
 
 
-  const textToType = "Patrick Kilcullen, software developer.";
+  const textToType = "specializing in full stack web development utilizing technologies such as...";
   const [typedText, setTypedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [ref, inView] = useInView();
 
   useEffect(() => {
-    if (inView) {
+    // if (inView) {
+    //   const typingInterval = setInterval(() => {
+    //     if (currentIndex < textToType.length) {
+    //       setTypedText(textToType.slice(0, currentIndex + 1));
+    //       setCurrentIndex(currentIndex + 1);
+    //     } else {
+    //       clearInterval(typingInterval);
+    //     }
+    //   }, 100); // Adjust the typing speed (interval) as needed
+
+    //   return () => {
+    //     clearInterval(typingInterval);
+    //   };
+    // }
+
+    
       const typingInterval = setInterval(() => {
         if (currentIndex < textToType.length) {
           setTypedText(textToType.slice(0, currentIndex + 1));
@@ -80,12 +95,12 @@ const NewHome2 = () => {
         } else {
           clearInterval(typingInterval);
         }
-      }, 100); // Adjust the typing speed (interval) as needed
+      }, 50); // Adjust the typing speed (interval) as needed
 
       return () => {
         clearInterval(typingInterval);
       };
-    }
+ 
   }, [currentIndex, inView]);
 
 
@@ -392,22 +407,31 @@ const NewHome2 = () => {
         </ParallaxLayer> */}
 
         <ParallaxLayer
-          offset={0.9}
-          speed={1.8}
+          offset={.5}
+           speed={1.5}
           factor={1}
           style={{ textAlign: "center", left: "25vw" }}
         >
-          <Home2></Home2>
+          {/* <Home2></Home2> */}
+            <div
+            >
+              <h1 
+              // ref={ref} 
+              className="homeAbout" style={{ width: "50vw" }}>
+                {typedText}
+              </h1>
+            </div>
+         
         </ParallaxLayer>
 
-        {/* <ParallaxLayer
-          offset={0.9}
-          speed={2}
+        <ParallaxLayer
+          offset={0.6}
+          speed={3}
           factor={0.5}
           style={{ left: "45vw", marginTop: "800px" }}
         >
           <Tech></Tech>
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
         {/* <ParallaxLayer sticky={{ start: 2, end: 3 }}>
           <SideNav></SideNav>
