@@ -104,6 +104,8 @@ margin-left: 12vw;
     align-self: center;
     margin-top: 0;
     margin-left: -1vw;
+  position: sticky;
+
 }
 
 @media only screen and (max-width: 600px) {

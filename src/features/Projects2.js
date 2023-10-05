@@ -33,7 +33,6 @@ const Projects2 = () => {
                     className="projectPic"
                     src={project.pic}
                     alt="screenshot of project"
-                  
                   />
                 </Link>
                 {/* <img className='projectPic' src={project.pic} alt="screenshot of project"/> */}
@@ -59,6 +58,7 @@ const Projects2 = () => {
                         boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",
                         borderRadius: "20px",
                         border: "2px solid white",
+                        zIndex: 1000,
                       }}
                     >
                       {" "}
@@ -82,6 +82,7 @@ const Projects2 = () => {
                         boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",
                         borderRadius: "20px",
                         border: "2px solid white",
+                        zIndex: 1000,
                       }}
                     >
                       {" "}
