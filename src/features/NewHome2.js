@@ -425,8 +425,8 @@ const NewHome2 = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={0.6}
-          speed={3}
+          offset={0.3}
+          speed={6}
           factor={0.5}
           style={{ left: "45vw", marginTop: "800px" }}
         >
