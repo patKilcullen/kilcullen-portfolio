@@ -69,10 +69,18 @@ const NewHome2 = () => {
 
 
 
-  const textToType = "I'm a passionate, creative developer based in Chicago, Il. ";
+  const textToType = "I'm a passionate, creative developer based in Chicago, Il. I specialize in building innovative apps using a variety of technolgies including...";
   const [typedText, setTypedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [ref, inView] = useInView();
+  const [typingDelay, setTypingDelay]= useState(false)
+
+useEffect(() => {
+  setTimeout(() => {
+    setTypingDelay(true);
+  }, 2000);
+}, []);
+
 
   useEffect(() => {
     // if (inView) {
@@ -90,7 +98,9 @@ const NewHome2 = () => {
     //   };
     // }
 
-    
+   
+
+    if(typingDelay){
       const typingInterval = setInterval(() => {
         if (currentIndex < textToType.length) {
           setTypedText(textToType.slice(0, currentIndex + 1));
@@ -103,8 +113,13 @@ const NewHome2 = () => {
       return () => {
         clearInterval(typingInterval);
       };
+    }else{
+      setTypingDelay(false)
+    }
+   
+
  
-  }, [currentIndex, inView]);
+  }, [currentIndex, inView, typingDelay]);
 
 
 
@@ -479,9 +494,9 @@ const NewHome2 = () => {
 
         <ParallaxLayer
           offset={0.5}
-          speed={.5}
+          speed={.8}
           factor={1}
-          style={{ textAlign: "center", left: "25vw" }}
+          style={{ textAlign: "center", left: "5vw" }}
         >
           {/* <Home2></Home2> */}
           <div>
