@@ -24,11 +24,13 @@
 
 
 .profilePic {
-  border-radius: 50px;
-  height: 60vh;
+  /* border-radius: 50px; */
+    border-radius: 50px;
+  height: 35vh;
   border: 2px solid rgb(135, 82, 82);
   flex: 0 0 auto;
   margin-right: 20px;
+
   float: left;
   /* box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3); */
   /* box-shadow: 4px 4px 8px 4px rgb(153, 151, 157); */

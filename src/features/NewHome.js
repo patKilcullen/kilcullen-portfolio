@@ -5,7 +5,7 @@ import Home from './Home';
 import Projects from './Projects';
 import Experience from './Experience';
 
-import moon from './moon.jpg'
+
 
 import newMoon from "./newMoon.png";
 import sky from "./sky.jpg";

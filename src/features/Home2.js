@@ -34,7 +34,7 @@ const Home = () => {
             {/* <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} />  */}
             <div className="scroll">
               <h1 className="homeAbout" style={{ width: "50vw" }}>
-                specializing in full stack web development utilizing technologies such as
+                I've a 
               </h1>
             </div>
           </div>

@@ -46,7 +46,7 @@ const Tech = () => {
       {/* <hr className="divider" /> */}
       <div style={{ width: "500px" }}></div>
       <div className="tech" style={{ left: "100vw", width: "50vw" }}>
-        <div>
+        <div style={{display: "flex", flexWrap: "wrap"}}>
           {symbols.map((symbol) => {
             return (
               <div style={{ display: "flex", alignItems: "center" }}>

@@ -28,20 +28,20 @@ import clouds from "./clouds.png";
 import clouds2 from "./clouds2.png";
 import clouds3 from "./clouds3.png";
 import clouds4 from "./clouds4.png";
+import cloudsPurple from "./cloudPurple.png";
 import lake from "./lake.png";
 
 
-import moon from "./moon.jpg";
 import bloodMoon from "./bloodMoon.png";
 
 import newMoon from "./newMoon.png";
 import bmoon from "./bmoon.png";
 
-import moon3 from "./moon6.png";
+
 import sky from "./sky.jpg";
 import sky4 from "./sky4.png";
 
-import stars from "./stars4.png";
+
 import ai from "./ai.png";
 
 import {
@@ -58,6 +58,9 @@ import "../style/experience.css";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { projects } from "./projectInfo";
+
+import profilePic from "../ProfilePic.PNG";
+
 const NewHome2 = () => {
 
 
@@ -66,7 +69,7 @@ const NewHome2 = () => {
 
 
 
-  const textToType = "specializing in full stack web development utilizing technologies such as...";
+  const textToType = "I'm a passionate, creative developer based in Chicago, Il. ";
   const [typedText, setTypedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [ref, inView] = useInView();
@@ -109,13 +112,13 @@ const NewHome2 = () => {
 
   return (
     <div>
-      NewHome
       <Parallax pages={2.9}>
         <ParallaxLayer
           id={"bummyboy"}
-          sticky={{ start: 0.19, end: 0.2 }}
-          speed={2}
-          style={{ height: "15vw" }}
+          offset={0}
+          speed={1}
+          factor={0}
+          style={{ marginTop: "150px", zIndex: 10000 }}
         >
           <div style={{ backgroundColor: "black", left: "-5vw" }}>
             <span
@@ -128,7 +131,7 @@ const NewHome2 = () => {
             >
               Patrick{" "}
             </span>
-
+            <span style={{ margin: "2vw" }}>""</span>
             <span
               style={{
                 backgroundColor: "black",
@@ -142,7 +145,51 @@ const NewHome2 = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          id={"ssofware-enginerr"}
+          // id={"bummyboy"}
+          offset={0}
+          speed={1}
+          factor={0}
+          // style={{ marginTop: "150px", zIndex: 10000 }}
+          style={{ left: "20vw", height: "10vh",marginTop: "275px", zIndex: 10000 }}
+        >
+          <div style={{ zIndex: 2 }}>
+            <span className="name-in-text-left">Software Developer</span>
+          </div>
+        </ParallaxLayer>
+
+        {/* <ParallaxLayer
+          id={"bummyboy"}
+          sticky={{ start: 0.19, end: 0.2 }}
+          speed={3}
+          style={{ height: "15vw" }}
+        >
+          <div style={{ backgroundColor: "black", left: "-5vw" }}>
+            <span
+              style={{
+                backgroundColor: "black",
+                fontSize: "8vw",
+                left: "-5vw",
+              }}
+              className="name-in-text-left"
+            >
+              Patrick{" "}
+            </span>
+            <span style={{ margin: "2vw" }}>""</span>
+            <span
+              style={{
+                backgroundColor: "black",
+                fontSize: "8vw",
+              }}
+              className="name-in-text-right"
+            >
+              Kilcullen
+            </span>
+          </div>
+        </ParallaxLayer> */}
+    
+
+        {/* <ParallaxLayer
+          // id={"ssofware-enginerr"}
           sticky={{ start: 0.39, end: 0.4 }}
           speed={2}
           style={{ left: "20vw", height: "10vh" }}
@@ -150,16 +197,16 @@ const NewHome2 = () => {
           <div style={{ zIndex: 2 }}>
             <span className="name-in-text-left">Software Developer</span>
           </div>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         <ParallaxLayer
           offset={1}
           factor={1}
-          speed={2}
+          speed={3}
           // sticky={{ start: .4, end: 1 }}
           style={{
             zIndex: 100,
-            marginTop: "-500px",
+            marginTop: "-1500px",
             //  marginTop: "1000px"
           }}
         >
@@ -245,9 +292,9 @@ const NewHome2 = () => {
 
         <ParallaxLayer
           id={"ai"}
-          style={{ backgroundImage: `url(${ai})`, backgroundSize: "cover" }}
+          style={{ backgroundImage: `url(${sky4})`, backgroundSize: "cover" }}
           factor={3.1}
-          speed={1 / 5}
+          speed={0.5}
         ></ParallaxLayer>
 
         <ParallaxLayer
@@ -258,7 +305,7 @@ const NewHome2 = () => {
             left: "50vw",
           }}
           factor={2}
-          offset={0.9}
+          offset={0.4}
           speed={2.3}
         ></ParallaxLayer>
 
@@ -269,9 +316,33 @@ const NewHome2 = () => {
             backgroundSize: "cover",
           }}
           factor={2}
-          offset={0.9}
+          offset={0.4}
           speed={1.5}
         ></ParallaxLayer>
+
+        <ParallaxLayer
+          id={"clouds"}
+          style={{
+            backgroundImage: `url(${cloudsPurple})`,
+            backgroundSize: "contain",
+            left: "25vw",
+          }}
+          factor={2}
+          offset={0.5}
+          speed={0.5}
+        ></ParallaxLayer>
+
+        {/* <ParallaxLayer
+          id={"clouds"}
+          style={{
+            backgroundImage: `url(${cloudsPurple})`,
+            backgroundSize: "contain",
+            left: "-25vw",
+          }}
+          factor={2}
+          offset={1}
+          speed={2}
+        ></ParallaxLayer> */}
 
         <ParallaxLayer
           id={"mntns"}
@@ -293,9 +364,9 @@ const NewHome2 = () => {
             height: "200vh",
             width: "200vw",
           }}
-          factor={2}
-          offset={1.4}
-          speed={1.5}
+          factor={3}
+          offset={1.2}
+          speed={1}
         ></ParallaxLayer>
 
         {/* <ParallaxLayer
@@ -407,28 +478,33 @@ const NewHome2 = () => {
         </ParallaxLayer> */}
 
         <ParallaxLayer
-          offset={.5}
-           speed={1.5}
+          offset={0.5}
+          speed={.5}
           factor={1}
           style={{ textAlign: "center", left: "25vw" }}
         >
           {/* <Home2></Home2> */}
-            <div
+          <div>
+            {/* <img
+              alt="Patrick Kilcullen"
+              className="profilePic"
+              src={profilePic}
+            /> */}
+            <h1
+              // ref={ref}
+              className="homeAbout"
+              style={{ width: "50vw" }}
             >
-              <h1 
-              // ref={ref} 
-              className="homeAbout" style={{ width: "50vw" }}>
-                {typedText}
-              </h1>
-            </div>
-         
+              {typedText}
+            </h1>
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={0.3}
           speed={6}
           factor={0.5}
-          style={{ left: "45vw", marginTop: "800px" }}
+          style={{ left: "25vw", marginTop: "800px" }}
         >
           <Tech></Tech>
         </ParallaxLayer>
