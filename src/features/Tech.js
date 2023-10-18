@@ -42,11 +42,33 @@ const Tech = () => {
 
 
   return (
+    // <div style={{ width: "20vw" }}>
+    //   {/* <hr className="divider" /> */}
+    //   <div style={{ width: "500px" }}></div>
+    //   <div className="tech" style={{ left: "100vw", width: "50vw" }}>
+    //     <div style={{display: "flex", flexWrap: "wrap"}}>
+    //       {symbols.map((symbol) => {
+    //         return (
+    //           <div style={{ display: "flex", alignItems: "center" }}>
+    //             <img
+    //               alt="language-icon"
+    //               className="node-icon"
+    //               src={symbol.symbole}
+    //               style={{ height: "60px", color: "#d8a2a2" }}
+    //             />
+    //             <h1 style={{ color: "#d8a2a2" }}>{symbol.name}</h1>
+    //           </div>
+    //         );
+    //       })}
+    //     </div>
+    //   </div>
+    // </div>
+
     <div style={{ width: "20vw" }}>
       {/* <hr className="divider" /> */}
       <div style={{ width: "500px" }}></div>
       <div className="tech" style={{ left: "100vw", width: "50vw" }}>
-        <div style={{display: "flex", flexWrap: "wrap"}}>
+        <div style={{ display: "flex", flexDirection: "column" }}>
           {symbols.map((symbol) => {
             return (
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -54,132 +76,15 @@ const Tech = () => {
                   alt="language-icon"
                   className="node-icon"
                   src={symbol.symbole}
-                  style={{ height: "60px", color: "#d8a2a2" }}
+                  style={{ height: "80px",   filter: "saturate(30%)" }}
                 />
-                <h1 style={{ color: "#d8a2a2" }}>{symbol.name}</h1>
+                <h1 style={{ color: "#d8a2a2", fontSize: "40px" }}>{symbol.name}</h1>
               </div>
             );
           })}
         </div>
       </div>
     </div>
-
-    // <div style={{ width: "20vw" }}>
-    //   {/* <hr className="divider" /> */}
-    //   <div style={{ width: "500px" }}></div>
-    //   <div className="tech" style={{ left: "100vw", width: "50vw" }}>
-    //     <h2 className="techIntro">
-    //       I've build applications using a variety of technologies, inclucing...
-
-    //       <h3
-    //         style={{
-    //           display: "flex",
-    //           flexDirection: "row",
-    //           flexWrap: "wrap",
-    //           alignItems: "flex-end",
-    //         }}
-    //       >
-
-    //         <div style={{display: "flex", alignItems: "center" }}>
-    //           {" "}
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={javascriptIcon}
-    //             style={{ height: "60px", color: "#d8a2a2" }}
-    //           />
-    //           JavaScript,{" "}
-    //         </div>
-
-    //         <div>
-    //           {" "}
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={nodeSVG}
-    //             style={{ height: "60px", color: "#d8a2a2" }}
-    //           />
-    //           Node.js,{" "}
-    //         </div>
-    //         <div>
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={reactIcon}
-    //             style={{ height: "60px" }}
-    //           />
-    //           React,{" "}
-    //         </div>
-    //         <div>
-    //           {" "}
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={reduxIcon}
-    //             style={{ height: "60px" }}
-    //           />
-    //           Redux,{" "}
-    //         </div>
-    //         <div>
-    //           {" "}
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={postgresIcon}
-    //             style={{ height: "60px" }}
-    //           />
-    //           PostgreSQL,{" "}
-    //         </div>
-    //         <div>
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={sequelizeIcon}
-    //             style={{ height: "60px" }}
-    //           />
-    //           Sequelize,{" "}
-    //         </div>
-    //         <div>
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={expressIcon}
-    //             style={{ height: "60px" }}
-    //           />
-    //           Express,{" "}
-    //         </div>
-    //         <div>
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={materialIcon}
-    //             style={{ height: "60px" }}
-    //           />
-    //           MaterialUI,{" "}
-    //         </div>
-    //         <div>
-    //           {" "}
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={htmlIcon}
-    //             style={{ height: "60px" }}
-    //           />
-    //           HTML,{" "}
-    //         </div>
-    //         <div>
-    //           <img
-    //             alt="language-icon"
-    //             className="node-icon"
-    //             src={cssIcon}
-    //             style={{ height: "60px" }}
-    //           />{" "}
-    //           CSS{" "}
-    //         </div>
-    //       </h3>
-    //     </h2>
-    //   </div>
-    // </div>
   );
 };
 

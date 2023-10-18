@@ -108,7 +108,7 @@ useEffect(() => {
         } else {
           clearInterval(typingInterval);
         }
-      }, 50); // Adjust the typing speed (interval) as needed
+      }, 20); // Adjust the typing speed (interval) as needed
 
       return () => {
         clearInterval(typingInterval);
@@ -165,7 +165,12 @@ useEffect(() => {
           speed={1}
           factor={0}
           // style={{ marginTop: "150px", zIndex: 10000 }}
-          style={{ left: "20vw", height: "10vh",marginTop: "275px", zIndex: 10000 }}
+          style={{
+            left: "20vw",
+            height: "10vh",
+            marginTop: "275px",
+            zIndex: 10000,
+          }}
         >
           <div style={{ zIndex: 2 }}>
             <span className="name-in-text-left">Software Developer</span>
@@ -201,7 +206,6 @@ useEffect(() => {
             </span>
           </div>
         </ParallaxLayer> */}
-    
 
         {/* <ParallaxLayer
           // id={"ssofware-enginerr"}
@@ -378,6 +382,7 @@ useEffect(() => {
             left: "-50vw",
             height: "200vh",
             width: "200vw",
+            zIndex: 10000,
           }}
           factor={3}
           offset={1.2}
@@ -422,6 +427,7 @@ useEffect(() => {
             backgroundImage: `url(${clouds4})`,
             backgroundSize: "cover",
             left: "-5vw",
+            // zIndex: 10000,
             // transform: "rotate(-5deg)"
             // transform: "scaleX(-1)",
           }}
@@ -494,7 +500,7 @@ useEffect(() => {
 
         <ParallaxLayer
           offset={0.5}
-          speed={.8}
+          speed={0.5}
           factor={1}
           style={{ textAlign: "center", left: "5vw" }}
         >
@@ -519,7 +525,7 @@ useEffect(() => {
           offset={0.3}
           speed={6}
           factor={0.5}
-          style={{ left: "25vw", marginTop: "800px" }}
+          style={{ left: "60vw", marginTop: "800px" }}
         >
           <Tech></Tech>
         </ParallaxLayer>
@@ -528,15 +534,15 @@ useEffect(() => {
           <SideNav></SideNav>
         </ParallaxLayer> */}
 
-        {/* <ParallaxLayer
-          offset={1.5}
-          factor={1}
-          speed={1.5}
+        <ParallaxLayer
+          offset={1.15}
+          factor={0.8}
+          speed={4}
           // style={{ zIndex: 30 }}
-          style={{ left: "" }}
+          style={{ left: "-5vw" }}
         >
           <Experience2></Experience2>
-        </ParallaxLayer> */}
+        </ParallaxLayer>
       </Parallax>
     </div>
   );
