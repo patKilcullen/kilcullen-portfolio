@@ -33,10 +33,9 @@ const Tech = () => {
     { symbole: materialIcon, name: "Material UI" },
     { symbole: sequelizeIcon, name: "Sequelize" },
     { symbole: expressIcon, name: "Express" },
-
-    { symbole: javascriptIcon, name: "JavaScript" },
   ];
 
+  
  
 
 

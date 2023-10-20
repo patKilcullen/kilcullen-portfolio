@@ -78,7 +78,7 @@ const NewHome2 = () => {
 useEffect(() => {
   setTimeout(() => {
     setTypingDelay(true);
-  }, 2000);
+  }, 1500);
 }, []);
 
 
@@ -133,9 +133,16 @@ useEffect(() => {
           offset={0}
           speed={1}
           factor={0}
-          style={{ marginTop: "150px", zIndex: 10000 }}
+          style={{
+            marginTop: "150px",
+            zIndex: 1,
+            height: "15vh",
+            backgroundColor: "black",
+            opacity: "85%",
+          }}
+          // sticky={{ start: 0, end: 3 }}
         >
-          <div style={{ backgroundColor: "black", left: "-5vw" }}>
+          <div style={{ left: "-5vw" }}>
             <span
               style={{
                 backgroundColor: "black",
@@ -156,65 +163,58 @@ useEffect(() => {
             >
               Kilcullen
             </span>
+
+            <div style={{ backgroundColor: "#050c2c", marginTop: "-1%"}}>
+              <span
+                // className="name-in-text-left"
+                className="software-engineer"
+              >
+                Software Developer
+              </span>
+            </div>
           </div>
         </ParallaxLayer>
-
-        <ParallaxLayer
-          // id={"bummyboy"}
+        {/* <ParallaxLayer
           offset={0}
           speed={1}
           factor={0}
-          // style={{ marginTop: "150px", zIndex: 10000 }}
-          style={{
-            left: "20vw",
-            height: "10vh",
-            marginTop: "275px",
-            zIndex: 10000,
-          }}
+          sticky={{ start: 0, end: 3 }}
         >
-          <div style={{ zIndex: 2 }}>
-            <span className="name-in-text-left">Software Developer</span>
-          </div>
-        </ParallaxLayer>
-
-        {/* <ParallaxLayer
-          id={"bummyboy"}
-          sticky={{ start: 0.19, end: 0.2 }}
-          speed={3}
-          style={{ height: "15vw" }}
-        >
-          <div style={{ backgroundColor: "black", left: "-5vw" }}>
-            <span
-              style={{
-                backgroundColor: "black",
-                fontSize: "8vw",
-                left: "-5vw",
-              }}
-              className="name-in-text-left"
-            >
-              Patrick{" "}
-            </span>
-            <span style={{ margin: "2vw" }}>""</span>
-            <span
-              style={{
-                backgroundColor: "black",
-                fontSize: "8vw",
-              }}
-              className="name-in-text-right"
-            >
-              Kilcullen
-            </span>
+          <div
+            style={{
+              color: "white",
+              zIndex: 10000,
+              left: "200px",
+              fontSize: "50px",
+              border: "2px solid red",
+            }}
+          >
+            <h1 style={{marginLeft: "20px"}}>Sooofffffdfdfdf</h1>
           </div>
         </ParallaxLayer> */}
 
         {/* <ParallaxLayer
-          // id={"ssofware-enginerr"}
-          sticky={{ start: 0.39, end: 0.4 }}
-          speed={2}
-          style={{ left: "20vw", height: "10vh" }}
+          // id={"bummyboy"}
+          offset={0.5}
+          speed={1}
+          factor={0}
+          // style={{ marginTop: "150px", zIndex: 10000 }}
+
+          style={{
+            marginLeft: "20vw",
+            height: "10vh",
+
+            zIndex: 10000,
+          }}
+          sticky={{ start: 0, end: 3 }}
         >
-          <div style={{ zIndex: 2 }}>
-            <span className="name-in-text-left">Software Developer</span>
+          <div>
+            <span
+              // className="name-in-text-left"
+              className="software-engineer"
+            >
+              Software Developer
+            </span>
           </div>
         </ParallaxLayer> */}
 
@@ -224,89 +224,12 @@ useEffect(() => {
           speed={3}
           // sticky={{ start: .4, end: 1 }}
           style={{
-            zIndex: 100,
+            zIndex: 1000,
             marginTop: "-1500px",
             //  marginTop: "1000px"
           }}
         >
           <Projects2></Projects2>
-
-          {/* <div className="mainProjectContainer">
-            {projects.map((project, idx) => {
-              return (
-                <div className="projectContainer" key={idx}>
-                  <div className="name">{project.name}</div>
-                  <div className="description">{project.description}</div>
-                  <Link
-                    to={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {" "}
-                    <img
-                      className="projectPic"
-                      src={project.pic}
-                      alt="screenshot of project"
-                    />
-                  </Link>
-
-                  <div className="projectAbout"> {project.about}</div>
-                  <div className="buttons">
-                    <Link
-                      to={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {" "}
-                      <Button
-                        onClick={() => {
-                          console.log("Foooooo");
-                        }}
-                        className="button"
-                        variant="contained"
-                        sx={{
-                          color: "#3e497a",
-                          backgroundColor: "#d8a2a2",
-                          fontWeight: "bold",
-                          fontSize: "23px",
-                          boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",
-                          borderRadius: "20px",
-                          border: "2px solid white",
-                          zIndex: 1000,
-                        }}
-                      >
-                        {" "}
-                        Demo
-                      </Button>
-                    </Link>
-                    <Link
-                      to={project.code}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {" "}
-                      <Button
-                        className="button"
-                        variant="contained"
-                        sx={{
-                          color: "#3e497a",
-                          backgroundColor: "#d8a2a2",
-                          fontWeight: "bold",
-                          fontSize: "23px",
-                          boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",
-                          borderRadius: "20px",
-                          border: "2px solid white",
-                        }}
-                      >
-                        {" "}
-                        Code
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div> */}
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -389,29 +312,6 @@ useEffect(() => {
           speed={1}
         ></ParallaxLayer>
 
-        {/* <ParallaxLayer
-          style={{
-            backgroundImage: `url(${trees})`,
-            backgroundSize: "cover",
-          }}
-          factor={3}
-          offset={1.9}
-          speed={1.7}
-        ></ParallaxLayer> */}
-
-        {/* <ParallaxLayer
-          style={{
-            backgroundImage: `url(${trees2})`,
-            backgroundSize: "contain",
-            left: "-50vw",
-            height: "200vh",
-            width: "200vw",
-          }}
-          factor={3}
-          offset={1.9}
-          speed={1.7}
-        ></ParallaxLayer> */}
-
         <ParallaxLayer
           style={{
             backgroundImage: `url(${lake})`,
@@ -427,7 +327,7 @@ useEffect(() => {
             backgroundImage: `url(${clouds4})`,
             backgroundSize: "cover",
             left: "-5vw",
-            // zIndex: 10000,
+            zIndex: 10000,
             // transform: "rotate(-5deg)"
             // transform: "scaleX(-1)",
           }}
@@ -510,6 +410,7 @@ useEffect(() => {
               alt="Patrick Kilcullen"
               className="profilePic"
               src={profilePic}
+              style={{ filter: "saturate(300%) contrast(130%) brightness(70%) grayscale(20%)", zIndex: 0 }}
             /> */}
             <h1
               // ref={ref}
@@ -539,7 +440,7 @@ useEffect(() => {
           factor={0.8}
           speed={4}
           // style={{ zIndex: 30 }}
-          style={{ left: "-5vw" }}
+          style={{ left: "-5vw", zIndex: 100000 }}
         >
           <Experience2></Experience2>
         </ParallaxLayer>
