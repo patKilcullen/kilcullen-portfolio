@@ -72,7 +72,9 @@ const NewHome2 = () => {
   const textToType = "I'm a passionate, creative developer based in Chicago, Il. I specialize in building innovative apps using a variety of technolgies including...";
   const [typedText, setTypedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({
+    threshold: 1
+  });
   const [typingDelay, setTypingDelay]= useState(false)
 
 useEffect(() => {
@@ -116,8 +118,7 @@ useEffect(() => {
     }else{
       setTypingDelay(false)
     }
-   
-
+  
  
   }, [currentIndex, inView, typingDelay]);
 
@@ -137,34 +138,55 @@ useEffect(() => {
             marginTop: "150px",
             zIndex: 1,
             height: "15vh",
-            backgroundColor: "black",
+            // backgroundColor: "black",
             opacity: "85%",
+            // border: "2px solid red",
           }}
           // sticky={{ start: 0, end: 3 }}
         >
-          <div style={{ left: "-5vw" }}>
-            <span
+          <div
+            style={{
+              // marginTop: "150px",
+              // zIndex: 1,
+              // height: "15vh",
+              // backgroundColor: "black",
+              // opacity: "85%",
+              // border: "2px solid red",
+            }}
+          >
+            <div
               style={{
-                backgroundColor: "black",
-                fontSize: "8vw",
                 left: "-5vw",
-              }}
-              className="name-in-text-left"
-            >
-              Patrick{" "}
-            </span>
-            <span style={{ margin: "2vw" }}>""</span>
-            <span
-              style={{
+                zIndex: 1,
+                // height: "15vh",
                 backgroundColor: "black",
-                fontSize: "8vw",
+                opacity: "85%",
+  
               }}
-              className="name-in-text-right"
             >
-              Kilcullen
-            </span>
+              <span
+                style={{
+                  backgroundColor: "black",
+                  fontSize: "8vw",
+                  left: "-5vw",
+                }}
+                className="name-in-text-left"
+              >
+                Patrick{" "}
+              </span>
+              <span style={{ margin: "2vw" }}>""</span>
+              <span
+                style={{
+                  backgroundColor: "black",
+                  fontSize: "8vw",
+                }}
+                className="name-in-text-right"
+              >
+                Kilcullen
+              </span>
+            </div>
 
-            <div style={{ backgroundColor: "#050c2c", marginTop: "-1%"}}>
+            <div style={{ backgroundColor: "#050c2c", marginTop: "-1%" }}>
               <span
                 // className="name-in-text-left"
                 className="software-engineer"
@@ -336,6 +358,7 @@ useEffect(() => {
           speed={2}
         ></ParallaxLayer>
 
+        {/* BOTTOM */}
         <ParallaxLayer
           style={{
             backgroundImage: `url(${computer})`,
@@ -398,35 +421,54 @@ useEffect(() => {
           </div>
         </ParallaxLayer> */}
 
+        {/* ABOUT ME */}
         <ParallaxLayer
           offset={0.5}
-          speed={0.5}
+          speed={1}
           factor={1}
-          style={{ textAlign: "center", left: "5vw" }}
+          style={{
+            textAlign: "center",
+            //  left: "5vw",
+            display: "flex",
+            justifyContent: "space-around",
+          }}
         >
           {/* <Home2></Home2> */}
           <div>
-            {/* <img
+            <img
               alt="Patrick Kilcullen"
               className="profilePic"
               src={profilePic}
-              style={{ filter: "saturate(300%) contrast(130%) brightness(70%) grayscale(20%)", zIndex: 0 }}
-            /> */}
+              style={{
+                filter:
+                  "saturate(300%) contrast(130%) brightness(70%) grayscale(20%)",
+                zIndex: 0,
+              }}
+            />
             <h1
               // ref={ref}
               className="homeAbout"
-              style={{ width: "50vw" }}
+              style={{ width: "70vw" }}
             >
               {typedText}
             </h1>
           </div>
         </ParallaxLayer>
-
-        <ParallaxLayer
+        {/* TECH */}
+        {/* <ParallaxLayer
           offset={0.3}
           speed={6}
           factor={0.5}
           style={{ left: "60vw", marginTop: "800px" }}
+        >
+          <Tech></Tech>
+        </ParallaxLayer> */}
+
+        <ParallaxLayer
+          offset={0.3}
+          speed={2}
+          factor={0.5}
+          style={{ marginTop: "800px" }}
         >
           <Tech></Tech>
         </ParallaxLayer>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import '../style/home.css'
 
 // import nodeIcon from '../icons8-nodejs-48.png'
@@ -17,9 +17,13 @@ import expressIcon from '../icons8-express-js-64.png'
 
 import JavascriptIcon from "@mui/icons-material/Javascript";
 
+import { useInView } from "react-intersection-observer";
+
 
 const Tech = () => {
-
+  const [ref, inView] = useInView({
+    threshold: 1
+  });
 
 
   let symbols = [
@@ -36,7 +40,14 @@ const Tech = () => {
   ];
 
   
- 
+const [slide, setSlide] = useState(false)
+
+ useEffect(()=>{
+if(inView){
+  console.log("IN VIEWWW")
+  setSlide(true)
+}
+ }, [inView])
 
 
 
@@ -63,11 +74,43 @@ const Tech = () => {
     //   </div>
     // </div>
 
-    <div style={{ width: "20vw" }}>
+    // <div style={{ width: "20vw" }}>
+    //   {/* <hr className="divider" /> */}
+    //   <div style={{ width: "500px" }}></div>
+    //   <div className="tech" style={{ left: "100vw", width: "50vw" }}>
+    //     <div style={{ display: "flex", flexDirection: "column" }}>
+    //       {symbols.map((symbol) => {
+    //         return (
+    //           <div style={{ display: "flex", alignItems: "center" }}>
+    //             <img
+    //               alt="language-icon"
+    //               className="node-icon"
+    //               src={symbol.symbole}
+    //               style={{ height: "80px",   filter: "saturate(30%)" }}
+    //             />
+    //             <h1 style={{ color: "#d8a2a2", fontSize: "40px" }}>{symbol.name}</h1>
+    //           </div>
+    //         );
+    //       })}
+    //     </div>
+    //   </div>
+    // </div>
+
+    <div  style={{ display: "flex", flexDirection: "column", alignItems: "center"}}>
       {/* <hr className="divider" /> */}
-      <div style={{ width: "500px" }}></div>
-      <div className="tech" style={{ left: "100vw", width: "50vw" }}>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+
+      <h1 ref={ref} 
+      style={{animation: slide ? "slideInAnimationLeft 1s forwards" : null, color: inView ? "red" : "white"}}
+      > {slide ? `I have experience working with a range of technologies and an tools, including...` : "gatyyyy"}</h1>
+      <div className="tech">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+           
+          }}
+        >
           {symbols.map((symbol) => {
             return (
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -75,9 +118,11 @@ const Tech = () => {
                   alt="language-icon"
                   className="node-icon"
                   src={symbol.symbole}
-                  style={{ height: "80px",   filter: "saturate(30%)" }}
+                  style={{ height: "80px", filter: "saturate(30%)", backgroundColor: inView ? "green" : null }}
                 />
-                <h1 style={{ color: "#d8a2a2", fontSize: "40px" }}>{symbol.name}</h1>
+                <h1 style={{ color: "#d8a2a2", fontSize: "40px" }}>
+                  {symbol.name}
+                </h1>
               </div>
             );
           })}
