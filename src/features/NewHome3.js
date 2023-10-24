@@ -132,7 +132,7 @@ const NewHome2 = () => {
     <div>
       <Parallax pages={2.9}>
         <ParallaxLayer
-          id={"bummyboy"}
+          id="title"
           offset={0}
           speed={1}
           factor={0}

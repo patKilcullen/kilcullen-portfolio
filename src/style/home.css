@@ -17,6 +17,7 @@
   /* border: 2px solid green; */
   display: flex;
   flex-direction: row;
+
   
   
 }
@@ -56,7 +57,7 @@
   font-size: 50px;
   font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
-
+font-size: 8vw;
   display: inline-block;
   overflow: hidden;
   animation: slideInAnimationLeft 1s forwards;
@@ -85,7 +86,7 @@ margin-left: 20vw;
 
 .name-in-text-right{
   color: rgb(228, 225, 225);
-  font-size: 50px;
+  font-size: 8vw;
   font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
 
@@ -116,7 +117,10 @@ margin-left: 20vw;
   margin-right: -5%;
 }
 .tech-text{
-color: #d8a2a2
+color: #d8a2a2;
+width: 80vw;
+font-size: 40px;
+
 }
 .divider {
   width: 75%;
@@ -220,16 +224,16 @@ animation: pulse 10s infinite;
 }
 @media only screen and (max-width: 900px){
   .profilePic {
-    float: none; 
-    margin-left: -20vw;
+    /* float: none; 
+    margin-left: -20vw; */
   }
   }
 
 @media only screen and (max-width: 600px) {
   .mainContainer {
-    flex-direction: column;
+    /* flex-direction: column;
     margin-left: 1vw;
-   
+    */
   }
  
   /* .scroll {
@@ -242,7 +246,7 @@ animation: pulse 10s infinite;
   
   .homeAbout {
   overflow: scroll;
-  max-height: 50vh;
+  max-height: 60vh;
     
     }
   .homeButtons{
@@ -254,22 +258,201 @@ animation: pulse 10s infinite;
     width: 50vw;
     font-size: 20px;
   }
+
+
   .tech {
     margin-left: -20vw;
   }
 }
 
 
-
-@media (max-width: 767px) {
-  /* Your CSS styles for small screens here */
+#tech-layer{
+margin-top:  900px;
+}
+#projects-layer{
+margin-top: -1000px;
 }
 
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Your CSS styles for medium screens here */
+
+
+
+/* Styles for Mobile devices (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .name-in-text-left{
+  margin-top: -50px;
+  font-size: 15vw;
+}
+.name-in-text-right{
+   /* margin-top: -400px; */
+   font-size: 15vw;
+}
+   #about-me-layer{
+
 }
 
-@media (min-width: 1024px) {
-  /* Your CSS styles for large screens here */
+  #tech-layer{
+ margin-top: 1300px;
+  }
+
+  #tech-text{
+    font-size: 25px;
+  }
+  .tech-text{
+    font-size: 25px;
+  }
+  #projects-layer{
+margin-top: 100px;
 }
+  #experience-layer{
+  
+}
+
+.node-icon{
+  height: 60px;
+
+}
+
+
+
+}
+
+/* Styles for iPads and Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+
+.name-in-text-left{
+  margin-top: -50px;
+  font-size: 100px;
+}
+.name-in-text-right{
+   /* margin-top: -400px; */
+   font-size: 100px;
+}
+    #about-me-layer{
+       /* position: absolute; 
+    top: -200px;
+   */
+}
+
+  #tech-layer{
+    margin-top: 1200px;
+}
+
+
+
+  #projects-layer{
+margin-top: 100px;
+}
+  #experience-layer{
+  
+}
+.node-icon{
+  height: 80px;
+
+}
+
+}
+
+/* Styles for Small screens and laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+.name-in-text-left{
+  
+  font-size: 10vw;
+}
+.name-in-text-right{
+   /* margin-top: -400px; */
+   font-size: 10vw;
+}
+   
+
+
+
+   #about-me-layer{
+  
+
+}
+
+  #tech-layer{
+
+    
+    margin-top: 1200px;
+}
+
+  #projects-layer{
+margin-top: 100px;
+}
+  #experience-layer{
+  
+}
+
+.node-icon{
+  height: 80px;
+
+}
+
+
+
+}
+
+/* Styles for Desktops and large screens (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+   #about-me-layer{
+  
+}
+
+  #tech-layer{
+  margin-top: 900px;
+}
+
+  #projects-layer{
+margin-top: 100px;
+}
+  #experience-layer{
+  
+}
+
+.node-icon{
+  height: 80px;
+
+}
+
+}
+
+/* Styles for Extra large screens and TVs (1201px and more) */
+@media (min-width: 1201px) {
+   #about-me-layer{
+  
+}
+
+  #tech-layer{
+  
+}
+
+  #projects-layer{
+margin-top: 100px;
+}
+  #experience-layer{
+  
+}
+
+.node-icon{
+  height: 80px;
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+

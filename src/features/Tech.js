@@ -96,32 +96,46 @@ if(inView){
     //   </div>
     // </div>
 
-    <div  style={{ display: "flex", flexDirection: "column", alignItems: "center"}}>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       {/* <hr className="divider" /> */}
 
-      <h1 ref={ref} className="tech-text"
-      style={{animation: slide ? "slideInAnimationLeft 1s forwards" : null,
-   visibility: !inView ? "hidden" : null }}
-      > I have experience working with a range of technologies and an tools, including...</h1>
+      <h1
+        ref={ref}
+        className="tech-text"
+        style={{
+          animation: slide ? "slideInAnimationLeft 1s forwards" : null,
+          visibility: !inView ? "hidden" : null,
+        }}
+      >
+        {" "}
+        I have experience working with a range of technologies and an tools,
+        including...
+      </h1>
       <div className="tech">
         <div
           style={{
             display: "flex",
             flexDirection: "row",
             flexWrap: "wrap",
-           
+          
           }}
+      
         >
           {symbols.map((symbol) => {
             return (
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div
+                style={{ display: "flex", alignItems: "center" }}
+                id="tech-list"
+              >
                 <img
                   alt="language-icon"
                   className="node-icon"
                   src={symbol.symbole}
-                  style={{ height: "80px", filter: "saturate(30%)"}}
+                  style={{ filter: "saturate(30%)" }}
                 />
-                <h1 style={{ color: "#d8a2a2", fontSize: "40px" }}>
+                <h1 id="tech-text" style={{ color: "#d8a2a2", }}>
                   {symbol.name}
                 </h1>
               </div>
