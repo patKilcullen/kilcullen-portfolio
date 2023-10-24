@@ -16,6 +16,7 @@ import SideNav from "../SideNav";
 import NavBar from "../NavBar";
 
 import Tech from "./Tech";
+import EditDesign from "./EditDesign";
 
 import forest from "./forest.png";
 import mountains from "./mountains.png";
@@ -173,10 +174,10 @@ setSkySaturation(e.target.value -200);
 
 
 
-       const [hue, setHue] = useState(0)
-       const handleChangeColor =()=>{
-setHue(hue + 20)
-       }
+//        const [hue, setHue] = useState(0)
+//        const handleChangeColor =()=>{
+// setHue(hue + 20)
+//        }
 
        const [nightMode, setNightMode] = useState(false)
        const handleNightMode =()=>{
@@ -185,7 +186,9 @@ setNightMode(!nightMode)
 
   return (
     <div>
-      {/* <button onClick={handleChangeColor}>change color</button> */}
+      <EditDesign handleBrightness={handleBrightness} handleColor={handleColor} handleContrast={handleContrast} handleNightMode={handleNightMode} handleSaturation={handleSaturation} handlegrayscale={handlegrayscale}
+      brightness={brightness} color={color} contrast={contrast} nightMode={nightMode} saturation={saturation} grayscale={grayscale}/>
+      {/* <button onClick={handleChangeColor}>change color</button>
       <button onClick={handleNightMode}>Night Mode</button>
       <label style={{ color: "white" }}>Color</label>
       <input
@@ -227,7 +230,7 @@ setNightMode(!nightMode)
         max={200}
         value={brightness}
         onChange={handleBrightness}
-      />
+      /> */}
       <Parallax pages={3.1}>
         <ParallaxLayer
           offset={0}
