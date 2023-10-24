@@ -274,12 +274,17 @@ margin-top: -1000px;
 }
 
 
+#about-me-layer{
+  margin-top: 75px;
+}
 
+/* @media  (max-width: 319px) {
 
+} */
 
 /* Styles for Mobile devices (320px - 480px) */
-@media (min-width: 320px) and (max-width: 480px) {
-
+/* @media (min-width: 320px) and (max-width: 480px) { */
+@media (max-width: 480px) {
   .name-in-text-left{
   margin-top: -50px;
   font-size: 15vw;
@@ -289,14 +294,14 @@ margin-top: -1000px;
    font-size: 15vw;
 }
    #about-me-layer{
-
+  margin-top: 0px;
 }
 .profilePic{
   height: 50vh;
 }
 
   #tech-layer{
- margin-top: 1300px;
+ margin-top: 1500px;
   }
 
   #tech-text{

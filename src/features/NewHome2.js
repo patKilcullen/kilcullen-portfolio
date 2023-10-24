@@ -123,24 +123,110 @@ useEffect(() => {
   }, [currentIndex, inView, typingDelay]);
 
 
-  const [slider, setSlider] = useState(0)
-
-  const handleSlide =(e)=>{
-setSlider(e.target.value)
-console.log("THIS SLIOER: ", slider)
+  
+  const [saturation, setSaturation] = useState(300);
+  const [skySaturation, setSkySaturation] = useState(saturation - 200);
+  const handleSaturation =(e)=>{
+setSaturation(e.target.value)
+setSkySaturation(e.target.value -200);
   }
-  useState(()=>{
-console.log("SLIDER: ", slider )
-  }, slider)
+
+  const [grayscale, setGrayscale] = useState(20);
+  const [skyGrayscale, setSkyGrayscale] = useState(grayscale - 20);
+  const handlegrayscale = (e) => {
+    setGrayscale(e.target.value);
+    setSkyGrayscale(e.target.value -20);
+  };
+
+    const [contrast, setContrast] = useState(130);
+    const [skyContrast, setSkyContrast] = useState(contrast - 30);
+    const handleContrast = (e) => {
+      setContrast(e.target.value);
+      setSkyContrast(e.target.value - 30);
+        console.log("contrast: ", contrast, typeof contrast);
+        console.log("SKY contrast: ", skyContrast, typeof e.target.value);
+    };
+
+       const [brightness, setBrightness] = useState(70);
+       const [skyBrightness, setSkyBrightness] = useState(brightness +30);
+       const handleBrightness = (e) => {
+         setBrightness(e.target.value);
+         setSkyBrightness(Number(e.target.value) + 30);
+         console.log("BRIGHTNESS: ", brightness, typeof brightness)
+          console.log("SKY BRIGHTNESS: ", skyBrightness, typeof e.target.value);
+       };
+
+
+
+          const [color, setColor] = useState(0);
+          const [skyColor, setSkyColor] = useState(0);
+          const handleColor = (e) => {
+            setColor(e.target.value);
+            setSkyColor(
+              e.target.value > 0
+                ? `-${e.target.value}`
+                : Number(e.target.value) + (Math.abs(Number(e.target.value)) * 2)
+            );
+            console.log("color: ", color, typeof color);
+            console.log("SKY color: ", skyColor, typeof skycolor);
+          };
+
+
+
+       const [hue, setHue] = useState(0)
+       const handleChangeColor =()=>{
+setHue(hue + 20)
+       }
+
+       const [nightMode, setNightMode] = useState(false)
+       const handleNightMode =()=>{
+setNightMode(!nightMode)
+       }
 
   return (
     <div>
+      {/* <button onClick={handleChangeColor}>change color</button> */}
+      <button onClick={handleNightMode}>Night Mode</button>
+      <label style={{ color: "white" }}>Color</label>
+      <input
+        type="range"
+        min={-180}
+        max={180}
+        value={color}
+        onChange={handleColor}
+      />
+
+      <label style={{ color: "white" }}>saturation</label>
       <input
         type="range"
         min={0}
-        max={100}
-        value={slider}
-        onChange={handleSlide}
+        max={600}
+        value={saturation}
+        onChange={handleSaturation}
+      />
+      <label style={{ color: "white" }}>grayscale</label>
+      <input
+        type="range"
+        min={20}
+        max={120}
+        value={grayscale}
+        onChange={handlegrayscale}
+      />
+      <label style={{ color: "white" }}>contrast</label>
+      <input
+        type="range"
+        min={30}
+        max={300}
+        value={contrast}
+        onChange={handleContrast}
+      />
+      <label style={{ color: "white" }}>brightness</label>
+      <input
+        type="range"
+        min={-30}
+        max={200}
+        value={brightness}
+        onChange={handleBrightness}
       />
       <Parallax pages={3.1}>
         <ParallaxLayer
@@ -214,7 +300,12 @@ console.log("SLIDER: ", slider )
 
         <ParallaxLayer
           id={"ai"}
-          style={{ backgroundImage: `url(${sky4})`, backgroundSize: "cover" }}
+          style={{
+            backgroundImage: nightMode ? `url(${newMoon})` : `url(${sky4})`,
+            // backgroundColor: nightMode ? "black" : null,
+            backgroundSize: "cover",
+            filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
+          }}
           factor={3.1}
           speed={0.5}
         ></ParallaxLayer>
@@ -222,9 +313,10 @@ console.log("SLIDER: ", slider )
         <ParallaxLayer
           id={"clouds"}
           style={{
-            backgroundImage: `url(${clouds3})`,
+            backgroundImage: nightMode ? null : `url(${clouds3})`,
             backgroundSize: "cover",
             left: "50vw",
+            filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
           }}
           factor={2}
           offset={0.4}
@@ -234,8 +326,9 @@ console.log("SLIDER: ", slider )
         <ParallaxLayer
           id={"clouds"}
           style={{
-            backgroundImage: `url(${clouds3})`,
+            backgroundImage: nightMode ? null : `url(${clouds3})`,
             backgroundSize: "cover",
+            filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
           }}
           factor={2}
           offset={0.4}
@@ -245,9 +338,10 @@ console.log("SLIDER: ", slider )
         <ParallaxLayer
           id={"clouds"}
           style={{
-            backgroundImage: `url(${cloudsPurple})`,
+            backgroundImage: `url(${cloudsPurple}) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
             backgroundSize: "contain",
             left: "25vw",
+            filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
           }}
           factor={2}
           offset={0.5}
@@ -259,6 +353,7 @@ console.log("SLIDER: ", slider )
           style={{
             backgroundImage: `url(${mountains})`,
             backgroundSize: "cover",
+            filter: `hue-rotate(${skyColor}deg)`,
           }}
           factor={4}
           offset={1}
@@ -274,6 +369,7 @@ console.log("SLIDER: ", slider )
             height: "200vh",
             width: "200vw",
             zIndex: 10000,
+            filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
           }}
           factor={3}
           offset={1.2}
@@ -296,6 +392,7 @@ console.log("SLIDER: ", slider )
             backgroundSize: "cover",
             left: "-5vw",
             zIndex: 10000,
+            filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
             // transform: "rotate(-5deg)"
             // transform: "scaleX(-1)",
           }}
@@ -324,8 +421,7 @@ console.log("SLIDER: ", slider )
               className="profilePic"
               src={profilePic}
               style={{
-                filter:
-                  "saturate(300%) contrast(130%) brightness(70%) grayscale(20%)",
+                filter: `saturate(${saturation}%) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayscale}%) hue-rotate(${skyColor}deg)`,
                 zIndex: 0,
               }}
             />
@@ -357,7 +453,7 @@ console.log("SLIDER: ", slider )
           // sticky={{ start: .4, end: 1 }}
           id="projects-layer"
           style={{
-            zIndex: 1000,
+            zIndex: 10001,
             // marginTop: "-1500px",
             //  marginTop: "1000px"
           }}
