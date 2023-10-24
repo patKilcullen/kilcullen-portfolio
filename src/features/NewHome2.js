@@ -123,12 +123,34 @@ useEffect(() => {
   }, [currentIndex, inView, typingDelay]);
 
 
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    // Add a resize event listener
+    window.addEventListener("resize", handleResize);
+
+    console.log("WINDOW SIZE: ", windowSize)
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  
 
 
   return (
     <div>
-      <Parallax pages={2.9}>
+      <Parallax pages={3.1}>
         <ParallaxLayer
           id={"bummyboy"}
           offset={0}
@@ -145,14 +167,16 @@ useEffect(() => {
           // sticky={{ start: 0, end: 3 }}
         >
           <div
-            style={{
-              // marginTop: "150px",
-              // zIndex: 1,
-              // height: "15vh",
-              // backgroundColor: "black",
-              // opacity: "85%",
-              // border: "2px solid red",
-            }}
+            style={
+              {
+                // marginTop: "150px",
+                // zIndex: 1,
+                // height: "15vh",
+                // backgroundColor: "black",
+                // opacity: "85%",
+                // border: "2px solid red",
+              }
+            }
           >
             <div
               style={{
@@ -161,7 +185,6 @@ useEffect(() => {
                 // height: "15vh",
                 backgroundColor: "black",
                 opacity: "85%",
-  
               }}
             >
               <span
@@ -240,7 +263,7 @@ useEffect(() => {
           </div>
         </ParallaxLayer> */}
 
-        <ParallaxLayer
+        {/* <ParallaxLayer
           offset={1}
           factor={1}
           speed={3}
@@ -252,7 +275,7 @@ useEffect(() => {
           }}
         >
           <Projects2></Projects2>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         <ParallaxLayer
           id={"ai"}
@@ -359,7 +382,7 @@ useEffect(() => {
         ></ParallaxLayer>
 
         {/* BOTTOM */}
-        <ParallaxLayer
+        {/* <ParallaxLayer
           style={{
             backgroundImage: `url(${computer})`,
             backgroundSize: "contain",
@@ -379,7 +402,7 @@ useEffect(() => {
               {typedText}
             </div>
           </div>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         {/* <ParallaxLayer
           sticky={{ start: 0.3, end: 0.3 }}
@@ -431,6 +454,7 @@ useEffect(() => {
             //  left: "5vw",
             display: "flex",
             justifyContent: "space-around",
+            gap: "20px",
           }}
         >
           {/* <Home2></Home2> */}
@@ -454,6 +478,7 @@ useEffect(() => {
             </h1>
           </div>
         </ParallaxLayer>
+
         {/* TECH */}
         {/* <ParallaxLayer
           offset={0.3}
@@ -468,11 +493,24 @@ useEffect(() => {
           offset={0.3}
           speed={2}
           factor={0.5}
-          style={{ marginTop: "800px" }}
+          style={{ marginTop: "900px" }}
         >
           <Tech></Tech>
         </ParallaxLayer>
 
+        <ParallaxLayer
+          offset={1}
+          factor={1}
+          speed={3}
+          // sticky={{ start: .4, end: 1 }}
+          style={{
+            zIndex: 1000,
+            marginTop: "-1500px",
+            //  marginTop: "1000px"
+          }}
+        >
+          <Projects2></Projects2>
+        </ParallaxLayer>
         {/* <ParallaxLayer sticky={{ start: 2, end: 3 }}>
           <SideNav></SideNav>
         </ParallaxLayer> */}
@@ -485,6 +523,17 @@ useEffect(() => {
           style={{ left: "-5vw", zIndex: 100000 }}
         >
           <Experience2></Experience2>
+        </ParallaxLayer>
+
+
+        <ParallaxLayer
+          offset={2.9}
+          factor={0.8}
+          speed={2.8}
+          // style={{ zIndex: 30 }}
+          style={{ backgroundColor: "black"}}
+        >
+        
         </ParallaxLayer>
       </Parallax>
     </div>

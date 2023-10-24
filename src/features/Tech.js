@@ -22,7 +22,7 @@ import { useInView } from "react-intersection-observer";
 
 const Tech = () => {
   const [ref, inView] = useInView({
-    threshold: 1
+    threshold: .5
   });
 
 
@@ -99,9 +99,10 @@ if(inView){
     <div  style={{ display: "flex", flexDirection: "column", alignItems: "center"}}>
       {/* <hr className="divider" /> */}
 
-      <h1 ref={ref} 
-      style={{animation: slide ? "slideInAnimationLeft 1s forwards" : null, color: inView ? "red" : "white"}}
-      > {slide ? `I have experience working with a range of technologies and an tools, including...` : "gatyyyy"}</h1>
+      <h1 ref={ref} className="tech-text"
+      style={{animation: slide ? "slideInAnimationLeft 1s forwards" : null,
+   visibility: !inView ? "hidden" : null }}
+      > I have experience working with a range of technologies and an tools, including...</h1>
       <div className="tech">
         <div
           style={{
@@ -118,7 +119,7 @@ if(inView){
                   alt="language-icon"
                   className="node-icon"
                   src={symbol.symbole}
-                  style={{ height: "80px", filter: "saturate(30%)", backgroundColor: inView ? "green" : null }}
+                  style={{ height: "80px", filter: "saturate(30%)"}}
                 />
                 <h1 style={{ color: "#d8a2a2", fontSize: "40px" }}>
                   {symbol.name}
