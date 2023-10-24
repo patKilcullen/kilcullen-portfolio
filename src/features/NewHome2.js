@@ -183,54 +183,17 @@ setSkySaturation(e.target.value -200);
        const handleNightMode =()=>{
 setNightMode(!nightMode)
        }
+const [showEditDesign, setShowEditDesign] = useState(false)
+const handleShowEdit =()=>{
+  setShowEditDesign(!showEditDesign)
+}
 
   return (
     <div>
-      <EditDesign handleBrightness={handleBrightness} handleColor={handleColor} handleContrast={handleContrast} handleNightMode={handleNightMode} handleSaturation={handleSaturation} handlegrayscale={handlegrayscale}
+      {showEditDesign ?
+      <EditDesign handleShowEdit={handleShowEdit} handleBrightness={handleBrightness} handleColor={handleColor} handleContrast={handleContrast} handleNightMode={handleNightMode} handleSaturation={handleSaturation} handlegrayscale={handlegrayscale}
       brightness={brightness} color={color} contrast={contrast} nightMode={nightMode} saturation={saturation} grayscale={grayscale}/>
-      {/* <button onClick={handleChangeColor}>change color</button>
-      <button onClick={handleNightMode}>Night Mode</button>
-      <label style={{ color: "white" }}>Color</label>
-      <input
-        type="range"
-        min={-180}
-        max={180}
-        value={color}
-        onChange={handleColor}
-      />
-
-      <label style={{ color: "white" }}>saturation</label>
-      <input
-        type="range"
-        min={0}
-        max={600}
-        value={saturation}
-        onChange={handleSaturation}
-      />
-      <label style={{ color: "white" }}>grayscale</label>
-      <input
-        type="range"
-        min={20}
-        max={120}
-        value={grayscale}
-        onChange={handlegrayscale}
-      />
-      <label style={{ color: "white" }}>contrast</label>
-      <input
-        type="range"
-        min={30}
-        max={300}
-        value={contrast}
-        onChange={handleContrast}
-      />
-      <label style={{ color: "white" }}>brightness</label>
-      <input
-        type="range"
-        min={-30}
-        max={200}
-        value={brightness}
-        onChange={handleBrightness}
-      /> */}
+      : <label style={{color: "white"}}>Don't like my design? Click to<button onClick={handleShowEdit}>Edit</button></label>}
       <Parallax pages={3.1}>
         <ParallaxLayer
           offset={0}
