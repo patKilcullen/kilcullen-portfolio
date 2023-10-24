@@ -123,33 +123,25 @@ useEffect(() => {
   }, [currentIndex, inView, typingDelay]);
 
 
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+  const [slider, setSlider] = useState(0)
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
-    // Add a resize event listener
-    window.addEventListener("resize", handleResize);
-
-    console.log("WINDOW SIZE: ", windowSize)
-    // Remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  
-
+  const handleSlide =(e)=>{
+setSlider(e.target.value)
+console.log("THIS SLIOER: ", slider)
+  }
+  useState(()=>{
+console.log("SLIDER: ", slider )
+  }, slider)
 
   return (
     <div>
+      <input
+        type="range"
+        min={0}
+        max={100}
+        value={slider}
+        onChange={handleSlide}
+      />
       <Parallax pages={3.1}>
         <ParallaxLayer
           offset={0}
@@ -186,7 +178,6 @@ useEffect(() => {
                 opacity: "85%",
               }}
               id="title"
-             
             >
               <span
                 style={{
@@ -324,7 +315,6 @@ useEffect(() => {
             //  left: "5vw",
             display: "flex",
             justifyContent: "space-around",
-            
           }}
         >
           {/* <Home2></Home2> */}
@@ -339,6 +329,7 @@ useEffect(() => {
                 zIndex: 0,
               }}
             />
+            ;
             <h1
               // ref={ref}
               className="homeAbout"

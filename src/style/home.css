@@ -291,6 +291,9 @@ margin-top: -1000px;
    #about-me-layer{
 
 }
+.profilePic{
+  height: 50vh;
+}
 
   #tech-layer{
  margin-top: 1300px;
