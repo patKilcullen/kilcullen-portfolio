@@ -212,7 +212,8 @@ const handleShowEdit =()=>{
           <button onClick={handleShowEdit}>Edit</button>
         </label>
       )}
-      <Parallax pages={3.1}>
+      {/* <Parallax pages={3.1}> */}
+      <Parallax pages={2.2}>
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -290,15 +291,17 @@ const handleShowEdit =()=>{
         </ParallaxLayer>
 
         <ParallaxLayer
-          id={"ai"}
           style={{
             backgroundImage: nightMode ? `url(${newMoon})` : `url(${sky4})`,
             // backgroundColor: nightMode ? "black" : null,
             backgroundSize: "cover",
             filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
           }}
+          // factor={3.1}
+          // factor={2.9}
           factor={3.1}
-          speed={0.5}
+          // speed={0.5}
+          speed={1.5}
         ></ParallaxLayer>
 
         <ParallaxLayer
@@ -345,10 +348,14 @@ const handleShowEdit =()=>{
             backgroundImage: `url(${mountains})`,
             backgroundSize: "cover",
             filter: `hue-rotate(${skyColor}deg)`,
+            marginTop: "-150vh",
           }}
-          factor={4}
+          factor={3}
+          // factor={3}
+          // offset={1.1}
           offset={1}
-          speed={2.8}
+          // speed={2.8}
+          speed={3.8}
         ></ParallaxLayer>
 
         <ParallaxLayer
@@ -356,27 +363,38 @@ const handleShowEdit =()=>{
           style={{
             backgroundImage: `url(${clouds3})`,
             backgroundSize: "contain",
-            left: "-50vw",
+            left: "-70vw",
             height: "200vh",
             width: "200vw",
             zIndex: 10000,
             filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
           }}
-          factor={3}
-          offset={1.2}
-          speed={1}
+          offset={0.9}
+          speed={0.8}
         ></ParallaxLayer>
 
         <ParallaxLayer
           style={{
             backgroundImage: `url(${lake})`,
             backgroundSize: "cover",
+            marginTop: "-350vh",
           }}
           factor={1}
           offset={2}
-          speed={3}
-        ></ParallaxLayer>
-
+          speed={3.8}
+        >
+          <SideNav></SideNav>
+          {/* <img
+            alt="computer"
+            // className="profilePic"
+            src={computer}
+            style={{
+              width: "100vw",
+              marginTop: "-40vh"
+            }}
+          /> */}
+        </ParallaxLayer>
+        {/* 
         <ParallaxLayer
           style={{
             backgroundImage: `url(${clouds4})`,
@@ -390,13 +408,13 @@ const handleShowEdit =()=>{
           factor={2}
           offset={3}
           speed={2}
-        ></ParallaxLayer>
+        ></ParallaxLayer> */}
 
         {/* ABOUT ME */}
         <ParallaxLayer
           offset={0.5}
           speed={1}
-          factor={1}
+          // factor={1}
           // id="about-me-layer"
           style={{
             textAlign: "center",
@@ -430,7 +448,7 @@ const handleShowEdit =()=>{
         <ParallaxLayer
           offset={0.3}
           speed={2}
-          factor={0.5}
+          //  factor={0.5}
           id="tech-layer"
           // style={{ marginTop: "900px" }}
         >
@@ -439,7 +457,7 @@ const handleShowEdit =()=>{
 
         <ParallaxLayer
           offset={1}
-          factor={1}
+          // factor={1}
           speed={3}
           // sticky={{ start: .4, end: 1 }}
           id="projects-layer"
@@ -454,7 +472,7 @@ const handleShowEdit =()=>{
 
         {/* <ParallaxLayer
           offset={1.15}
-          factor={0.8}
+          // factor={10}
           speed={4}
           id="experience-layer"
           // style={{ zIndex: 30 }}
@@ -462,14 +480,14 @@ const handleShowEdit =()=>{
         >
           <Experience2></Experience2>
         </ParallaxLayer> */}
-
+        {/* 
         <ParallaxLayer
           offset={2.9}
           factor={0.8}
           speed={2.8}
           // style={{ zIndex: 30 }}
           style={{ backgroundColor: "black" }}
-        ></ParallaxLayer>
+        ></ParallaxLayer> */}
       </Parallax>
     </div>
   );

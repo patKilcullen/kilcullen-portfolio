@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: column;
 
-margin-left: 12vw;
+/* margin-left: 12vw; */
     gap: 5vh;
  
-    width: 75%;
+    /* width: 75%; */
     
-    
+      width: 100%;
 }
 
 .pageTitle {
