@@ -1,7 +1,5 @@
 .home {
   width: 100%;
-  /* align-items: center; */
-  /* font-family: "Arial", sans-serif; */
   color: #3e497a;
 }
 
@@ -13,31 +11,21 @@
 .mainContainer {
   margin-top: 10vh;
   margin-left: 30vh;
-  width: 80vw;
-  /* border: 2px solid green; */
   display: flex;
   flex-direction: row;
-
-  
-  
 }
 
-
-
 .profilePic {
-  /* border-radius: 50px; */
-    border-radius: 50px;
+
+  border-radius: 50px;
   height: 35vh;
   border: 2px solid rgb(135, 82, 82);
   flex: 0 0 auto;
-  /* margin-right: 50vw; */
+
 
   float: right;
-  /* box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3); */
-  /* box-shadow: 4px 4px 8px 4px rgb(153, 151, 157); */
   box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
 }
-
 
 .homeAbout {
   /* flex: 1 1 auto; */
@@ -47,35 +35,36 @@
 
   margin-bottom: 55px;
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  font-family:  "Monaco", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
- 
+  font-family: "Monaco", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
   font-size: 30px;
 }
 
-.name-in-text-left{
+.name-in-text-left {
   color: rgb(228, 225, 225);
   font-size: 50px;
-  font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
   font-weight: bold;
-font-size: 8vw;
+  font-size: 8vw;
   display: inline-block;
   overflow: hidden;
   animation: slideInAnimationLeft 1s forwards;
-  
- }
- .software-engineer{
+}
+.software-engineer {
   color: rgb(228, 225, 225);
   font-size: 4vw;
-  font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
   font-weight: bold;
-margin-left: 20vw;
+  margin-left: 20vw;
   display: inline-block;
   overflow: hidden;
   animation: slideInAnimationLeft 1s forwards;
   background-color: #050c2c;
- }
- 
- @keyframes slideInAnimationLeft {
+}
+
+@keyframes slideInAnimationLeft {
   0% {
     transform: translateX(-300%);
   }
@@ -84,18 +73,18 @@ margin-left: 20vw;
   }
 }
 
-.name-in-text-right{
+.name-in-text-right {
   color: rgb(228, 225, 225);
   font-size: 8vw;
-  font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
   font-weight: bold;
 
   display: inline-block;
   overflow: hidden;
   animation: slideInAnimationRight 1s forwards;
-  
- }
- @keyframes slideInAnimationRight {
+}
+@keyframes slideInAnimationRight {
   0% {
     transform: translateX(300%);
   }
@@ -104,9 +93,7 @@ margin-left: 20vw;
   }
 }
 
-
-
-.about-and-pic{
+.about-and-pic {
   background-color: rgba(103, 62, 166, 0.1);
   box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3);
 }
@@ -116,11 +103,10 @@ margin-left: 20vw;
 
   margin-right: -5%;
 }
-.tech-text{
-color: #d8a2a2;
-width: 80vw;
-font-size: 40px;
-
+.tech-text {
+  color: #d8a2a2;
+  width: 80vw;
+  font-size: 40px;
 }
 .divider {
   width: 75%;
@@ -132,44 +118,33 @@ font-size: 40px;
   color: white;
   height: 2px;
 }
-.tech {
-  /* background-color: rgba(103, 62, 166, 0.1);
-  box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3); */
-}
+
 .techIntro {
   text-align: left;
   color: #d8a2a2;
-
 }
-.language-icon{
+.language-icon {
   font-size: 10px;
 }
 
 .homeButtons {
   display: flex;
-  
+
   justify-self: space-between;
   gap: 50px;
   margin-top: 15px;
   width: 80%;
-  
-  /* background-color: rgba(103, 62, 166, 0.1);
-  box-shadow: 4px 4px 8px 4px rgba(168, 128, 128, 0.3); */
 }
 
-
-#button{
-
-color: #3e497a;
-background-color: #d8a2a2;
-font-weight: bold;
-font-size: 23px;
-/* box-shadow: 4px 4px 8px 4px rgba(234, 238, 111, 0.5); */
-
-box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
-border-radius: 20px;
-border: 2px solid white;
-animation: pulse 10s infinite;
+#button {
+  color: #3e497a;
+  background-color: #d8a2a2;
+  font-weight: bold;
+  font-size: 23px;
+  box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
+  border-radius: 20px;
+  border: 2px solid white;
+  animation: pulse 10s infinite;
 }
 @keyframes pulse {
   0% {
@@ -191,65 +166,25 @@ animation: pulse 10s infinite;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 1050px){
-.homeButtons{
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-}
-.button {
-  width: 20vw;
-  font-size: 20px;
-}
-/* .about-and-pic{
-  display: flex;
-  flex-direction: column;
-} */
-/* .profilePic {
-  float: none;
-} */
-}
-@media only screen and (max-width: 900px){
-  .profilePic {
-    /* float: none; 
-    margin-left: -20vw; */
-  }
-  }
-
 @media only screen and (max-width: 600px) {
   .mainContainer {
     /* flex-direction: column;
     margin-left: 1vw;
     */
   }
- 
+
   /* .scroll {
     overflow: scroll;
   } */
   .profilePic {
     float: none;
-   
   }
-  
+
   .homeAbout {
-  overflow: scroll;
-  max-height: 60vh;
-    
-    }
-  .homeButtons{
+    overflow: scroll;
+    max-height: 60vh;
+  }
+  .homeButtons {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -259,219 +194,170 @@ animation: pulse 10s infinite;
     font-size: 20px;
   }
 
-
   .tech {
     margin-left: -20vw;
   }
 }
 
-
-#tech-layer{
-margin-top:  900px;
+#tech-layer {
+  margin-top: 900px;
 }
-#projects-layer{
-margin-top: -1000px;
+#projects-layer {
+  margin-top: -1000px;
 }
 
-
-#about-me-layer{
+#about-me-layer {
   margin-top: 75px;
-  
 }
-
 
 /* Styles for Mobile devices (320px - 480px) */
 @media (max-width: 480px) {
-  .name-in-text-left{
-  margin-top: -50px;
-  font-size: 15vw;
-}
-.name-in-text-right{
-   /* margin-top: -400px; */
-   font-size: 15vw;
-}
-   #about-me-layer{
-  margin-top: 0px;
-}
-.profilePic{
-  height: 50vh;
-}
-
-  #tech-layer{
- margin-top: 1500px;
+  .name-in-text-left {
+    margin-top: -50px;
+    font-size: 15vw;
+  }
+  .name-in-text-right {
+    /* margin-top: -400px; */
+    font-size: 15vw;
+  }
+  #about-me-layer {
+    margin-top: 0px;
+  }
+  .profilePic {
+    height: 50vh;
   }
 
-  #tech-text{
+  #tech-layer {
+    margin-top: 1500px;
+  }
+
+  #tech-text {
     font-size: 25px;
   }
-  .tech-text{
+  .tech-text {
     font-size: 25px;
   }
-  #projects-layer{
-margin-top: 500px;
-}
-  #experience-layer{
-  
-}
+  #projects-layer {
+    margin-top: 500px;
+  }
+  #experience-layer {
+  }
 
-.node-icon{
-  height: 60px;
-
-}
-
-
-
+  .node-icon {
+    height: 60px;
+  }
 }
 
 /* Styles for iPads and Tablets (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-
-
-.name-in-text-left{
-  margin-top: -50px;
-  font-size: 100px;
-}
-.name-in-text-right{
-   /* margin-top: -400px; */
-   font-size: 100px;
-}
-    #about-me-layer{
-       /* position: absolute; 
+  .name-in-text-left {
+    margin-top: -50px;
+    font-size: 100px;
+  }
+  .name-in-text-right {
+    /* margin-top: -400px; */
+    font-size: 100px;
+  }
+  #about-me-layer {
+    /* position: absolute; 
     top: -200px;
    */
-}
+  }
 
-  #tech-layer{
+  #tech-layer {
     margin-top: 1400px;
-}
- #tech-text{
+  }
+  #tech-text {
     font-size: 25px;
   }
-  .tech-text{
+  .tech-text {
     font-size: 25px;
   }
-.node-icon{
-  height: 60px;
+  .node-icon {
+    height: 60px;
+  }
 
-}
-
-  #projects-layer{
-/* margin-top: 100px; */
- margin-top: -125vh;
-}
-  #experience-layer{
-  
-}
-
-
+  #projects-layer {
+    /* margin-top: 100px; */
+    margin-top: -125vh;
+  }
+  #experience-layer {
+  }
 }
 
 /* Styles for Small screens and laptops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .name-in-text-left {
+    font-size: 10vw;
+  }
+  .name-in-text-right {
+    /* margin-top: -400px; */
+    font-size: 10vw;
+  }
 
+  #about-me-layer {
+  }
 
-.name-in-text-left{
-  
-  font-size: 10vw;
-}
-.name-in-text-right{
-   /* margin-top: -400px; */
-   font-size: 10vw;
-}
-   
-
-
-
-   #about-me-layer{
-  
-
-}
-
-  #tech-layer{
-
-    
+  #tech-layer {
     /* margin-top: 1000px; */
-      margin-top: 100vh;
-}
+    margin-top: 110vh;
+  }
 
-  #projects-layer{
-/* margin-top: -800px; */
- margin-top: -150vh;
-}
-  #experience-layer{
-   margin-top: 1200px; 
-}
+  #projects-layer {
+    /* margin-top: -800px; */
+    margin-top: -140vh;
+  }
+  #experience-layer {
+    margin-top: 1200px;
+  }
 
-.node-icon{
-  height: 80px;
-
-}
-
-
-
+  .node-icon {
+    height: 80px;
+  }
 }
 
 /* Styles for Desktops and large screens (1025px - 1200px) */
 @media (min-width: 1025px) and (max-width: 1200px) {
-   #about-me-layer{
-  
-}
+  #about-me-layer {
+  }
 
-  #tech-layer{
-  /* margin-top: 800px; */
-  margin-top: 100vh;
-}
+  #tech-layer {
+    /* margin-top: 800px; */
+    margin-top: 100vh;
+  }
 
-  #projects-layer{
- /* margin-top: -1000px;  */
-   margin-top: -150vh;
+  #projects-layer {
+    /* margin-top: -1000px;  */
+    margin-top: -150vh;
+  }
+  #experience-layer {
+    margin-top: 500px;
+  }
 
-}
-  #experience-layer{
-  margin-top: 500px; 
-}
-
-.node-icon{
-  height: 80px;
-
-}
-
+  .node-icon {
+    height: 80px;
+  }
 }
 
 /* Styles for Extra large screens and TVs (1201px and more) */
 @media (min-width: 1201px) {
-   #about-me-layer{
-  
-}
+  #about-me-layer {
+  }
 
-  #tech-layer{
-   /* margin-top: 1000px; */
+  #tech-layer {
+    /* margin-top: 1000px; */
     margin-top: 100vh;
-}
+  }
 
-  #projects-layer{
-
- /* margin-top: -1200px;  */
+  #projects-layer {
+    /* margin-top: -1200px;  */
     margin-top: -150vh;
+  }
+  #experience-layer {
+    margin-top: 500px;
+  }
+
+  .node-icon {
+    height: 80px;
+  }
 }
-  #experience-layer{
-   margin-top: 500px; 
-}
-
-.node-icon{
-  height: 80px;
-
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
