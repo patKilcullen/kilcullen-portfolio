@@ -1,6 +1,6 @@
 import React from 'react'
 import { Email, GitHub, LinkedIn } from '@material-ui/icons'
-import "./style/sideBar.css"
+import "../style/sideBar.css"
 
 const SideNav = () => {
   return (

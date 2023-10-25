@@ -279,12 +279,8 @@ margin-top: -1000px;
   
 }
 
-/* @media  (max-width: 319px) {
-
-} */
 
 /* Styles for Mobile devices (320px - 480px) */
-/* @media (min-width: 320px) and (max-width: 480px) { */
 @media (max-width: 480px) {
   .name-in-text-left{
   margin-top: -50px;
@@ -360,7 +356,8 @@ margin-top: 500px;
 }
 
   #projects-layer{
-margin-top: 100px;
+/* margin-top: 100px; */
+ margin-top: -125vh;
 }
   #experience-layer{
   
@@ -393,11 +390,13 @@ margin-top: 100px;
   #tech-layer{
 
     
-    margin-top: 1000px;
+    /* margin-top: 1000px; */
+      margin-top: 100vh;
 }
 
   #projects-layer{
-margin-top: -800px;
+/* margin-top: -800px; */
+ margin-top: -150vh;
 }
   #experience-layer{
    margin-top: 1200px; 
@@ -419,11 +418,14 @@ margin-top: -800px;
 }
 
   #tech-layer{
-  margin-top: 1000px;
+  /* margin-top: 800px; */
+  margin-top: 100vh;
 }
 
   #projects-layer{
- margin-top: -1200px; 
+ /* margin-top: -1000px;  */
+   margin-top: -150vh;
+
 }
   #experience-layer{
   margin-top: 500px; 
@@ -443,12 +445,14 @@ margin-top: -800px;
 }
 
   #tech-layer{
-   margin-top: 1000px;
+   /* margin-top: 1000px; */
+    margin-top: 100vh;
 }
 
   #projects-layer{
-/* margin-top: 100px; */
- margin-top: -1200px; 
+
+ /* margin-top: -1200px;  */
+    margin-top: -150vh;
 }
   #experience-layer{
    margin-top: 500px; 
