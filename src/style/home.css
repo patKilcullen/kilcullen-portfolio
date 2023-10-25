@@ -312,7 +312,7 @@ margin-top: -1000px;
     font-size: 25px;
   }
   #projects-layer{
-margin-top: 100px;
+margin-top: 500px;
 }
   #experience-layer{
   
@@ -346,10 +346,18 @@ margin-top: 100px;
 }
 
   #tech-layer{
-    margin-top: 1200px;
+    margin-top: 1400px;
 }
+ #tech-text{
+    font-size: 25px;
+  }
+  .tech-text{
+    font-size: 25px;
+  }
+.node-icon{
+  height: 60px;
 
-
+}
 
   #projects-layer{
 margin-top: 100px;
@@ -357,10 +365,7 @@ margin-top: 100px;
   #experience-layer{
   
 }
-.node-icon{
-  height: 80px;
 
-}
 
 }
 
@@ -388,11 +393,11 @@ margin-top: 100px;
   #tech-layer{
 
     
-    margin-top: 1200px;
+    margin-top: 1000px;
 }
 
   #projects-layer{
-margin-top: 100px;
+margin-top: -800px;
 }
   #experience-layer{
   
@@ -414,11 +419,11 @@ margin-top: 100px;
 }
 
   #tech-layer{
-  margin-top: 900px;
+  margin-top: 1000px;
 }
 
   #projects-layer{
-margin-top: 100px;
+ margin-top: -1200px; 
 }
   #experience-layer{
   
@@ -438,11 +443,12 @@ margin-top: 100px;
 }
 
   #tech-layer{
-  
+   margin-top: 1000px;
 }
 
   #projects-layer{
-margin-top: 100px;
+/* margin-top: 100px; */
+ margin-top: -1200px; 
 }
   #experience-layer{
   

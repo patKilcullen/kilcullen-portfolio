@@ -190,10 +190,28 @@ const handleShowEdit =()=>{
 
   return (
     <div>
-      {showEditDesign ?
-      <EditDesign handleShowEdit={handleShowEdit} handleBrightness={handleBrightness} handleColor={handleColor} handleContrast={handleContrast} handleNightMode={handleNightMode} handleSaturation={handleSaturation} handlegrayscale={handlegrayscale}
-      brightness={brightness} color={color} contrast={contrast} nightMode={nightMode} saturation={saturation} grayscale={grayscale}/>
-      : <label style={{color: "white"}}>Don't like my design? Click to<button onClick={handleShowEdit}>Edit</button></label>}
+      {showEditDesign ? (
+        <EditDesign
+          handleShowEdit={handleShowEdit}
+          handleBrightness={handleBrightness}
+          handleColor={handleColor}
+          handleContrast={handleContrast}
+          handleNightMode={handleNightMode}
+          handleSaturation={handleSaturation}
+          handlegrayscale={handlegrayscale}
+          brightness={brightness}
+          color={color}
+          contrast={contrast}
+          nightMode={nightMode}
+          saturation={saturation}
+          grayscale={grayscale}
+        />
+      ) : (
+        <label style={{ color: "white" }}>
+          Don't like my design? Click to
+          <button onClick={handleShowEdit}>Edit</button>
+        </label>
+      )}
       <Parallax pages={3.1}>
         <ParallaxLayer
           offset={0}
@@ -236,6 +254,7 @@ const handleShowEdit =()=>{
                   backgroundColor: "black",
                   // fontSize: "8vw",
                   left: "-5vw",
+                  filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
                 }}
                 className="name-in-text-left"
               >
@@ -253,7 +272,13 @@ const handleShowEdit =()=>{
               </span>
             </div>
 
-            <div style={{ backgroundColor: "#050c2c", marginTop: "-1%" }}>
+            <div
+              style={{
+                backgroundColor: "#050c2c",
+                marginTop: "-1%",
+                filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
+              }}
+            >
               <span
                 // className="name-in-text-left"
                 className="software-engineer"
