@@ -1,10 +1,9 @@
 import React from 'react'
 
-const EditDesign = ({ handleShowEdit, handleNightMode, handleColor, handleSaturation, handlegrayscale, handleContrast, handleBrightness, color, saturation, grayscale, contrast, brightness}) => {
+const EditDesign = ({handlePlainBackground, handleShowEdit, handleNightMode, handleColor, handleSaturation, handlegrayscale, handleContrast, handleBrightness, color, saturation, grayscale, contrast, brightness}) => {
   return (
-    <div>
+    <div style={{backgroundColor: "black"}}>
       {" "}
-
       <button onClick={handleNightMode}>Night Mode</button>
       <label style={{ color: "white" }}>Color</label>
       <input
@@ -46,6 +45,8 @@ const EditDesign = ({ handleShowEdit, handleNightMode, handleColor, handleSatura
         value={brightness}
         onChange={handleBrightness}
       />
+      <button onClick={handlePlainBackground}>PLAIN</button>
+
       <button onClick={handleShowEdit}>X</button>
     </div>
   );
