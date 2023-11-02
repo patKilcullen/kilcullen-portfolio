@@ -1,75 +1,55 @@
+#main-projects{
+  /* margin-top: 100vh;
+  border: 5px solid red; */
+}
 
 #projectsPage {
     display: flex;
     flex-direction: column;
-
-/* margin-left: 12vw; */
     gap: 5vh;
- 
-    /* width: 75%; */
-    
-    
-
 }
 
 .pageTitle {
-
-    color: #d8a2a2;
-
+    /* color: #d8a2a2;
     font-size: 100px;
     text-decoration: underline;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 50vh;
+    margin-bottom: 50vh; */
     
 }
 .projectsPageTitle {
-
     color: #d8a2a2;
     font-size: 60px;
     text-decoration: underline;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-   
     align-self: center;
 }
 .mainProjectContainer {
     display: flex;
 flex-direction: column;
-    /* width: 80vw; */
-    /* flex-wrap: wrap;
-    gap: 60px; */
-
-    margin-top: -50px;
-  align-items: center;
+    margin-top: -60px;
+  /* align-items: center; */
 
   align-self: center;
-    justify-content: space-around;
-
+    /* justify-content: space-around; */
 width: 75vw;
   gap: 60px;
     
 }
 
 .projectContainer {
-    display: flex;
- 
+    /* display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* align-content: center; */
-    /* max-width: 25vw; */
-    gap: 10px;
-
     overflow: hidden;
-    /* animation: slideInAnimation 1s forwards; */
-width: 1000px;
+width: 1000px; */
   
 }
 
 .inner-project-container{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
 align-items: center;
-
-    float: left;
+    float: left; */
 }
 
 @keyframes slideInAnimation {
@@ -82,47 +62,36 @@ align-items: center;
   }
 
 
-.name{
-    /* color: white; */
+.project-name{
     color: #d8a2a2;
     font-size: 40px;
     font-weight: bold;
 }
 .description {
-    /* color: white; */
-    color: #d8a2a2;
+    /* color: #d8a2a2;
     font-size: 20px;
-    min-height: 7vh;
+    min-height: 7vh; */
 }
 
 .projectPic {
     height: 40vh;
-
     border-radius: 25px;
-    /* max-width: 25vw; */
   float: right
 }
 .projectAbout {
-    /* overflow: auto;
-    width: 100%;
-    max-width: 25vw; */
-
-  
     color: #d8a2a2;
-   /* color: white; */
-/* background-color: rgba(0, 0, 0, 0.4); */
-  
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
 }
 .buttons {
-    display: flex;
+  /* float: left; */
+    /* display: flex;
     flex-direction: row;
     align-self: center;
     margin-top: 0;
     margin-left: -1vw;
-  position: sticky;
+  position: sticky; */
 
 }
 

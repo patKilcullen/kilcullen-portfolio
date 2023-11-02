@@ -199,12 +199,12 @@
   }
 }
 
-#tech-layer {
+/* #tech-layer {
   margin-top: 900px;
 }
 #projects-layer {
   margin-top: -1000px;
-}
+} */
 
 #about-me-layer {
   margin-top: 75px;
@@ -265,7 +265,11 @@
   }
 
   #tech-layer {
-    margin-top: 1400px;
+    margin-top: 110vh;
+    #projects-layer {
+    /* margin-top: -800px; */
+    margin-top: -120;
+  }
   }
   #tech-text {
     font-size: 25px;

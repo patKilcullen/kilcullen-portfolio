@@ -40,15 +40,15 @@ export const projects = [
     align: "left",
   },
 
-  {
-    name: "Full Stack App",
-    description: "This was the first full stack app I ever made!",
-    about:
-      "It may not look like much, but I was proud of my first full stack CRUD app. I received the highest grade in my cohort of 60+ students, and my instructor described it as the 'Best project I have seen yet!' I put a lot of effort into it and thoroughly searched for and eliminated many bugs.",
-    code: "https://github.com/patKilcullen/jpfp-template-V2-a",
-    demo: "https://youtu.be/yNKRxSyjyG8",
-    tech: "Node.js, PostgreSQL, Express, React, Redux, CSS",
-    pic: JuniorPhasePic,
-    align: "right",
-  },
+  // {
+  //   name: "Full Stack App",
+  //   description: "This was the first full stack app I ever made!",
+  //   about:
+  //     "It may not look like much, but I was proud of my first full stack CRUD app. I received the highest grade in my cohort of 60+ students, and my instructor described it as the 'Best project I have seen yet!' I put a lot of effort into it and thoroughly searched for and eliminated many bugs.",
+  //   code: "https://github.com/patKilcullen/jpfp-template-V2-a",
+  //   demo: "https://youtu.be/yNKRxSyjyG8",
+  //   tech: "Node.js, PostgreSQL, Express, React, Redux, CSS",
+  //   pic: JuniorPhasePic,
+  //   align: "right",
+  // },
 ];

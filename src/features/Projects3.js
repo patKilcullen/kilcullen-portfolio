@@ -117,7 +117,7 @@ const Projects3 = () => {
 
 
 
-     <div id="main">
+     <div id="main-projects">
       <div id="projectsPage">
         <h1 className="projectsPageTitle">Projects</h1>
 
@@ -127,9 +127,14 @@ const Projects3 = () => {
           {projects.map((project, idx)=>{
             return (
               <div
-               style={{ backgroundColor: "rgba(10, 10, 110, 0.1)", borderRadius: "25px"}}
+                style={{
+                  backgroundColor: "rgba(10, 10, 110, 0.1)",
+                  borderRadius: "25px",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
               >
-                <h1 className="name">{project.name}</h1>
+                <h1 className="project-name">{project.name}</h1>
                 <div>
                   <Link
                     to={project.demo}
@@ -144,10 +149,12 @@ const Projects3 = () => {
                     />
                   </Link>
 
-                  <div className="projectAbout" >{project.about}</div>
+                  <div className="projectAbout">{project.about}</div>
                 </div>
                 <div>
-                  <div>Tech: {project.tech}</div>
+                  <div style={{ float: project.align }}>
+                    Tech: {project.tech}
+                  </div>
 
                   <div className="buttons">
                     <Link
