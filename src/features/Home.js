@@ -170,7 +170,7 @@ const handlePlainBackground = ()=>{
         </label>
       )} */}
       {/* <Parallax pages={3.1}> */}
-      <Parallax pages={2.4}>
+      <Parallax pages={2.8}>
         <ParallaxLayer
           sticky={{ start: 0, end: 2.5 }}
           style={{ height: "1--%" }}
@@ -268,7 +268,7 @@ const handlePlainBackground = ()=>{
             }}
             // factor={3.1}
             // factor={2.9}
-            factor={5.1}
+            factor={5.5}
             // speed={0.5}
             speed={1.5}
           ></ParallaxLayer>
@@ -325,7 +325,7 @@ const handlePlainBackground = ()=>{
             }}
           /> */}
             </ParallaxLayer>
-
+{/* Black Botton */}
             <ParallaxLayer
               style={{
                 // backgroundImage: `url(${lake})`,
@@ -333,7 +333,7 @@ const handlePlainBackground = ()=>{
                  marginTop: "-251vh",
                 backgroundColor: "black"
               }}
-              factor={1}
+              factor={3}
               offset={2}
               speed={3.8}
             >

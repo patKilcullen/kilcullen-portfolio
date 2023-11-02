@@ -4,6 +4,20 @@ import GraceShopperPic from '../Grace-ShopperPic.png'
 import JuniorPhasePic from './juniorPhasePic.png'
 
 
+ import javascriptIcon from "../javascriptLogo.png";
+ import reactIcon from "../reactLogo.png";
+ import reduxIcon from "../reduxLogo.png";
+ import postgresIcon from "../postgreSQLLogo.png";
+ import htmlIcon from "../htmlLogo.png";
+ import cssIcon from "../cssLogo.png";
+ import nodeSVG from "../node-js.svg";
+ import materialIcon from "../materialUILogo.png";
+ import sequelizeIcon from "../sequelize.svg";
+ import expressIcon from "../expressLogo.png";
+ import jwtIcon from "../jwtLogo.png"
+ import socketIOIcon from "../socketIO.png"
+
+
 export const projects = [
   {
     name: "Balderdash",
@@ -13,6 +27,20 @@ export const projects = [
     code: "https://github.com/patKilcullen/Balderdash",
     demo: "https://www.youtube.com/watch?v=CF5TT-MY4oY",
     tech: "Node.js, PostgreSQL, Express, React, Redux",
+    tech2: [
+      { symbole: javascriptIcon, name: "JavaScript" },
+      { symbole: reactIcon, name: "React" },
+      { symbole: reduxIcon, name: "Redux" },
+      { symbole: postgresIcon, name: "PostgreSQL" },
+      { symbole: htmlIcon, name: "HTML" },
+      { symbole: cssIcon, name: "CSS" },
+      { symbole: nodeSVG, name: "Node" },
+      { symbole: materialIcon, name: "Material UI" },
+      { symbole: sequelizeIcon, name: "Sequelize" },
+      { symbole: expressIcon, name: "Express" },
+      { symbole: jwtIcon, name: "JSON Web Token" },
+      { symbole: socketIOIcon, name: "Socket.io" },
+    ],
     pic: balderdashPic,
     align: "left",
   },
@@ -25,6 +53,18 @@ export const projects = [
     code: "https://github.com/patKilcullen/EZ-Stack",
     demo: "https://youtu.be/4eurtRFDq0s",
     tech: "Node.js, PostgreSQL, Express, React, Redux, Material UI, CSS, Cloudinary, JWT",
+    tech2: [
+      { symbole: javascriptIcon, name: "JavaScript" },
+      { symbole: reactIcon, name: "React" },
+      { symbole: reduxIcon, name: "Redux" },
+      { symbole: postgresIcon, name: "PostgreSQL" },
+      { symbole: htmlIcon, name: "HTML" },
+      { symbole: cssIcon, name: "CSS" },
+      { symbole: nodeSVG, name: "Node" },
+      { symbole: materialIcon, name: "Material UI" },
+      { symbole: sequelizeIcon, name: "Sequelize" },
+      { symbole: expressIcon, name: "Express" },
+    ],
     pic: EZStackPic,
     align: "right",
   },
@@ -36,6 +76,18 @@ export const projects = [
     code: "https://github.com/patKilcullen/Grace-Shopper1",
     demo: "https://www.youtube.com/watch?v=lmXfjCeO7IA",
     tech: "Node.js, PostgreSQL, Express, React, Redux, Tailwind CSS, JWT",
+    tech2: [
+      { symbole: javascriptIcon, name: "JavaScript" },
+      { symbole: reactIcon, name: "React" },
+      { symbole: reduxIcon, name: "Redux" },
+      { symbole: postgresIcon, name: "PostgreSQL" },
+      { symbole: htmlIcon, name: "HTML" },
+      { symbole: cssIcon, name: "CSS" },
+      { symbole: nodeSVG, name: "Node" },
+      { symbole: materialIcon, name: "Material UI" },
+      { symbole: sequelizeIcon, name: "Sequelize" },
+      { symbole: expressIcon, name: "Express" },
+    ],
     pic: GraceShopperPic,
     align: "left",
   },

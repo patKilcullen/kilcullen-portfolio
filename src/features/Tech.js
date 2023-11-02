@@ -2,20 +2,32 @@ import React, {useEffect, useRef, useState} from "react";
 import '../style/home.css'
 
 // import nodeIcon from '../icons8-nodejs-48.png'
- import javascriptIcon from "../icons8-javascript-48.png"
-import reactIcon from "../logo192.png"
-import reduxIcon from '../icons8-redux-an-open-source-javascript-library-for-managing-application-state-24.png'
-import postgresIcon from '../icons8-postgresql-48.png'
-import htmlIcon from"../icons8-html5-48.png"
-import cssIcon from '../icons8-css-48.png'
-import nodeSVG from '../node-js.svg'
-import materialIcon from  '../icons8-material-ui-48.png'
-import sequelizeIcon from '../sequelize.svg'
-import expressIcon from '../icons8-express-js-64.png'
+//  import javascriptIcon from "../icons8-javascript-48.png"
+// import reactIcon from "../logo192.png"
+// import reduxIcon from '../icons8-redux-an-open-source-javascript-library-for-managing-application-state-24.png'
+// import postgresIcon from '../icons8-postgresql-48.png'
+// import htmlIcon from"../icons8-html5-48.png"
+// import cssIcon from '../icons8-css-48.png'
+// import nodeSVG from '../node-js.svg'
+// import materialIcon from  '../icons8-material-ui-48.png'
+// import sequelizeIcon from '../sequelize.svg'
+// import expressIcon from '../icons8-express-js-64.png'
 
 
+ import javascriptIcon from "../javascriptLogo.png";
+ import reactIcon from "../reactLogo.png";
+ import reduxIcon from "../reduxLogo.png";
+ import postgresIcon from "../postgreSQLLogo.png";
+ import htmlIcon from "../htmlLogo.png";
+ import cssIcon from "../cssLogo.png";
+ import nodeSVG from "../node-js.svg";
+ import materialIcon from "../materialUILogo.png";
+ import sequelizeIcon from "../sequelize.svg";
+ import expressIcon from "../expressLogo.png";
+ import jwtIcon from "../jwtLogo.png";
 
-import JavascriptIcon from "@mui/icons-material/Javascript";
+
+// import JavascriptIcon from "@mui/icons-material/Javascript";
 
 import { useInView } from "react-intersection-observer";
 

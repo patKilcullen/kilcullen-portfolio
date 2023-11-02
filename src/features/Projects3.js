@@ -152,8 +152,29 @@ const Projects3 = () => {
                   <div className="projectAbout">{project.about}</div>
                 </div>
                 <div id="tech-and-buttons">
-                  <div id="project-tech" style={{ float: project.align }}>
-                    Tech: {project.tech}
+                  <div id="project-tech" style={{ float: project.align, display: "flex", alignItems: "center", gap: "15px", marginTop: "15px" }}>
+                    {/* Tech: {project.tech} */}
+                    Tech Stack: {
+                      project.tech2.map((proj)=>{
+                        return (
+                          <div
+                            style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+                            // id="tech-list"
+                          >
+                            <img
+                              alt="language-icon"
+                              
+                              className="node-icon"
+                              src={proj.symbole}
+                              style={{ filter: "saturate(30%)", height: "30px" }}
+                            />
+                            <h1 id="tech-text" style={{ color: "#d8a2a2", fontSize: "10px" }}>
+                              {proj.name}
+                            </h1>
+                          </div>
+                        );
+                      })
+                    }
                   </div>
 
                   <div className="buttons">
