@@ -461,7 +461,7 @@ const handlePlainBackground = ()=>{
           speed={1.5}
           id="projects-layer"
           style={{
-             marginTop: "-300px",
+            //  marginTop: "-300px",
 
             zIndex: 10001,
             // marginTop: "-1500px",

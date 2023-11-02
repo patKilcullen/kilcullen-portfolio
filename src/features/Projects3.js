@@ -135,7 +135,7 @@ const Projects3 = () => {
                 }}
               >
                 <h1 className="project-name">{project.name}</h1>
-                <div>
+                <div id="inner-project-container">
                   <Link
                     to={project.demo}
                     target="_blank"
@@ -151,8 +151,8 @@ const Projects3 = () => {
 
                   <div className="projectAbout">{project.about}</div>
                 </div>
-                <div>
-                  <div style={{ float: project.align }}>
+                <div id="tech-and-buttons">
+                  <div id="project-tech" style={{ float: project.align }}>
                     Tech: {project.tech}
                   </div>
 

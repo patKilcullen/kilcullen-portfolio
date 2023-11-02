@@ -45,11 +45,11 @@ width: 1000px; */
   
 }
 
-.inner-project-container{
-    /* display: flex;
+#inner-project-container{
+    display: flex;
     flex-direction: row;
 align-items: center;
-    float: left; */
+    /* float: left; */
 }
 
 @keyframes slideInAnimation {
@@ -84,6 +84,16 @@ align-items: center;
     display: flex;
     flex-direction: column;
 }
+#tech-and-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#project-tech{
+color: #d8a2a2;
+font-size: larger;
+}
+
 .buttons {
   /* float: left; */
     /* display: flex;
@@ -94,6 +104,34 @@ align-items: center;
   position: sticky; */
 
 }
+
+
+  @media (max-width: 550px) {
+  .projectPic{
+    width: 100vw;
+  }
+ 
+}
+
+/* @media (min-width: 481px) and (max-width: 768px) { */
+  @media (max-width: 768px) {
+  .projectPic{
+    height: 30vh;
+  }
+  #inner-project-container{
+    flex-direction: column;
+  }
+}
+
+/* @media (min-width: 769px) and (max-width: 1024px) { */
+  @media (max-width: 1200px) {
+ #inner-project-container{
+    flex-direction: column;
+  }
+}
+
+
+
 
 /* @media only screen and (max-width: 600px) {
     .mainProjectContainer {
