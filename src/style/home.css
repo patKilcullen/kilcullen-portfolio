@@ -106,7 +106,7 @@
 .tech-text {
   color: #d8a2a2;
   width: 80vw;
-  font-size: 40px;
+  font-size: 30px;
 }
 .divider {
   width: 75%;
@@ -251,10 +251,10 @@
   #tech-layer {
     margin-top: 110vh
   }
-
   #tech-text {
-    font-size: 25px;
+    font-size: 20px;
   }
+
   .tech-text {
     font-size: 25px;
   }
@@ -266,7 +266,7 @@
   }
 
   .node-icon {
-    height: 60px;
+    height: 50px;
   }
 }
 

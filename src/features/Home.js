@@ -170,7 +170,7 @@ const handlePlainBackground = ()=>{
         </label>
       )} */}
       {/* <Parallax pages={3.1}> */}
-      <Parallax pages={2.2}>
+      <Parallax pages={2.4}>
         <ParallaxLayer
           sticky={{ start: 0, end: 2.5 }}
           style={{ height: "1--%" }}
@@ -309,6 +309,29 @@ const handlePlainBackground = ()=>{
                 backgroundImage: `url(${lake})`,
                 backgroundSize: "cover",
                 marginTop: "-350vh",
+              }}
+              factor={1}
+              offset={2}
+              speed={3.8}
+            >
+              {/* <SideNav></SideNav> */}
+              {/* <img
+            alt="computer"
+            // className="profilePic"
+            src={computer}
+            style={{
+              width: "100vw",
+              marginTop: "-40vh"
+            }}
+          /> */}
+            </ParallaxLayer>
+
+            <ParallaxLayer
+              style={{
+                // backgroundImage: `url(${lake})`,
+                // backgroundSize: "cover",
+                 marginTop: "-251vh",
+                backgroundColor: "black"
               }}
               factor={1}
               offset={2}
