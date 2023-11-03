@@ -6,9 +6,10 @@
 
   width: 10%;
   height: 100vh;
-  margin-top: -10vh;
+  margin-top: 10vh;
   position: fixed;
-  animation: pulse 5s;
+  /* animation: pulse 5s; */
+  left: -1vw
 }
 
 .list {
@@ -17,7 +18,7 @@
 
 .socialMedia svg {
   color: #d8a2a2;
-  margin: 20px;
+  margin: 10px;
   font-size: 50px;
   cursor: pointer;
   background-color: rgba(103, 62, 166, 0.1);
@@ -25,7 +26,7 @@
   /* box-shadow: 4px 4px 8px 4px rgb(71, 66, 87); */
 
   box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
-  animation: pulse 5s;
+  /* animation: pulse 5s; */
 }
 
 @keyframes pulse {
@@ -44,7 +45,7 @@
   color: #d8a2a2;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .sideBar {
     margin-left: 75vw;
   }
@@ -52,4 +53,4 @@
     font-size: 50px;
     width: 50px;
   }
-}
+} */

@@ -108,7 +108,7 @@ font-size: larger;
 }
 
 
-  @media (max-width: 550px) {
+  @media (max-width: 290px) {
   .projectPic{
     width: 100vw;
   }

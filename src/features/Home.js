@@ -23,7 +23,7 @@ import sky4 from "./backgrounds/sky4.png";
 
 import Button from "@mui/material/Button";
 
-import resume from "../resume.pdf"
+
 
 const Home = () => {
 
@@ -146,6 +146,8 @@ const handlePlainBackground = ()=>{
 
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
+
+      <SideNav></SideNav>
       {/* {showEditDesign ? (
         <EditDesign
           handlePlainBackground={handlePlainBackground}
@@ -304,27 +306,22 @@ const handlePlainBackground = ()=>{
               speed={3.8}
             ></ParallaxLayer>
 
+         
+
             {/* BOTTOM */}
             <ParallaxLayer
               style={{
                 backgroundImage: `url(${lake})`,
                 backgroundSize: "cover",
                 marginTop: "-350vh",
+                // zIndex: "10000000"
               }}
               factor={1}
               offset={2}
               speed={3.8}
             >
+  
               {/* <SideNav></SideNav> */}
-              {/* <img
-            alt="computer"
-            // className="profilePic"
-            src={computer}
-            style={{
-              width: "100vw",
-              marginTop: "-40vh"
-            }}
-          /> */}
             </ParallaxLayer>
             {/* Black Botton */}
             <ParallaxLayer
@@ -434,7 +431,10 @@ const handlePlainBackground = ()=>{
             // marginTop: "-25vh"
           }}
         >
-          <div id="about-me-layer" style={{ display: "flex", gap: "0px", alignItems: "center"  }}>
+          <div
+            id="about-me-layer"
+            style={{ display: "flex", gap: "0px", alignItems: "center" }}
+          >
             <h1 className="homeAbout" style={{ width: "70vw" }}>
               {typedText}
             </h1>
