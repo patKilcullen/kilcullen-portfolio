@@ -107,6 +107,27 @@ font-size: larger;
 
 }
 
+  #projectPic-link-left{
+    
+    order: -1
+  }
+  #projectPic-link-right{
+    order: 1
+  }
+
+
+
+.project-tech{
+    display: flex;
+align-items: center;
+gap: 15px;
+margin-top: 15px;
+flex-wrap: wrap;
+max-height: 15vh;
+overflow: auto;
+  }
+
+
 
   @media (max-width: 290px) {
   .projectPic{
@@ -115,7 +136,6 @@ font-size: larger;
  
 }
 
-/* @media (min-width: 481px) and (max-width: 768px) { */
   @media (max-width: 768px) {
   .projectPic{
     height: 30vh;
@@ -126,9 +146,12 @@ font-size: larger;
 }
 
 /* @media (min-width: 769px) and (max-width: 1024px) { */
-  @media (max-width: 1200px) {
+  @media (max-width: 900px) {
  #inner-project-container{
     flex-direction: column;
+  }
+  #projectPic-link-right{
+    order: -1
   }
 }
 

@@ -35,7 +35,7 @@ const SideNav = () => {
         <p>Connect with me:</p>
         <hr className="divider" />
         <a
-          href="https://github.com/patKilcullen?tab=repositories"
+          href="https://github.com/patKilcullen"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "red" }}

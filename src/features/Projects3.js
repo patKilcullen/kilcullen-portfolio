@@ -10,15 +10,12 @@ const Projects3 = () => {
   //   window.scrollTo(0, 0); // Scroll to the top of the page when component renders
   // }, []);
   return (
-  
-     <div id="main-projects">
+    <div id="main-projects">
       <div id="projectsPage">
         <h1 className="projectsPageTitle">Projects</h1>
 
-        {/* <div id="mainContent"> */}
-
         <div className="mainProjectContainer">
-          {projects.map((project, idx)=>{
+          {projects.map((project, idx) => {
             return (
               <div
                 style={{
@@ -34,7 +31,11 @@ const Projects3 = () => {
                     to={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ order: project.align === "right" ? 1 : -1 }}
+                    id={
+                      project.align === "right"
+                        ? "projectPic-link-right"
+                        : "projectPic-link-left"
+                    }
                   >
                     <img
                       className="projectPic"
@@ -44,28 +45,17 @@ const Projects3 = () => {
                     />
                   </Link>
 
-                  <div
-                    className="projectAbout"
-                    // style={{ order: project.align === " right" ? -1 : 1 }}
-                  >
-                    {project.about}
-                  </div>
+                  <div className="projectAbout">{project.about}</div>
                 </div>
                 <div id="tech-and-buttons">
                   <div
-                    id="project-tech"
+                    className="project-tech"
                     style={{
                       float: project.align,
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "15px",
-                      marginTop: "15px",
-                      flexWrap: "wrap",
-                      maxHeight: "15vh",
-                      overflow: "auto",
+
+                      order: project.align === "right" ? 1 : -1,
                     }}
                   >
-                    {/* Tech: {project.tech} */}
                     Tech Stack:{" "}
                     {project.tech2.map((proj) => {
                       return (
@@ -75,7 +65,6 @@ const Projects3 = () => {
                             flexDirection: "column",
                             alignItems: "center",
                           }}
-                          // id="tech-list"
                         >
                           <img
                             alt="language-icon"
