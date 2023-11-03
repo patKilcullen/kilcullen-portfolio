@@ -257,7 +257,7 @@ flex-direction: column;
   }
 
   #tech-layer {
-    margin-top: 120vh
+    margin-top: 110vh
   }
   #tech-text {
     font-size: 20px;
@@ -274,7 +274,8 @@ flex-direction: column;
   }
 
   .node-icon {
-    height: 50px;
+    height: 20px;
+
   }
 }
 
@@ -313,7 +314,7 @@ flex-direction: column;
     /* position: absolute; 
     top: -200px;
    */
-   margin-top: -5vh;
+   margin-top: 5vh;
   }
 
   #tech-layer {
@@ -331,7 +332,7 @@ flex-direction: column;
     font-size: 25px;
   }
   .node-icon {
-    height: 60px;
+    height: 30px;
   }
 
 
@@ -364,7 +365,7 @@ flex-direction: column;
  
 
   .node-icon {
-    height: 80px;
+    height: 40px;
   }
 
  
@@ -389,7 +390,7 @@ flex-direction: column;
   }
 
   .node-icon {
-    height: 80px;
+    height: 50px;
   }
 }
 
@@ -412,6 +413,6 @@ flex-direction: column;
   }
 
   .node-icon {
-    height: 80px;
+    height: 60px;
   }
 }

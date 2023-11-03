@@ -83,6 +83,8 @@ align-items: center;
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
+    overflow: auto;
+    max-height: 10vh;
 }
 #tech-and-buttons{
   display: flex;

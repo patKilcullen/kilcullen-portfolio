@@ -152,7 +152,7 @@ const Projects3 = () => {
                   <div className="projectAbout">{project.about}</div>
                 </div>
                 <div id="tech-and-buttons">
-                  <div id="project-tech" style={{ float: project.align, display: "flex", alignItems: "center", gap: "15px", marginTop: "15px" }}>
+                  <div id="project-tech" style={{ float: project.align, display: "flex", alignItems: "center", gap: "15px", marginTop: "15px", flexWrap: "wrap", maxHeight: "15vh", overflow: "auto" }}>
                     {/* Tech: {project.tech} */}
                     Tech Stack: {
                       project.tech2.map((proj)=>{
@@ -166,7 +166,7 @@ const Projects3 = () => {
                               
                               className="node-icon"
                               src={proj.symbole}
-                              style={{ filter: "saturate(30%)", height: "30px" }}
+                              style={{ filter: "saturate(30%)",  }}
                             />
                             <h1 id="tech-text" style={{ color: "#d8a2a2", fontSize: "10px" }}>
                               {proj.name}

@@ -218,6 +218,7 @@ const handlePlainBackground = ()=>{
                 zIndex: 1,
                 backgroundColor: "black",
                 opacity: "85%",
+                // minWidth: "300px"
               }}
               id="title"
             >
