@@ -145,7 +145,7 @@ const handlePlainBackground = ()=>{
 
 
   return (
-    <div>
+    <div style={{ display: "flex", overflowY: "hidden" }}>
       {/* {showEditDesign ? (
         <EditDesign
           handlePlainBackground={handlePlainBackground}
@@ -325,13 +325,13 @@ const handlePlainBackground = ()=>{
             }}
           /> */}
             </ParallaxLayer>
-{/* Black Botton */}
+            {/* Black Botton */}
             <ParallaxLayer
               style={{
                 // backgroundImage: `url(${lake})`,
                 // backgroundSize: "cover",
-                 marginTop: "-251vh",
-                backgroundColor: "black"
+                marginTop: "-251vh",
+                backgroundColor: "black",
               }}
               factor={3}
               offset={2}
@@ -430,9 +430,13 @@ const handlePlainBackground = ()=>{
             //  left: "5vw",
             display: "flex",
             justifyContent: "space-around",
+            // marginTop: "-25vh"
           }}
         >
-          <div id="about-me-layer">
+          <div id="about-me-layer" style={{ display: "flex", gap: "0px", alignItems: "center"  }}>
+            <h1 className="homeAbout" style={{ width: "70vw" }}>
+              {typedText}
+            </h1>
             <img
               alt="Patrick Kilcullen"
               className="profilePic"
@@ -445,9 +449,6 @@ const handlePlainBackground = ()=>{
               }}
             />
             ;
-            <h1 className="homeAbout" style={{ width: "70vw" }}>
-              {typedText}
-            </h1>
             {/* <div
               style={{ display: "flex", justifyContent: "center", gap: "25px" }}
             >

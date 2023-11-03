@@ -21,16 +21,17 @@
   height: 35vh;
   border: 2px solid rgb(135, 82, 82);
   flex: 0 0 auto;
+max-width: 250px;
 
 
-  float: right;
+  /* float: right; */
   box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
 }
 
 .homeAbout {
   /* flex: 1 1 auto; */
   text-align: left;
-  margin-right: 20%;
+  /* margin-right: 20%; */
   color: #d8a2a2;
 
   margin-bottom: 55px;
@@ -207,14 +208,16 @@
 } */
 
 #about-me-layer {
-  margin-top: 75px;
+  /* margin-top: 75px; */
+  margin-top: -50vh;
+  width: 80vw;
 }
 
 
 @media (max-width: 300px) {
 
   #tech-layer {
-    margin-top: -5230vh;
+  /* margin-top: -5230vh; */
 
   }
   #projects-layer {
@@ -242,14 +245,19 @@
     font-size: 15vw;
   }
   #about-me-layer {
-    margin-top: 0px;
+    margin-top:-5vh;
+flex-direction: column;
+
+
   }
+ 
   .profilePic {
-    height: 50vh;
+    /* float: none; */
+    order: -1;
   }
 
   #tech-layer {
-    margin-top: 110vh
+    margin-top: 120vh
   }
   #tech-text {
     font-size: 20px;
@@ -270,13 +278,29 @@
   }
 }
 
+/* @media (orientation: landscape) and (max-width: 500px) {
+   #tech-layer {
+    margin-top: 500px;
+   border: 3px solid rgb(18, 2, 2);
+  }
+   #projects-layer {
+    margin-top: -60vh;
+  }
+} */
+
+
 /* Styles for iPads and Tablets (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
 .homeAbout{
   font-size: 25px;
 }
-
-
+.profilePic {
+    /* float: none; */
+    order: -1;
+  }
+#about-me-layer{
+  flex-direction: column;
+}
   .name-in-text-left {
     margin-top: -50px;
     font-size: 100px;
@@ -289,10 +313,11 @@
     /* position: absolute; 
     top: -200px;
    */
+   margin-top: -5vh;
   }
 
   #tech-layer {
-    margin-top: 110vh;
+    margin-top: 100vh;
    
   }
    #projects-layer {
@@ -375,7 +400,7 @@
 
   #tech-layer {
     /* margin-top: 1000px; */
-    margin-top: 80vh;
+    margin-top: 85vh;
   }
 
   #projects-layer {
