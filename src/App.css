@@ -1,4 +1,7 @@
 
+.App{
+background-color: black;
+}
 nav a {
   color: whitesmoke;
   display: inline-block;
