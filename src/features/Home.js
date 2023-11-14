@@ -1,92 +1,383 @@
-import React from "react";
-import '../style/home.css'
-import { useNavigate } from "react-router-dom";
-import Button from '@mui/material/Button';
-// import nodeIcon from '../icons8-nodejs-48.png'
-import javascriptIcon from "../icons8-javascript-48.png"
-import reactIcon from "../logo192.png"
-import reduxIcon from '../icons8-redux-an-open-source-javascript-library-for-managing-application-state-24.png'
-import postgresIcon from '../icons8-postgresql-48.png'
-import htmlIcon from"../icons8-html5-48.png"
-import cssIcon from '../icons8-css-48.png'
-import nodeSVG from '../node-js.svg'
-import materialIcon from  '../icons8-material-ui-48.png'
-import sequelizeIcon from '../sequelize.svg'
-import expressIcon from '../icons8-express-js-64.png'
+import React, { useEffect, useState, useRef } from "react";
 
-import profilePic from "../ProfilePic.PNG"
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
+import { useInView } from "react-intersection-observer";
+
+import Projects from "./Projects";
+import Experience from "./Experience";
+import SideNav from "./SideNav";
+import Tech from "./Tech";
+import EditDesign from "./EditDesign";
+
+import profilePic from "../ProfilePic.PNG";
+import profilePic2 from "../profile-pic.jpeg";
+import mountains from "./backgrounds/mountains.png";
+import clouds3 from "./backgrounds/clouds3.png";
+import cloudsPurple from "./backgrounds/cloudPurple.png";
+import lake from "./backgrounds/lake.png";
+import newMoon from "./backgrounds/newMoon.png";
+import sky4 from "./backgrounds/sky4.png";
+
+import Button from "@mui/material/Button";
 
 const Home = () => {
-    const navigate = useNavigate()
+  const projectsSectionRef = useRef(null);
 
+  const textToType =
+    "I'm a full stack software developer based in Chicago, Il. I think of Software development as a creative outlet, and I’m passionate about bringing unique and innovative ideas to life. Beyond coding, I enjoy writing, reading, movies, and cooking.";
+  // const [typedText, setTypedText] = useState("");
 
- 
+  const typedText = textToType;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [ref, inView] = useInView({
+    threshold: 1,
+  });
+  const [typingDelay, setTypingDelay] = useState(false);
 
+  const [saturation, setSaturation] = useState(300);
+  const [skySaturation, setSkySaturation] = useState(saturation - 200);
+  const handleSaturation = (e) => {
+    setSaturation(e.target.value);
+    setSkySaturation(e.target.value - 200);
+  };
 
+  const [grayscale, setGrayscale] = useState(20);
+  const [skyGrayscale, setSkyGrayscale] = useState(grayscale - 20);
+  const handlegrayscale = (e) => {
+    setGrayscale(e.target.value);
+    setSkyGrayscale(e.target.value - 20);
+  };
+
+  const [contrast, setContrast] = useState(130);
+  const [skyContrast, setSkyContrast] = useState(contrast - 30);
+  const handleContrast = (e) => {
+    setContrast(e.target.value);
+    setSkyContrast(e.target.value - 30);
+  };
+
+  const [brightness, setBrightness] = useState(70);
+  const [skyBrightness, setSkyBrightness] = useState(brightness + 30);
+  const handleBrightness = (e) => {
+    setBrightness(e.target.value);
+    setSkyBrightness(Number(e.target.value) + 30);
+  };
+
+  const [color, setColor] = useState(0);
+  const [skyColor, setSkyColor] = useState(0);
+  const handleColor = (e) => {
+    setColor(e.target.value);
+    setSkyColor(
+      e.target.value > 0
+        ? `-${e.target.value}`
+        : Number(e.target.value) + Math.abs(Number(e.target.value)) * 2
+    );
+  };
+
+  const [nightMode, setNightMode] = useState(false);
+  const handleNightMode = () => {
+    setNightMode(!nightMode);
+  };
+  const [showEditDesign, setShowEditDesign] = useState(false);
+  const handleShowEdit = () => {
+    setShowEditDesign(!showEditDesign);
+  };
+
+  const [plain, setPlain] = useState(false);
+
+  const handlePlainBackground = () => {
+    setPlain(!plain);
+  };
 
   return (
-    <div id="main">
-      {/* <div id="mainContent"> */}
-      <div className="mainContent">
-     
-        {/* <img id="profilePic" src={profilePic} />  */}
-        <div className="mainContainer">
-          <div className="about-and-pic" >
-        <img alt="Patrick Kilcullen" className="profilePic" src={profilePic} /> 
-        <div className="scroll">
-        {/* <h1 className="homeAbout">
-          Hi, I'm <span id="name-in-text">Patrick Kilcullen</span>, a software developer with a passion for
-          creating forward-thinking and efficient applications. I love learning about
-          new technologies and discovering how they can be used to solve all kinds of
-          problems. I have experience building apps with
-          the PERN stack, but I'm always eager to learn more and explore new
-          technologies. If you're looking for a dedicated software
-          developer who's always excited to overcome challenges with innovative solutions, I'm your guy!
-        </h1> */}
+    <div style={{ display: "flex", overflowY: "hidden" }}>
+      <SideNav></SideNav>
 
-        <h1 className="homeAbout">
-            Hi, I'm <span className="name-in-text-left">Patrick</span> <span className="name-in-text-right">Kilcullen</span>, a software developer with a passion for creating forward-thinking and efficient applications. I love learning about new technologies and discovering how they can be used to solve all kinds of problems. I have experience building apps with the PERN stack, but I'm always eager to learn more and explore new technologies. If you're looking for a dedicated software developer who's always excited to overcome challenges with innovative solutions, I'm your guy!
-          </h1>
-   
-        </div>
-        </div>
-        </div>
-        
-        {/* <hr className="divider" /> */}
-   <div className="tech">
-        <h2 className="techIntro" >I've build applications using a variety of technologies, inclucing...<h3 style={{display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "flex-end"}} >
-          <div><img alt="language-icon" className="language-icon" src={javascriptIcon} style={{height: "60px"}}/>Javascript, </div>
-        <div> <img alt="language-icon" className="node-icon" src={nodeSVG} style={{height: "60px"}}/>Node.js, </div>
-        <div><img alt="language-icon" className="node-icon" src={reactIcon} style={{height: "60px"}}/>React, </div>
-        <div>  <img alt="language-icon" className="node-icon" src={reduxIcon} style={{height: "60px"}}/>Redux, </div>
-      <div> <img alt="language-icon" className="node-icon" src={postgresIcon} style={{height: "60px"}}/>PostgreSQL, </div>
-        <div><img alt="language-icon" className="node-icon" src={sequelizeIcon} style={{height: "60px"}}/>Sequelize, </div>
-        <div><img alt="language-icon" className="node-icon" src={expressIcon} style={{height: "60px"}}/>Express, </div>
-        <div><img alt="language-icon" className="node-icon" src={materialIcon} style={{height: "60px"}}/>MaterialUI, </div>
-       <div> <img alt="language-icon" className="node-icon" src={htmlIcon} style={{height: "60px"}}/>HTML, </div>
-       <div><img alt="language-icon" className="node-icon" src={cssIcon} style={{height: "60px"}} /> CSS          </div>  
-       </h3></h2>
-        
-        </div>
-        <hr className="divider" />
-        <div className="homeButtons">
-            <h1 className="button-text" > Learn more about what I've done... </h1>
-        {/* <Button onClick={()=>navigate('/projects')} className="button" variant="contained" sx={{color: "#3e497a", backgroundColor: "#d8a2a2", fontWeight: "bold", fontSize: "23px",
-  boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Projects</Button>
-        <Button onClick={()=>navigate('/experience')} className="button" variant="contained"sx={{color: "#3e497a", backgroundColor: "#d8a2a2",fontWeight: "bold", fontSize: "23px",
-  boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",  borderRadius: '20px', border: "2px solid white"}}> Experience</Button> */}
+      <Parallax pages={2.8}>
+        <ParallaxLayer
+          sticky={{ start: 0, end: 2.5 }}
+          style={{ height: "1--%" }}
+        >
+          {showEditDesign ? (
+            <EditDesign
+              handlePlainBackground={handlePlainBackground}
+              handleShowEdit={handleShowEdit}
+              handleBrightness={handleBrightness}
+              handleColor={handleColor}
+              handleContrast={handleContrast}
+              handleNightMode={handleNightMode}
+              handleSaturation={handleSaturation}
+              handlegrayscale={handlegrayscale}
+              brightness={brightness}
+              color={color}
+              contrast={contrast}
+              nightMode={nightMode}
+              saturation={saturation}
+              grayscale={grayscale}
+            />
+          ) : (
+            <label style={{ color: "white" }}>
+              Don't like my background? Click to
+              <Button onClick={handleShowEdit}>Edit</Button>
+            </label>
+          )}
+        </ParallaxLayer>
 
-<Button onClick={()=>navigate('/projects')} id="button" > Projects</Button>
-<Button onClick={()=>navigate('/experience')} id="button" > Experience</Button>
-        </div>
-      </div>
-      
-      </div>
-   
+        <ParallaxLayer
+          offset={0}
+          speed={1}
+          factor={0}
+          style={{
+            marginTop: "150px",
+            zIndex: 1,
+            height: "15vh",
+            opacity: "85%",
+          }}
+        >
+          <div>
+            <div
+              style={{
+                left: "-5vw",
+                zIndex: 1,
+                backgroundColor: "black",
+                opacity: "85%",
+                // minWidth: "300px"
+              }}
+              id="title"
+            >
+              <span
+                style={{
+                  backgroundColor: "black",
+                  left: "-5vw",
+                  filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
+                }}
+                className="name-in-text-left"
+              >
+                Patrick{" "}
+              </span>
+              <span style={{ margin: "2vw" }}>""</span>
+              <span
+                style={{
+                  backgroundColor: "black",
+                }}
+                className="name-in-text-right"
+              >
+                Kilcullen
+              </span>
+            </div>
+
+            <div
+              style={{
+                // backgroundColor: "#050c2c",
+                backgroundClip: "rgba(5, 12, 44, 0.5",
+
+                marginTop: "-1%",
+                filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
+              }}
+            >
+              <span className="software-engineer">Software Developer</span>
+            </div>
+          </div>
+        </ParallaxLayer>
+
+        {/* PLAIN LAYER */}
+        {plain ? (
+          <ParallaxLayer
+            style={{
+              background: "linear-gradient(180deg, #050c2c, #e74c3c)",
+              filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
+            }}
+            factor={5.5}
+            speed={1.5}
+          ></ParallaxLayer>
+        ) : (
+          <>
+            <ParallaxLayer
+              style={{
+                backgroundImage: nightMode ? `url(${newMoon})` : `url(${sky4})`,
+                backgroundSize: "cover",
+                filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
+              }}
+              factor={3.1}
+              speed={1.5}
+            ></ParallaxLayer>
+
+            <ParallaxLayer
+              id={"mntns"}
+              style={{
+                backgroundImage: `url(${mountains})`,
+                backgroundSize: "cover",
+                filter: `hue-rotate(${skyColor}deg)`,
+                marginTop: "-150vh",
+              }}
+              factor={3}
+              offset={1}
+              speed={3.8}
+            ></ParallaxLayer>
+
+            {/* BOTTOM */}
+            <ParallaxLayer
+              style={{
+                backgroundImage: `url(${lake})`,
+                backgroundSize: "cover",
+                marginTop: "-350vh",
+              }}
+              factor={1}
+              offset={2}
+              speed={3.8}
+            >
+              {/* <SideNav></SideNav> */}
+            </ParallaxLayer>
+            {/* Black Bottom */}
+            <ParallaxLayer
+              style={{
+                // backgroundImage: `url(${lake})`,
+                // backgroundSize: "cover",
+                marginTop: "-251vh",
+                backgroundColor: "black",
+              }}
+              factor={3}
+              offset={2}
+              speed={3.8}
+            ></ParallaxLayer>
+
+            <ParallaxLayer
+              id={"clouds"}
+              style={{
+                backgroundImage: nightMode ? null : `url(${clouds3})`,
+                backgroundSize: "cover",
+                left: "50vw",
+                filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+              }}
+              factor={2}
+              offset={0.4}
+              speed={2.3}
+            ></ParallaxLayer>
+
+            <ParallaxLayer
+              id={"clouds"}
+              style={{
+                backgroundImage: nightMode ? null : `url(${clouds3})`,
+                backgroundSize: "cover",
+                filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+              }}
+              factor={2}
+              offset={0.4}
+              // speed={1.5}
+              speed={2.5}
+            ></ParallaxLayer>
+
+            <ParallaxLayer
+              id={"clouds"}
+              style={{
+                backgroundImage: `url(${cloudsPurple}) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+                backgroundSize: "contain",
+                left: "25vw",
+                filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+              }}
+              factor={2}
+              offset={0.5}
+              speed={0.5}
+            ></ParallaxLayer>
+
+            <ParallaxLayer
+              id={"clouds"}
+              style={{
+                backgroundImage: `url(${clouds3})`,
+                backgroundSize: "contain",
+                left: "-70vw",
+                height: "200vh",
+                width: "200vw",
+                zIndex: 10000,
+                // transform: "scaleX(-1)",
+                filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+              }}
+              offset={0.9}
+              speed={0.8}
+            ></ParallaxLayer>
+          </>
+        )}
+
+        {/* ABOUT ME */}
+        <ParallaxLayer
+          offset={0.5}
+          speed={1.5}
+          style={{
+            textAlign: "center",
+            //  left: "5vw",
+            display: "flex",
+            justifyContent: "space-around",
+            // marginTop: "-25vh"
+          }}
+        >
+          <div
+            id="about-me-layer"
+            style={{ display: "flex", gap: "0px", alignItems: "center" }}
+          >
+            <h1 className="homeAbout" style={{ width: "70vw" }}>
+              {typedText}
+            </h1>
+            <img
+              alt="Patrick Kilcullen"
+              className="profilePic"
+              src={profilePic2}
+              style={{
+                filter: `saturate(${
+                  saturation - 200
+                }%) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayscale}%) hue-rotate(${skyColor}deg)`,
+                zIndex: 0,
+              }}
+            />
+            ;
+          </div>
+        </ParallaxLayer>
+
+        {/* TECH */}
+        <ParallaxLayer offset={0.3} speed={1.5} id="tech-layer">
+          <Tech></Tech>
+        </ParallaxLayer>
+
+        {/* PROJECTS */}
+        <ParallaxLayer
+          offset={1}
+          factor={1}
+          // speed={3}
+          speed={1.5}
+          id="projects-layer"
+          style={{
+            zIndex: 10001,
+          }}
+        >
+          <div ref={projectsSectionRef}>
+            <Projects></Projects>
+          </div>
+        </ParallaxLayer>
+
+        {/* EXPERIENCE */}
+        {/* <ParallaxLayer
+          offset={1.15}
+          // factor={10}
+          speed={4}
+          id="experience-layer"
+          // style={{ zIndex: 30 }}
+          style={{ left: "-5vw", zIndex: 100000 }}
+        >
+          <Experience></Experience>
+        </ParallaxLayer> */}
+
+        {/* <ParallaxLayer
+          style={{
+            backgroundSize: "cover",
+            // marginTop: "-350vh",
+          }}
+          sticky={{ start: 0, end: 2.5 }}
+        >
+          <SideNav></SideNav>
+       
+        </ParallaxLayer> */}
+      </Parallax>
+    </div>
   );
 };
-
-
-
 
 export default Home;

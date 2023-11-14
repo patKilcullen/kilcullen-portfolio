@@ -10,7 +10,7 @@ import WorkIcon from "@material-ui/icons/Work";
 import fullstack from "../FullstackCertificate.png";
 import "../style/experience.css";
 
-function Experience() {
+function Experience2() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -38,50 +38,54 @@ function Experience() {
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            // className="vertical-timeline-element--work"
+            className="experienceBox"
             date="2018 - 2020"
             iconStyle={{ background: "#e9d35b", color: "white" }}
             icon={<WorkIcon />}
           >
-            <h3 className="vertical-timeline-element-title">
-              Memoir Writer/Editor
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">Freelance</h4>
-            <ul>
-              <li>
-                Crafted and developed engaging story structures that kept
-                prospective readers interested in a client's narrative
-              </li>
-              <li>
-                Conducted interviews to extract useful, accurate, and
-                interesting information to add depth, clarity, and color to
-                stories
-              </li>
-              <li>
-                Wrote extensive comments, questions, and explanations on
-                multiple drafts to illustrate my thoughts and processes
-              </li>
-              <li>
-                Cut memoirs and stories down to ideal length, cutting out as
-                many as 100,000 words while keeping the narrative intact
-              </li>
-              <li>
-                Worked extensively to capture a fitting voice for clients, as
-                well as an appropriate tone and writing style
-              </li>
-              <li>
-                Researched and cross-checked numerous sources to ensure
-                references and citations were thorough and accurate
-              </li>
-              <li>
-                Inspired clients to share my work with their associates, who in
-                turn came to me with their own writing projects
-              </li>
-            </ul>
+            <div >
+              <h3 className="vertical-timeline-element-title">
+                Memoir Writer/Editor
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">Freelance</h4>
+              <ul>
+                <li>
+                  Crafted and developed engaging story structures that kept
+                  prospective readers interested in a client's narrative
+                </li>
+                <li>
+                  Conducted interviews to extract useful, accurate, and
+                  interesting information to add depth, clarity, and color to
+                  stories
+                </li>
+                <li>
+                  Wrote extensive comments, questions, and explanations on
+                  multiple drafts to illustrate my thoughts and processes
+                </li>
+                <li>
+                  Cut memoirs and stories down to ideal length, cutting out as
+                  many as 100,000 words while keeping the narrative intact
+                </li>
+                <li>
+                  Worked extensively to capture a fitting voice for clients, as
+                  well as an appropriate tone and writing style
+                </li>
+                <li>
+                  Researched and cross-checked numerous sources to ensure
+                  references and citations were thorough and accurate
+                </li>
+                <li>
+                  Inspired clients to share my work with their associates, who
+                  in turn came to me with their own writing projects
+                </li>
+              </ul>
+            </div>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            // className="vertical-timeline-element--work"
+            className="experienceBox"
             date="2020 - present"
             iconStyle={{ background: "#e9d35b", color: "white" }}
             icon={<WorkIcon />}
@@ -118,7 +122,8 @@ function Experience() {
             </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
+            // className="vertical-timeline-element--work"
+            className="experienceBox"
             date="2020 - present"
             iconStyle={{ background: "#e9d35b", color: "white" }}
             icon={<WorkIcon />}
@@ -166,4 +171,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Experience2;
