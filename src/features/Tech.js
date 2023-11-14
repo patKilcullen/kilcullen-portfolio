@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../style/home.css";
 
 import javascriptIcon from "../javascriptLogo.png";
@@ -11,7 +11,7 @@ import nodeSVG from "../node-js.svg";
 import materialIcon from "../materialUILogo.png";
 import sequelizeIcon from "../sequelize.svg";
 import expressIcon from "../expressLogo.png";
-import jwtIcon from "../jwtLogo.png";
+// import jwtIcon from "../jwtLogo.png";
 
 import { useInView } from "react-intersection-observer";
 

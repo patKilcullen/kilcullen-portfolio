@@ -1,16 +1,16 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 
 import Projects from "./Projects";
-import Experience from "./Experience";
+
 import SideNav from "./SideNav";
 import Tech from "./Tech";
 import EditDesign from "./EditDesign";
 
-import profilePic from "../ProfilePic.PNG";
+
 import profilePic2 from "../profile-pic.jpeg";
 import mountains from "./backgrounds/mountains.png";
 import clouds3 from "./backgrounds/clouds3.png";
@@ -29,11 +29,11 @@ const Home = () => {
   // const [typedText, setTypedText] = useState("");
 
   const typedText = textToType;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [ref, inView] = useInView({
-    threshold: 1,
-  });
-  const [typingDelay, setTypingDelay] = useState(false);
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // const [ref, inView] = useInView({
+  //   threshold: 1,
+  // });
+  // const [typingDelay, setTypingDelay] = useState(false);
 
   const [saturation, setSaturation] = useState(300);
   const [skySaturation, setSkySaturation] = useState(saturation - 200);
