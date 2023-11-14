@@ -241,7 +241,7 @@ const Home = () => {
                 marginTop: "-281vh",
                 backgroundColor: "black",
               }}
-              factor={3}
+              factor={3.4}
               offset={2}
               speed={3.8}
             ></ParallaxLayer>
