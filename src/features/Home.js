@@ -116,7 +116,9 @@ const Home = () => {
               grayscale={grayscale}
             />
           ) : (
-            <label style={{ color: "white", backgroundColor:"rgba(0, 0, 0, 0.2)" }}>
+            <label
+              style={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+            >
               Don't like my background? Click to
               <Button onClick={handleShowEdit}>Edit</Button>
             </label>
@@ -235,7 +237,8 @@ const Home = () => {
               style={{
                 // backgroundImage: `url(${lake})`,
                 // backgroundSize: "cover",
-                marginTop: "-251vh",
+                // marginTop: "-251vh",
+                marginTop: "-281vh",
                 backgroundColor: "black",
               }}
               factor={3}
