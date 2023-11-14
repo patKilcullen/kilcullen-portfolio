@@ -1,3 +1,5 @@
+
+
 .sideBar {
   display: flex;
   justify-content: space-between;
@@ -8,12 +10,16 @@
   margin-top: 10vh;
   position: fixed;
   left: -1vw;
+
 }
 
 .list {
   font-size: 100px;
 }
-
+.socialMedia{
+background-color: rgba(255, 0, 0, 0.2);
+ border-radius: 10px;
+}
 .socialMedia svg {
   color: #d8a2a2;
 
@@ -21,7 +27,9 @@
   cursor: pointer;
   background-color: rgba(103, 62, 166, 0.1);
   box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
+  
 }
+ 
 
 @keyframes pulse {
   0% {
@@ -48,3 +56,19 @@
     width: 50px;
   }
 } */
+
+@media only screen and (max-width: 450px) {
+  .sideBar {
+    /* flex-direction: row;
+    width: 100vw;
+    top:-10vh;
+    justify-content: center;
+   background-color: rgba(255, 0, 0, 0.5);
+   height: 10vh; */
+  }
+  .socialMedia {
+ background-color: rgba(255, 0, 0, 0.2);
+ border-radius: 10px;
+  }
+ 
+}

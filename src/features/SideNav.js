@@ -29,9 +29,15 @@ const SideNav = () => {
 
 
   return (
-    <div className="sideBar" style={{ zIndex: "1000000" }}>
-      <div className="socialMedia">
-        <p>Connect with me:</p>
+    <div
+      className="sideBar"
+      style={{ zIndex: "1000000"}}
+    >
+      <div
+        className="socialMedia"
+        // style={{  border: "2px solid green" }}
+      >
+        {/* <p id="ass">Connect with me:</p> */}
         <hr className="divider" />
         <a
           href="https://github.com/patKilcullen"
@@ -53,7 +59,11 @@ const SideNav = () => {
         <a href="mailto:patrickjkilcullen@gmail.com">
           <Email style={{ color: "#d8a2a2" }} />
         </a>
-        <a href="/Patrick-Kilcullen_Resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a
+          href="/Patrick-Kilcullen_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {" "}
           <Person style={{ color: "#d8a2a2" }} />
         </a>

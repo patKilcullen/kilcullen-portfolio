@@ -1,8 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
-import NavBar from "./NavBar";
-import SideNav from "./features/SideNav";
+
 
 import Home from "./features/Home";
 import Experience from "./features/Experience";
