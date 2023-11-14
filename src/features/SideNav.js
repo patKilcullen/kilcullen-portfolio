@@ -5,31 +5,30 @@ import "../style/sideBar.css"
 const SideNav = () => {
 
 
- const handleDownload = async () => {
-   try {
-     const response = await fetch("/Patrick-Kilcullen_Resume.pdf");
-     const blob = await response.blob();
-     const blobUrl = URL.createObjectURL(blob);
+//  const handleDownload = async () => {
+//    try {
+//      const response = await fetch("/Patrick-Kilcullen_Resume.pdf");
+//      const blob = await response.blob();
+//      const blobUrl = URL.createObjectURL(blob);
 
-     const link = document.createElement("a");
-     link.href = blobUrl;
-     link.download = "Patrick-Kilcullen_Resume.pdf"; // Change the desired file name.
+//      const link = document.createElement("a");
+//      link.href = blobUrl;
+//      link.download = "Patrick-Kilcullen_Resume.pdf"; // Change the desired file name.
 
-     document.body.appendChild(link);
-     link.click();
+//      document.body.appendChild(link);
+//      link.click();
 
-     URL.revokeObjectURL(blobUrl);
-     document.body.removeChild(link);
-   } catch (error) {
-     console.error("Error downloading the file:", error);
-   }
- };
+//      URL.revokeObjectURL(blobUrl);
+//      document.body.removeChild(link);
+//    } catch (error) {
+//      console.error("Error downloading the file:", error);
+//    }
+//  };
 
 
 
 
   return (
-    // <div id="sideBar">
     <div className="sideBar" style={{ zIndex: "1000000" }}>
       <div className="socialMedia">
         <p>Connect with me:</p>

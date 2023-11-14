@@ -4,7 +4,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import { useInView } from "react-intersection-observer";
 
-import Projects2 from "./Projects3";
+import Projects from "./Projects";
 import Experience from "./Experience";
 import SideNav from "./SideNav";
 import Tech from "./Tech";
@@ -14,78 +14,26 @@ import profilePic from "../ProfilePic.PNG";
 import profilePic2 from "../profile-pic.jpeg";
 import mountains from "./backgrounds/mountains.png";
 import clouds3 from "./backgrounds/clouds3.png";
-import clouds4 from "./backgrounds/clouds4.png";
 import cloudsPurple from "./backgrounds/cloudPurple.png";
 import lake from "./backgrounds/lake.png";
 import newMoon from "./backgrounds/newMoon.png";
 import sky4 from "./backgrounds/sky4.png";
 
-
 import Button from "@mui/material/Button";
 
-
-
 const Home = () => {
-
-
-  const handleDownload = () => {
-    // Replace 'document.pdf' with the actual file URL you want to download.
-    const fileUrl = "https://example.com/path/to/document.pdf";
-    const link = document.createElement("a");
-    link.href = fileUrl;
-    link.download = "document.pdf"; // The name you want the file to have when downloaded.
-    link.click();
-  };
-
-
-
- const projectsSectionRef = useRef(null);
-
-   const scrollToProjectsSection = () => {
-
- 
-     if (projectsSectionRef.current) {
-       projectsSectionRef.current.scrollIntoView({ behavior: "smooth" });
-     }
-   };
-
-
+  const projectsSectionRef = useRef(null);
 
   const textToType =
-    "I'm a passionate, creative developer based in Chicago, Il. I specialize in building innovative apps using a variety of technolgies including...";
+    "I'm a full stack software developer based in Chicago, Il. I think of Software development as a creative outlet, and I’m passionate about bringing unique and innovative ideas to life. Beyond coding, I enjoy writing, reading, movies, and cooking.";
   // const [typedText, setTypedText] = useState("");
 
-const typedText = textToType
+  const typedText = textToType;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [ref, inView] = useInView({
     threshold: 1,
   });
   const [typingDelay, setTypingDelay] = useState(false);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setTypingDelay(true);
-  //   }, 1500);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (typingDelay) {
-  //     const typingInterval = setInterval(() => {
-  //       if (currentIndex < textToType.length) {
-  //         setTypedText(textToType.slice(0, currentIndex + 1));
-  //         setCurrentIndex(currentIndex + 1);
-  //       } else {
-  //         clearInterval(typingInterval);
-  //       }
-  //     }, 20);
-
-  //     return () => {
-  //       clearInterval(typingInterval);
-  //     };
-  //   } else {
-  //     setTypingDelay(false);
-  //   }
-  // }, [currentIndex, inView, typingDelay]);
 
   const [saturation, setSaturation] = useState(300);
   const [skySaturation, setSkySaturation] = useState(saturation - 200);
@@ -135,43 +83,16 @@ const typedText = textToType
     setShowEditDesign(!showEditDesign);
   };
 
+  const [plain, setPlain] = useState(false);
 
-
-const [plain, setPlain] = useState(false)
-
-const handlePlainBackground = ()=>{
-  setPlain(!plain)
-}
-
+  const handlePlainBackground = () => {
+    setPlain(!plain);
+  };
 
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
-
       <SideNav></SideNav>
-      {/* {showEditDesign ? (
-        <EditDesign
-          handlePlainBackground={handlePlainBackground}
-          handleShowEdit={handleShowEdit}
-          handleBrightness={handleBrightness}
-          handleColor={handleColor}
-          handleContrast={handleContrast}
-          handleNightMode={handleNightMode}
-          handleSaturation={handleSaturation}
-          handlegrayscale={handlegrayscale}
-          brightness={brightness}
-          color={color}
-          contrast={contrast}
-          nightMode={nightMode}
-          saturation={saturation}
-          grayscale={grayscale}
-        />
-      ) : (
-        <label style={{ color: "white" }}>
-          Don't like my design? Click to
-          <Button onClick={handleShowEdit}>Edit</Button>
-        </label>
-      )} */}
-      {/* <Parallax pages={3.1}> */}
+
       <Parallax pages={2.8}>
         <ParallaxLayer
           sticky={{ start: 0, end: 2.5 }}
@@ -196,7 +117,7 @@ const handlePlainBackground = ()=>{
             />
           ) : (
             <label style={{ color: "white" }}>
-              Don't like my design? Click to
+              Don't like my background? Click to
               <Button onClick={handleShowEdit}>Edit</Button>
             </label>
           )}
@@ -263,16 +184,10 @@ const handlePlainBackground = ()=>{
         {plain ? (
           <ParallaxLayer
             style={{
-              // background: "linear-gradient(45deg, #3498db, #e74c3c)",
               background: "linear-gradient(180deg, #050c2c, #e74c3c)",
-
-              // backgroundSize: "cover",
               filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
             }}
-            // factor={3.1}
-            // factor={2.9}
             factor={5.5}
-            // speed={0.5}
             speed={1.5}
           ></ParallaxLayer>
         ) : (
@@ -283,10 +198,7 @@ const handlePlainBackground = ()=>{
                 backgroundSize: "cover",
                 filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
               }}
-              // factor={3.1}
-              // factor={2.9}
               factor={3.1}
-              // speed={0.5}
               speed={1.5}
             ></ParallaxLayer>
 
@@ -299,14 +211,9 @@ const handlePlainBackground = ()=>{
                 marginTop: "-150vh",
               }}
               factor={3}
-              // factor={3}
-              // offset={1.1}
               offset={1}
-              // speed={2.8}
               speed={3.8}
             ></ParallaxLayer>
-
-         
 
             {/* BOTTOM */}
             <ParallaxLayer
@@ -314,16 +221,14 @@ const handlePlainBackground = ()=>{
                 backgroundImage: `url(${lake})`,
                 backgroundSize: "cover",
                 marginTop: "-350vh",
-                // zIndex: "10000000"
               }}
               factor={1}
               offset={2}
               speed={3.8}
             >
-  
               {/* <SideNav></SideNav> */}
             </ParallaxLayer>
-            {/* Black Botton */}
+            {/* Black Bottom */}
             <ParallaxLayer
               style={{
                 // backgroundImage: `url(${lake})`,
@@ -334,18 +239,7 @@ const handlePlainBackground = ()=>{
               factor={3}
               offset={2}
               speed={3.8}
-            >
-              {/* <SideNav></SideNav> */}
-              {/* <img
-            alt="computer"
-            // className="profilePic"
-            src={computer}
-            style={{
-              width: "100vw",
-              marginTop: "-40vh"
-            }}
-          /> */}
-            </ParallaxLayer>
+            ></ParallaxLayer>
 
             <ParallaxLayer
               id={"clouds"}
@@ -404,21 +298,6 @@ const handlePlainBackground = ()=>{
           </>
         )}
 
-        {/* <ParallaxLayer
-          style={{
-            backgroundImage: `url(${clouds4})`,
-            backgroundSize: "cover",
-            left: "-5vw",
-            zIndex: 10000,
-            filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
-            // transform: "rotate(-5deg)"
-            // transform: "scaleX(-1)",
-          }}
-          factor={2}
-          offset={1}
-          speed={2}
-        ></ParallaxLayer> */}
-
         {/* ABOUT ME */}
         <ParallaxLayer
           offset={0.5}
@@ -450,31 +329,11 @@ const handlePlainBackground = ()=>{
               }}
             />
             ;
-            {/* <div
-              style={{ display: "flex", justifyContent: "center", gap: "25px" }}
-            >
-              <Button
-                variant="contained"
-                style={{ zIndex: 100001 }}
-                onClick={scrollToProjectsSection}
-              >
-                Projects
-              </Button>
-              <Button variant="contained" onClick={handleDownload}>
-                Download Resume
-              </Button>
-            </div> */}
           </div>
         </ParallaxLayer>
 
         {/* TECH */}
-        <ParallaxLayer
-          offset={0.3}
-          // speed={2}
-          speed={1.5}
-          //  factor={0.5}
-          id="tech-layer"
-        >
+        <ParallaxLayer offset={0.3} speed={1.5} id="tech-layer">
           <Tech></Tech>
         </ParallaxLayer>
 
@@ -486,15 +345,11 @@ const handlePlainBackground = ()=>{
           speed={1.5}
           id="projects-layer"
           style={{
-            //  marginTop: "-300px",
-
             zIndex: 10001,
-            // marginTop: "-1500px",
-            //  marginTop: "1000px"
           }}
         >
           <div ref={projectsSectionRef}>
-            <Projects2></Projects2>
+            <Projects></Projects>
           </div>
         </ParallaxLayer>
 

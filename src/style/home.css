@@ -16,13 +16,11 @@
 }
 
 .profilePic {
-
   border-radius: 50px;
   height: 35vh;
   border: 2px solid rgb(135, 82, 82);
   flex: 0 0 auto;
-max-width: 250px;
-
+  max-width: 250px;
 
   /* float: right; */
   box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
@@ -164,9 +162,6 @@ max-width: 250px;
   color: #d8a2a2;
 }
 
-
-
-
 /* @media only screen and (max-width: 600px) {
   .mainContainer {
   
@@ -195,44 +190,25 @@ max-width: 250px;
   }
 } */
 
-
-
-
-
-
-/* #tech-layer {
-  margin-top: 900px;
-}
-#projects-layer {
-  margin-top: -1000px;
-} */
-
 #about-me-layer {
-  /* margin-top: 75px; */
   margin-top: -50vh;
   width: 80vw;
 }
 
-
 @media (max-width: 300px) {
-
   #tech-layer {
-  /* margin-top: -5230vh; */
-
   }
   #projects-layer {
-    /* margin-top: -1200px;  */
     margin-top: -30vh;
   }
 }
 
-
 /* Styles for Mobile devices (320px - 480px) */
 @media (max-width: 480px) {
-.homeAbout{
-  font-size: 20px;
-}
-.profilePic {
+  .homeAbout {
+    font-size: 20px;
+  }
+  .profilePic {
     float: none;
   }
 
@@ -245,19 +221,17 @@ max-width: 250px;
     font-size: 15vw;
   }
   #about-me-layer {
-    margin-top:-5vh;
-flex-direction: column;
-
-
+    margin-top: -5vh;
+    flex-direction: column;
   }
- 
+
   .profilePic {
     /* float: none; */
     order: -1;
   }
 
   #tech-layer {
-    margin-top: 110vh
+    margin-top: 110vh;
   }
   #tech-text {
     font-size: 20px;
@@ -275,7 +249,6 @@ flex-direction: column;
 
   .node-icon {
     height: 20px;
-
   }
 }
 
@@ -289,40 +262,33 @@ flex-direction: column;
   }
 } */
 
-
 /* Styles for iPads and Tablets (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-.homeAbout{
-  font-size: 25px;
-}
-.profilePic {
+  .homeAbout {
+    font-size: 25px;
+  }
+  .profilePic {
     /* float: none; */
     order: -1;
   }
-#about-me-layer{
-  flex-direction: column;
-}
+  #about-me-layer {
+    flex-direction: column;
+  }
   .name-in-text-left {
     margin-top: -50px;
     font-size: 100px;
   }
   .name-in-text-right {
-    /* margin-top: -400px; */
     font-size: 100px;
   }
   #about-me-layer {
-    /* position: absolute; 
-    top: -200px;
-   */
-   margin-top: 5vh;
+    margin-top: 5vh;
   }
 
   #tech-layer {
     margin-top: 100vh;
-   
   }
-   #projects-layer {
-    /* margin-top: -800px; */
+  #projects-layer {
     margin-top: -60vh;
   }
   #tech-text {
@@ -332,9 +298,8 @@ flex-direction: column;
     font-size: 25px;
   }
   .node-icon {
-    height: 30px;
+    height: 25px;
   }
-
 
   #experience-layer {
   }
@@ -346,7 +311,6 @@ flex-direction: column;
     font-size: 10vw;
   }
   .name-in-text-right {
-    /* margin-top: -400px; */
     font-size: 10vw;
   }
 
@@ -354,21 +318,16 @@ flex-direction: column;
   }
 
   #tech-layer {
-    /* margin-top: 1000px; */
     margin-top: 80vh;
   }
 
   #projects-layer {
-    /* margin-top: -800px; */
     margin-top: -60vh;
   }
- 
 
   .node-icon {
-    height: 40px;
+    height: 30px;
   }
-
- 
 }
 
 /* Styles for Desktops and large screens (1025px - 1200px) */
@@ -381,7 +340,7 @@ flex-direction: column;
     margin-top: 80vh;
   }
 
- #projects-layer {
+  #projects-layer {
     /* margin-top: -800px; */
     margin-top: -70vh;
   }
@@ -390,7 +349,7 @@ flex-direction: column;
   }
 
   .node-icon {
-    height: 50px;
+    height: 35px;
   }
 }
 
@@ -413,6 +372,6 @@ flex-direction: column;
   }
 
   .node-icon {
-    height: 60px;
+    height: 40px;
   }
 }

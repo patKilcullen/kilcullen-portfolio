@@ -1,7 +1,7 @@
 import  balderdashPic from '../BalderdashPic.png'
 import EZStackPic from '../EZ-StackPic.png'
 import GraceShopperPic from '../Grace-ShopperPic.png'
-import JuniorPhasePic from './juniorPhasePic.png'
+// import JuniorPhasePic from './juniorPhasePic.png'
 
 
  import javascriptIcon from "../javascriptLogo.png";
@@ -16,7 +16,7 @@ import JuniorPhasePic from './juniorPhasePic.png'
  import expressIcon from "../expressLogo.png";
  import jwtIcon from "../jwtLogo.png"
  import socketIOIcon from "../socketIO.png"
-
+import awsLogo from "../awsLogo.png"
 
 export const projects = [
   {
@@ -31,15 +31,16 @@ export const projects = [
       { symbole: javascriptIcon, name: "JavaScript" },
       { symbole: reactIcon, name: "React" },
       { symbole: reduxIcon, name: "Redux" },
+      { symbole: socketIOIcon, name: "Socket.io" },
+      { symbole: awsLogo, name: "AWS" },
       { symbole: postgresIcon, name: "PostgreSQL" },
       { symbole: htmlIcon, name: "HTML" },
       { symbole: cssIcon, name: "CSS" },
       { symbole: nodeSVG, name: "Node" },
-      { symbole: materialIcon, name: "Material UI" },
+      { symbole: materialIcon, name: "MaterialUI" },
       { symbole: sequelizeIcon, name: "Sequelize" },
       { symbole: expressIcon, name: "Express" },
-      { symbole: jwtIcon, name: "JSON Web Token" },
-      { symbole: socketIOIcon, name: "Socket.io" },
+      { symbole: jwtIcon, name: "JWT" },
     ],
     pic: balderdashPic,
     align: "left",
@@ -57,6 +58,7 @@ export const projects = [
       { symbole: javascriptIcon, name: "JavaScript" },
       { symbole: reactIcon, name: "React" },
       { symbole: reduxIcon, name: "Redux" },
+      { symbole: jwtIcon, name: "JWT" },
       { symbole: postgresIcon, name: "PostgreSQL" },
       { symbole: htmlIcon, name: "HTML" },
       { symbole: cssIcon, name: "CSS" },

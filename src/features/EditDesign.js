@@ -1,10 +1,15 @@
 import React from 'react'
 
+
+import Button from "@mui/material/Button";
+
 const EditDesign = ({handlePlainBackground, handleShowEdit, handleNightMode, handleColor, handleSaturation, handlegrayscale, handleContrast, handleBrightness, color, saturation, grayscale, contrast, brightness}) => {
   return (
-    <div style={{backgroundColor: "black"}}>
+    <div style={{ backgroundColor: "black", display: "flex", justifyContent:"center", flexWrap: "wrap", marginRight: "0px"}}>
       {" "}
-      <button onClick={handleNightMode}>Night Mode</button>
+      <Button variant="contained" onClick={handleNightMode}>
+        Night Mode
+      </Button>
       <label style={{ color: "white" }}>Color</label>
       <input
         type="range"
@@ -45,9 +50,16 @@ const EditDesign = ({handlePlainBackground, handleShowEdit, handleNightMode, han
         value={brightness}
         onChange={handleBrightness}
       />
-      <button onClick={handlePlainBackground}>PLAIN</button>
-
-      <button onClick={handleShowEdit}>X</button>
+      <Button variant="contained" onClick={handlePlainBackground}>
+        PLAIN
+      </Button>
+      <Button
+        variant="outlined"
+        style={{ alignSelf: "flex-end" }}
+        onClick={handleShowEdit}
+      >
+        close
+      </Button>
     </div>
   );
 }
