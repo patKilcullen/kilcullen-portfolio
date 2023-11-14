@@ -198,7 +198,8 @@ const Home = () => {
                 backgroundSize: "cover",
                 filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
               }}
-              factor={3.1}
+              // factor={3.1}
+              factor={3.3}
               speed={1.5}
             ></ParallaxLayer>
 
