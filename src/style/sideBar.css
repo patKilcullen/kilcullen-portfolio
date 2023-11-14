@@ -58,14 +58,7 @@ background-color: rgba(255, 0, 0, 0.2);
 } */
 
 @media only screen and (max-width: 450px) {
-  .sideBar {
-    /* flex-direction: row;
-    width: 100vw;
-    top:-10vh;
-    justify-content: center;
-   background-color: rgba(255, 0, 0, 0.5);
-   height: 10vh; */
-  }
+
   .socialMedia {
  background-color: rgba(255, 0, 0, 0.2);
  border-radius: 10px;
