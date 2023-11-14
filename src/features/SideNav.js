@@ -38,7 +38,7 @@ const SideNav = () => {
         // style={{  border: "2px solid green" }}
       >
         {/* <p id="ass">Connect with me:</p> */}
-        <hr className="divider" />
+        {/* <hr className="divider" /> */}
         <a
           href="https://github.com/patKilcullen"
           target="_blank"
