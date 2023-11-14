@@ -116,7 +116,7 @@ const Home = () => {
               grayscale={grayscale}
             />
           ) : (
-            <label style={{ color: "white" }}>
+            <label style={{ color: "white", backgroundColor:"rgba(0, 0, 0, 0.2)" }}>
               Don't like my background? Click to
               <Button onClick={handleShowEdit}>Edit</Button>
             </label>
@@ -211,7 +211,8 @@ const Home = () => {
                 filter: `hue-rotate(${skyColor}deg)`,
                 marginTop: "-150vh",
               }}
-              factor={3}
+              // factor={3}
+              factor={3.2}
               offset={1}
               speed={3.8}
             ></ParallaxLayer>
