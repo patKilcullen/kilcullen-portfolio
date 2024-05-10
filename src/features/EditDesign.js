@@ -1,15 +1,59 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
-import Button from "@mui/material/Button";
+import {
+  Button,
+  Box,
+  Typography,
+  ToggleButton,
+  ToggleButtonGroup,
+} from "@mui/material";
 
 const EditDesign = ({handlePlainBackground, handleShowEdit, handleNightMode, handleColor, handleSaturation, handlegrayscale, handleContrast, handleBrightness, color, saturation, grayscale, contrast, brightness}) => {
+
+ const [themeSection, setThemeSection] = useState('dayMode')
+
+ const handleThemeChange = (theme) =>{
+  setThemeSection(theme)
+  
+  if(theme === "plainMode"){
+handlePlainBackground(true)
+  }else{
+  handlePlainBackground(false);  
+handleNightMode(theme === "dayMode" ? false : true)
+  }
+ }
   return (
-    <div style={{ backgroundColor: "black", display: "flex", justifyContent:"center", flexWrap: "wrap", marginRight: "0px"}}>
+    <div
+      style={{
+        backgroundColor: "black",
+        display: "flex",
+        justifyContent: "center",
+        flexWrap: "wrap",
+        marginRight: "0px",
+      }}
+    >
       {" "}
-      <Button variant="contained" onClick={handleNightMode}>
+      <Box>
+        <Typography sx={{ color: "white" }}>Theme</Typography>
+        <ToggleButtonGroup
+          variant="contained"
+          color="secondary"
+          sx={{ backgroundColor: "#1976D2", border: "blue" }}
+          value={themeSection}
+          exclusive
+          onChange={(e) => handleThemeChange(e.target.value)}
+        >
+          <ToggleButton value="dayMode" variant="outlined">
+            Day Mode
+          </ToggleButton>
+          <ToggleButton value="nightMode">Night Mode</ToggleButton>
+          <ToggleButton value="plainMode">Plain Mode</ToggleButton>
+        </ToggleButtonGroup>
+      </Box>
+      {/* <Button variant="contained" onClick={handleNightMode}>
         Night Mode
-      </Button>
+      </Button> */}
       <label style={{ color: "white" }}>Color</label>
       <input
         type="range"

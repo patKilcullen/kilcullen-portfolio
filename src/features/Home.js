@@ -75,8 +75,8 @@ const Home = () => {
   };
 
   const [nightMode, setNightMode] = useState(false);
-  const handleNightMode = () => {
-    setNightMode(!nightMode);
+  const handleNightMode = (type) => {
+    setNightMode(type);
   };
   const [showEditDesign, setShowEditDesign] = useState(false);
   const handleShowEdit = () => {
@@ -85,8 +85,8 @@ const Home = () => {
 
   const [plain, setPlain] = useState(false);
 
-  const handlePlainBackground = () => {
-    setPlain(!plain);
+  const handlePlainBackground = (type) => {
+    setPlain(type);
   };
 
   return (
