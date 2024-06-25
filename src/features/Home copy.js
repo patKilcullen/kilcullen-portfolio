@@ -68,7 +68,6 @@ const Home = () => {
   const [color, setColor] = useState(0);
   const [skyColor, setSkyColor] = useState(0);
   const handleColor = (e) => {
-   
     setColor(e.target.value);
     setSkyColor(
       e.target.value > 0
@@ -86,15 +85,12 @@ const Home = () => {
     setShowEditDesign(!showEditDesign);
   };
 
-  const [plain, setPlain] = useState(false);
+  const [plain, setPlain] = useState(true);
 
   const handlePlainBackground = (type) => {
     setPlain(type);
   };
 
-
-  const [addCloouds, setAddClouds] = useState(false)
-    const [addMountains, setAddMountains] = useState(false);
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
       <SideNav></SideNav>
@@ -122,8 +118,6 @@ const Home = () => {
               grayscale={grayscale}
               plainColor1={plainColor1}
               setPlainColor1={setPlainColor1}
-              setAddClouds={setAddClouds}
-              setAddMountains={setAddMountains}
             />
           ) : (
             <label
@@ -222,10 +216,7 @@ const Home = () => {
           <ParallaxLayer
             style={{
               // background: "linear-gradient(180deg, #050c2c, #e74c3c)",
-              // background: `linear-gradient(180deg, ${plainColor1}, ${plainColor2})`,
-
-              background: plainColor1,
-
+              background: `linear-gradient(180deg, ${plainColor1}, ${plainColor2})`,
               filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
             }}
             factor={5.5}
@@ -235,27 +226,19 @@ const Home = () => {
           <>
             <ParallaxLayer
               style={{
-                // backgroundImage: nightMode ? `url(${newMoon})` : `url(${sky4})`,
-                backgroundImage: nightMode ? `url(${newMoon})` : null,
-                background: nightMode ? "" : plainColor1,
-
+                backgroundImage: nightMode ? `url(${newMoon})` : `url(${sky4})`,
                 backgroundSize: "cover",
                 filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
               }}
               // factor={3.1}
               factor={3.3}
               speed={1.5}
-            >
-              {" "}
-            </ParallaxLayer>
+            ></ParallaxLayer>
 
             <ParallaxLayer
               id={"mntns"}
               style={{
-                 backgroundImage: addMountains ? `url(${mountains})` : null,
-                // backgroundImage: null,
-                backgroundColor: nightMode ? "black" : plainColor1,
-
+                backgroundImage: `url(${mountains})`,
                 backgroundSize: "cover",
                 filter: `hue-rotate(${skyColor}deg)`,
                 marginTop: "-150vh",
@@ -269,10 +252,7 @@ const Home = () => {
             {/* BOTTOM */}
             <ParallaxLayer
               style={{
-                 backgroundImage: addMountains ? `url(${lake})` : null,
-                // backgroundImage: null,
-                backgroundColor: nightMode ? "black" : plainColor1,
-
+                backgroundImage: `url(${lake})`,
                 backgroundSize: "cover",
                 marginTop: "-350vh",
               }}
@@ -285,11 +265,11 @@ const Home = () => {
             {/* Black Bottom */}
             <ParallaxLayer
               style={{
-                 backgroundImage: addMountains ? `url(${lake})` : null,
+                // backgroundImage: `url(${lake})`,
                 // backgroundSize: "cover",
                 // marginTop: "-251vh",
                 marginTop: "-281vh",
-                background: nightMode || addMountains ? "black" : plainColor1,
+                backgroundColor: "black",
               }}
               factor={3.4}
               offset={2}
@@ -299,8 +279,7 @@ const Home = () => {
             <ParallaxLayer
               id={"clouds"}
               style={{
-                // backgroundImage: nightMode ? null : `url(${clouds3})`,
-                backgroundImage: addCloouds ? `url(${clouds3})` : null,
+                backgroundImage: nightMode ? null : `url(${clouds3})`,
                 backgroundSize: "cover",
                 left: "50vw",
                 filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
@@ -313,8 +292,7 @@ const Home = () => {
             <ParallaxLayer
               id={"clouds"}
               style={{
-                // backgroundImage: nightMode ? null : `url(${clouds3})`,
-                backgroundImage: addCloouds ? `url(${clouds3})` : null,
+                backgroundImage: nightMode ? null : `url(${clouds3})`,
                 backgroundSize: "cover",
                 filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
@@ -324,26 +302,23 @@ const Home = () => {
               speed={2.5}
             ></ParallaxLayer>
 
-            {/* <ParallaxLayer
+            <ParallaxLayer
               id={"clouds"}
               style={{
-                // backgroundImage: `url(${cloudsPurple}) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
-                backgroundImage: `url(${addCloouds ? cloudsPurple : null})`,
-                // backgroundImage: `url(${addCloouds ? cloudsPurple : null}) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+                backgroundImage: `url(${cloudsPurple}) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
                 backgroundSize: "contain",
                 left: "25vw",
-                 filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+                filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
               factor={2}
               offset={0.5}
               speed={0.5}
-            ></ParallaxLayer> */}
+            ></ParallaxLayer>
 
             <ParallaxLayer
               id={"clouds"}
               style={{
-                // backgroundImage: `url(${clouds3})`,
-                backgroundImage: addCloouds ? `url(${clouds3})` : null,
+                backgroundImage: `url(${clouds3})`,
                 backgroundSize: "contain",
                 left: "-70vw",
                 height: "200vh",

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
 
 import {
@@ -7,100 +7,25 @@ import {
   Typography,
   ToggleButton,
   ToggleButtonGroup,
-  Modal
 } from "@mui/material";
-
-
 
 import ColorPicker from './ColorPicker'
 
+const EditDesign = ({handlePlainBackground, handleShowEdit, handleNightMode, handleColor, handleSaturation, handlegrayscale, handleContrast, handleBrightness, color, saturation, grayscale, contrast, brightness}) => {
 
+ const [themeSection, setThemeSection] = useState('dayMode')
 
-// const style = {
-//   // position: "absolute",
-//   top: "50vh",
-//   left: "50%",
-//   transform: "translate(-50%, -50%)",
-//   minWidth: "35vw",
-//   //   width: '35vw',
-//   maxHeight: "90vh",
-//   overflowY: "auto",
-//   bgcolor: "background.paper",
-//   border: "2px solid #000",
-//   boxShadow: 24,
-//   p: 4,
-//   display: "flex",
-//   flexDirection: "column",
-//   alignItems: "center",
-//   borderRadius: "20px",
-// };
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-const EditDesign = ({
-  open,
-  setShowEditDesign,
-  handlePlainBackground,
-  handleShowEdit,
-  handleNightMode,
-  handleColor,
-  handleSaturation,
-  handlegrayscale,
-  handleContrast,
-  handleBrightness,
-  color,
-  saturation,
-  grayscale,
-  contrast,
-  brightness,
-  plainColor1,
-  setPlainColor1,
-  setAddClouds,
-  setAddMountains,
-}) => {
-  const [themeSection, setThemeSection] = useState("plainMode");
-
-  const handleThemeChange = (theme) => {
-    setThemeSection(theme);
-
-    if (theme === "plainMode") {
-      handlePlainBackground(true);
-    } else {
-      handlePlainBackground(false);
-      handleNightMode(theme === "dayMode" ? false : true);
-    }
-  };
-
-  //   CLOSE MODAL
-  const handleClose = () => {
-    setShowEditDesign(false);
-  };
-
-  // Enable scroll on body when modal is open
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "auto";
-    } else {
-      document.body.style.overflow = "hidden";
-    }
-  }, [open]);
-
-  const handleAddClouds = () => {
-    setAddClouds((prev) => !prev);
-  };
-  const handleAddMountains = () => {
-    setAddMountains((prev) => !prev);
-  };
+ const handleThemeChange = (theme) =>{
+  setThemeSection(theme)
+  
+  if(theme === "plainMode"){
+handlePlainBackground(true)
+  }else{
+  handlePlainBackground(false);  
+handleNightMode(theme === "dayMode" ? false : true)
+  }
+ }
   return (
-    // <Modal open={open} onClose={handleClose} sx={{ overflow: "auto" }}>
     <div
       style={{
         backgroundColor: "black",
@@ -128,7 +53,7 @@ const EditDesign = ({
           <ToggleButton value="plainMode">Plain Mode</ToggleButton>
         </ToggleButtonGroup>
       </Box>
-      <ColorPicker plainColor1={plainColor1} setPlainColor1={setPlainColor1} />
+      <ColorPicker />
       {/* <Button variant="contained" onClick={handleNightMode}>
         Night Mode
       </Button> */}
@@ -175,12 +100,6 @@ const EditDesign = ({
       <Button variant="contained" onClick={handlePlainBackground}>
         PLAIN
       </Button>
-      <Button variant="contained" onClick={handleAddClouds}>
-        Add Clouds
-      </Button>
-      <Button variant="contained" onClick={handleAddMountains}>
-        Add Mountains
-      </Button>
       <Button
         variant="outlined"
         style={{ alignSelf: "flex-end" }}
@@ -189,8 +108,7 @@ const EditDesign = ({
         close
       </Button>
     </div>
-    // </Modal>
   );
-};
+}
 
 export default EditDesign
