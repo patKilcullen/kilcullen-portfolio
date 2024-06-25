@@ -41,7 +41,7 @@
 
 .name-in-text-left {
   color: rgb(228, 225, 225);
-  font-size: 50px;
+  /* font-size: 50px; */
   font-family: "New Century Schoolbook", "Copperplate", Haettenschweiler,
     "Arial Narrow Bold", sans-serif;
   font-weight: bold;
