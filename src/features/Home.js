@@ -2,8 +2,6 @@ import React, { useState, useRef } from "react";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-// import { useInView } from "react-intersection-observer";
-
 import Projects from "./Projects";
 
 import SideNav from "./SideNav";
@@ -13,7 +11,6 @@ import EditDesign from "./EditDesign";
 import profilePic2 from "../profile-pic.jpeg";
 import mountains from "./backgrounds/mountains.png";
 import clouds3 from "./backgrounds/clouds3.png";
-import cloudsPurple from "./backgrounds/cloudPurple.png";
 import lake from "./backgrounds/lake.png";
 import newMoon from "./backgrounds/newMoon.png";
 import sky4 from "./backgrounds/sky4.png";
@@ -25,14 +22,10 @@ const Home = () => {
 
   const textToType =
     "I'm a full stack software developer based in Chicago, Il. I think of Software development as a creative outlet, and I’m passionate about bringing unique and innovative ideas to life. Beyond coding, I enjoy writing, reading, movies, and cooking.";
-  // const [typedText, setTypedText] = useState("");
+
 
   const typedText = textToType;
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  // const [ref, inView] = useInView({
-  //   threshold: 1,
-  // });
-  // const [typingDelay, setTypingDelay] = useState(false);
+
 
   const [saturation, setSaturation] = useState(300);
   const [skySaturation, setSkySaturation] = useState(saturation - 200);
@@ -62,9 +55,8 @@ const Home = () => {
     setSkyBrightness(Number(e.target.value) + 30);
   };
 
-  // const [plainColor1, setPlainColor1] = useState("#050c2c");
     const [plainColor1, setPlainColor1] = useState("#858CAA");
-  const [plainColor2, setPlainColor2] = useState("#e74c3c");
+
   const [color, setColor] = useState(0);
   const [skyColor, setSkyColor] = useState(0);
   const handleColor = (e) => {
@@ -132,37 +124,22 @@ const Home = () => {
             </Box>
           ) : (
             <label
-              style={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+              style={{
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.2)",
+                fontSize: "20px",
+                marginRight: "5px",
+              }}
             >
-              Don't like my background? Click to
-              <Button onClick={handleShowEdit}>Edit</Button>
+              Don't like my background? Click here to:
+              <Button
+                sx={{ fontSize: "25px", fontWeight: "bold" }}
+                onClick={handleShowEdit}
+              >
+                Edit
+              </Button>
             </label>
           )}
-
-          {/* <label
-            style={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-          >
-            Don't like my background? Click to
-            <Button onClick={handleShowEdit}>Edit</Button>
-            <EditDesign
-              open={showEditDesign}
-              setShowEditDesign={setShowEditDesign}
-              handlePlainBackground={handlePlainBackground}
-              handleShowEdit={handleShowEdit}
-              handleBrightness={handleBrightness}
-              handleColor={handleColor}
-              handleContrast={handleContrast}
-              handleNightMode={handleNightMode}
-              handleSaturation={handleSaturation}
-              handlegrayscale={handlegrayscale}
-              brightness={brightness}
-              color={color}
-              contrast={contrast}
-              nightMode={nightMode}
-              saturation={saturation}
-              grayscale={grayscale}
-            />
-          </label> */}
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -192,7 +169,7 @@ const Home = () => {
                   backgroundColor: "black",
                   left: "-5vw",
                   // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
-                  filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
+                  // filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
                 }}
                 className="name-in-text-left"
               >
@@ -244,6 +221,7 @@ const Home = () => {
               style={{
                 // backgroundImage: nightMode ? `url(${newMoon})` : `url(${sky4})`,
                 backgroundImage: nightMode ? `url(${newMoon})` : null,
+                // backgroundImage: nightMode ? `url(${newMoon})` : addMountains ? `url(${sky4})` : null,
                 backgroundColor: nightMode ? "black" : plainColor1,
 
                 backgroundSize: "cover",
@@ -329,7 +307,7 @@ const Home = () => {
               style={{
                 backgroundImage: addClouds ? `url(${clouds3})` : null,
                 backgroundSize: "cover",
-                filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
+                filter: `saturate(${saturation}%) grayscale(60%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
                 // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
               factor={2}
@@ -353,6 +331,74 @@ const Home = () => {
               }}
               offset={0.9}
               speed={0.8}
+            ></ParallaxLayer>
+
+            {/* MOIUNTIAN CLOUDS */}
+            <ParallaxLayer
+              id={"clouds"}
+              style={{
+                // backgroundImage: `url(${clouds3})`,
+                backgroundImage: addClouds ? `url(${clouds3})` : null,
+                backgroundSize: "contain",
+                left: "-70vw",
+                height: "200vh",
+                width: "200vw",
+                zIndex: 10000,
+                filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
+                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+              }}
+              offset={1}
+              speed={0.8}
+            ></ParallaxLayer>
+            <ParallaxLayer
+              id={"clouds"}
+              style={{
+                // backgroundImage: `url(${clouds3})`,
+                backgroundImage: addClouds ? `url(${clouds3})` : null,
+                backgroundSize: "contain",
+                left: "20vw",
+                height: "200vh",
+                width: "200vw",
+                zIndex: 10000,
+                filter: `saturate(${saturation}%) grayscale(70%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
+                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+              }}
+              offset={0.9}
+              speed={0.9}
+            ></ParallaxLayer>
+            <ParallaxLayer
+              id={"clouds"}
+              style={{
+                // backgroundImage: `url(${clouds3})`,
+                backgroundImage:
+                  addClouds && !addMountains ? `url(${clouds3})` : null,
+                backgroundSize: "contain",
+                left: "-30vw",
+                height: "200vh",
+                width: "200vw",
+                zIndex: 10000,
+                filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
+                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+              }}
+              offset={1.2}
+              speed={0.8}
+            ></ParallaxLayer>
+            <ParallaxLayer
+              id={"clouds"}
+              style={{
+                // backgroundImage: `url(${clouds3})`,
+                backgroundImage:
+                  addClouds && !addMountains ? `url(${clouds3})` : null,
+                backgroundSize: "contain",
+                left: "60vw",
+                height: "200vh",
+                width: "200vw",
+                zIndex: 10000,
+                filter: `saturate(${saturation}%) grayscale(70%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
+                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
+              }}
+              offset={1.6}
+              speed={1}
             ></ParallaxLayer>
           </>
         )}
@@ -441,3 +487,5 @@ const Home = () => {
 };
 
 export default Home;
+
+

@@ -99,3 +99,43 @@ margin-top: 0vh;
     
   }
 }
+
+
+
+.sideBar .socialMedia a {
+  position: relative;
+  display: inline-block;
+}
+
+.sideBar .socialMedia a .hover-text {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the icon */
+  left: 80%;
+  margin-left: -50px;
+  width: 100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sideBar .socialMedia a .hover-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Arrow pointing down */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.sideBar .socialMedia a:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+}
