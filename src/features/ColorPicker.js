@@ -1,29 +1,8 @@
 import React, { useState } from "react";
 import {
-  Slider,
   Sketch,
-  Material,
-  Colorful,
-  Compact,
-  Circle,
-  Wheel,
-  Block,
-  Github,
-  Chrome,
 } from "@uiw/react-color";
-import {
-  Alpha,
-  Hue,
-  ShadeSlider,
-  Saturation,
-  Interactive,
-  hsvaToHslaString,
-} from "@uiw/react-color";
-import {
-  EditableInput,
-  EditableInputRGBA,
-  EditableInputHSLA,
-} from "@uiw/react-color";
+
 
 import { Box, IconButton } from "@mui/material";
 

@@ -13,7 +13,7 @@ import mountains from "./backgrounds/mountains.png";
 import clouds3 from "./backgrounds/clouds3.png";
 import lake from "./backgrounds/lake.png";
 import newMoon from "./backgrounds/newMoon.png";
-import sky4 from "./backgrounds/sky4.png";
+
 
 import {Box, Button} from "@mui/material";
 
@@ -28,31 +28,31 @@ const Home = () => {
 
 
   const [saturation, setSaturation] = useState(300);
-  const [skySaturation, setSkySaturation] = useState(saturation - 200);
+  // const [skySaturation, setSkySaturation] = useState(saturation - 200);
   const handleSaturation = (e) => {
     setSaturation(e.target.value);
-    setSkySaturation(e.target.value - 200);
+    // setSkySaturation(e.target.value - 200);
   };
 
   const [grayscale, setGrayscale] = useState(20);
-  const [skyGrayscale, setSkyGrayscale] = useState(grayscale - 20);
+  // const [skyGrayscale, setSkyGrayscale] = useState(grayscale - 20);
   const handlegrayscale = (e) => {
     setGrayscale(e.target.value);
-    setSkyGrayscale(e.target.value - 20);
+    // setSkyGrayscale(e.target.value - 20);
   };
 
   const [contrast, setContrast] = useState(130);
-  const [skyContrast, setSkyContrast] = useState(contrast - 30);
+  // const [skyContrast, setSkyContrast] = useState(contrast - 30);
   const handleContrast = (e) => {
     setContrast(e.target.value);
-    setSkyContrast(e.target.value - 30);
+    // setSkyContrast(e.target.value - 30);
   };
 
   const [brightness, setBrightness] = useState(70);
-  const [skyBrightness, setSkyBrightness] = useState(brightness + 30);
+  // const [skyBrightness, setSkyBrightness] = useState(brightness + 30);
   const handleBrightness = (e) => {
     setBrightness(e.target.value);
-    setSkyBrightness(Number(e.target.value) + 30);
+    // setSkyBrightness(Number(e.target.value) + 30);
   };
 
     const [plainColor1, setPlainColor1] = useState("#858CAA");

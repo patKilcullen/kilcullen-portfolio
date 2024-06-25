@@ -1,29 +1,8 @@
 import React from 'react'
 import { Email, GitHub, LinkedIn, Person } from '@material-ui/icons'
 import "../style/sideBar.css"
-import {Box} from "@mui/material"
+
 const SideNav = () => {
-
-
-//  const handleDownload = async () => {
-//    try {
-//      const response = await fetch("/Patrick-Kilcullen_Resume.pdf");
-//      const blob = await response.blob();
-//      const blobUrl = URL.createObjectURL(blob);
-
-//      const link = document.createElement("a");
-//      link.href = blobUrl;
-//      link.download = "Patrick-Kilcullen_Resume.pdf"; // Change the desired file name.
-
-//      document.body.appendChild(link);
-//      link.click();
-
-//      URL.revokeObjectURL(blobUrl);
-//      document.body.removeChild(link);
-//    } catch (error) {
-//      console.error("Error downloading the file:", error);
-//    }
-//  };
 
 
 
@@ -32,10 +11,10 @@ const SideNav = () => {
     <div className="sideBar" style={{ zIndex: "1000000" }}>
       <div
         className="socialMedia"
-        // style={{  border: "2px solid green" }}
+
       >
         <p id="ass">Info:</p>
-        {/* <hr className="divider" /> */}
+
         <a
           href="https://github.com/patKilcullen"
           target="_blank"
