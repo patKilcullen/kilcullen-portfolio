@@ -100,13 +100,11 @@ const Home = () => {
       <Parallax pages={2.8}>
         <ParallaxLayer
           sticky={{ start: 0, end: 2.5 }}
-          style={{ height: "1--%", }}
+          style={{ height: "1--%" }}
         >
           {showEditDesign ? (
-            <Box
-              sx={{ display: "flex", justifyContent: "flex-end" }}
-            >
-              <Box sx={{alignSelf: "center"}}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+              <Box sx={{ alignSelf: "center" }}>
                 <EditDesign
                   handlePlainBackground={handlePlainBackground}
                   handleShowEdit={handleShowEdit}
@@ -128,6 +126,7 @@ const Home = () => {
                   addMountains={addMountains}
                   setAddClouds={setAddClouds}
                   setAddMountains={setAddMountains}
+                  setShowEditDesign={setShowEditDesign}
                 />
               </Box>
             </Box>
