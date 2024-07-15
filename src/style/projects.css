@@ -48,6 +48,15 @@
   height: 40vh;
   border-radius: 25px;
   float: right;
+
+}
+.youTube {
+  height: 40vh;
+  border-radius: 25px;
+  float: right;
+  border: 5px solid red;
+  margin-top: -50px;
+
 }
 .projectAbout {
   color: #d8a2a2;
@@ -74,6 +83,14 @@
   order: 1;
 }
 
+#youTube-link-left {
+  order: -1;
+}
+#youTube-link-right {
+  order: 1;
+}
+
+
 .project-tech {
   color: #d8a2a2;
   font-size: larger;
@@ -90,14 +107,21 @@
   .projectPic {
     width: 100vw;
   }
+  .youTube {
+    width: 100vw;
+  }
 }
 
 @media (max-width: 768px) {
   .projectPic {
     height: 30vh;
   }
+  .youTube {
+    height: 30vh;
+  }
   #inner-project-container {
     flex-direction: column;
+   
   }
 }
 
@@ -109,47 +133,12 @@
   #projectPic-link-right {
     order: -1;
   }
+  #youTube-link-right {
+    order: -1;
+  }
   .projectAbout {
-    max-height: 10vh;
+    max-height: 30vh;
+    width: 60vw;
   }
 }
 
-/* @media only screen and (max-width: 600px) {
-    .mainProjectContainer {
-
-        
-       margin-left: 0;
-       align-self: start;
-
-    }
-    #projectsPage {
-        margin-left: 15vw;
-    }
-    .pageTitle {
-      font-size: 7vh;
-     
-    }
-    .projectsPageTitle {
-        font-size: 7vh;
-       margin-left: -20vw;
-      }
-    
-    .projectContainer {
-        min-width: 80vw;
-    }
-    .projectAbout {
-        overflow: auto;
-        width: 100%;
-        min-width: 50vw;
-        max-height: 10vh;
-       
-
-      margin-left: 0px;
-        margin-bottom: 5px;
-        color: white;
-    }
-    .buttons{
-        display: flex;
-        flex-direction: column;
-    }
-  } */

@@ -11,6 +11,7 @@ import nodeSVG from "../node-js.svg";
 import materialIcon from "../materialUILogo.png";
 import sequelizeIcon from "../sequelize.svg";
 import expressIcon from "../expressLogo.png";
+import mongoDCIcon from "../mongodb-svgrepo-com.svg"
 // import jwtIcon from "../jwtLogo.png";
 
 import { useInView } from "react-intersection-observer";
@@ -31,6 +32,7 @@ const Tech = () => {
     { symbole: materialIcon, name: "Material UI" },
     { symbole: sequelizeIcon, name: "Sequelize" },
     { symbole: expressIcon, name: "Express" },
+    { symbole: mongoDCIcon, name: "MongoDB" },
   ];
 
   const [slide, setSlide] = useState(false);

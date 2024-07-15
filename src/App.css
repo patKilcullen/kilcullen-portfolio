@@ -60,7 +60,8 @@ body{
    /* position: fixed;  */
    width: 100vw;
   /* border: 2px solid red; */
-  z-index: 1
+  z-index: 1;
+  
 }
 
 
@@ -105,6 +106,7 @@ margin-top: 0vh;
 .sideBar .socialMedia a {
   position: relative;
   display: inline-block;
+
 }
 
 .sideBar .socialMedia a .hover-text {

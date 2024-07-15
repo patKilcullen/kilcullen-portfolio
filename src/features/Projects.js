@@ -1,27 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "./projectInfo";
-
 import "../style/projects.css";
 import Button from "@mui/material/Button";
+import ProjectModal from "./ProjectModal";
 
-const Projects3 = () => {
+const Projects3 = ({ color, setHideNav }) => {
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleOpenModal = (project) => {
+    setSelectedProject(project);
+    setOpenModal(true);
+    setHideNav(true)
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+    setSelectedProject(null);
+     setHideNav(false);
+  };
 
   return (
     <div id="main-projects">
       <div id="projectsPage">
         <h1 className="projectsPageTitle">Projects</h1>
-
         <div className="mainProjectContainer">
           {projects.map((project, idx) => {
             return (
               <div
+                key={idx}
                 style={{
-                  backgroundColor: "rgba(10, 10, 110, 0.1)",
+                  backgroundColor: openModal ? color : "rgba(10, 10, 110, 0.1)",
                   borderRadius: "25px",
                   display: "flex",
                   flexDirection: "column",
                 }}
+                onClick={() => handleOpenModal(project)}
               >
                 <h1 className="project-name">{project.name}</h1>
                 <div id="inner-project-container">
@@ -44,20 +59,21 @@ const Projects3 = () => {
                   </Link>
 
                   <div className="projectAbout">{project.about}</div>
+                  {/* {project.about} */}
                 </div>
                 <div id="tech-and-buttons">
                   <div
                     className="project-tech"
                     style={{
                       float: project.align,
-
                       order: project.align === "right" ? 1 : -1,
                     }}
                   >
                     Tech Stack:{" "}
-                    {project.tech2.map((proj) => {
+                    {project.tech2.map((proj, index) => {
                       return (
                         <div
+                          key={index}
                           style={{
                             display: "flex",
                             flexDirection: "column",
@@ -135,8 +151,15 @@ const Projects3 = () => {
               </div>
             );
           })}
+          {selectedProject && (
+            <ProjectModal
+              project={selectedProject}
+              open={openModal}
+              close={handleCloseModal}
+              color={color}
+            />
+          )}
         </div>
-        {/* </div> */}
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const SideNav = () => {
         className="socialMedia"
 
       >
-        <p id="ass">Info:</p>
+        <p style={{marginLeft: "10px"}}>Connect:</p>
 
         <a
           href="https://github.com/patKilcullen"

@@ -13,12 +13,14 @@
 
 }
 
+
 .list {
   font-size: 100px;
 }
 .socialMedia{
 background-color: rgba(255, 0, 0, 0.2);
  border-radius: 10px;
+
 }
 .socialMedia svg {
   color: #d8a2a2;
@@ -27,7 +29,7 @@ background-color: rgba(255, 0, 0, 0.2);
   cursor: pointer;
   background-color: rgba(103, 62, 166, 0.1);
   box-shadow: 4px 4px 8px 4px rgb(191, 161, 188);
-  
+
 }
  
 

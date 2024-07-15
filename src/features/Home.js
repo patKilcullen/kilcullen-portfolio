@@ -28,31 +28,23 @@ const Home = () => {
 
 
   const [saturation, setSaturation] = useState(300);
-  // const [skySaturation, setSkySaturation] = useState(saturation - 200);
   const handleSaturation = (e) => {
     setSaturation(e.target.value);
-    // setSkySaturation(e.target.value - 200);
   };
 
   const [grayscale, setGrayscale] = useState(20);
-  // const [skyGrayscale, setSkyGrayscale] = useState(grayscale - 20);
   const handlegrayscale = (e) => {
     setGrayscale(e.target.value);
-    // setSkyGrayscale(e.target.value - 20);
   };
 
   const [contrast, setContrast] = useState(130);
-  // const [skyContrast, setSkyContrast] = useState(contrast - 30);
   const handleContrast = (e) => {
     setContrast(e.target.value);
-    // setSkyContrast(e.target.value - 30);
   };
 
   const [brightness, setBrightness] = useState(70);
-  // const [skyBrightness, setSkyBrightness] = useState(brightness + 30);
   const handleBrightness = (e) => {
     setBrightness(e.target.value);
-    // setSkyBrightness(Number(e.target.value) + 30);
   };
 
     const [plainColor1, setPlainColor1] = useState("#858CAA");
@@ -85,9 +77,11 @@ const Home = () => {
 
   const [addClouds, setAddClouds] = useState(false);
   const [addMountains, setAddMountains] = useState(false);
+
+  const [hideNav, setHideNav] = useState(false)
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
-      <SideNav></SideNav>
+      {!hideNav && <SideNav></SideNav>}
 
       <Parallax pages={2.8}>
         <ParallaxLayer
@@ -160,7 +154,6 @@ const Home = () => {
                 zIndex: 1,
                 backgroundColor: "black",
                 opacity: "85%",
-                // minWidth: "300px"
               }}
               id="title"
             >
@@ -168,8 +161,6 @@ const Home = () => {
                 style={{
                   backgroundColor: "black",
                   left: "-5vw",
-                  // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
-                  // filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
                 }}
                 className="name-in-text-left"
               >
@@ -188,11 +179,8 @@ const Home = () => {
 
             <div
               style={{
-                // backgroundColor: "#050c2c",
                 backgroundClip: "rgba(5, 12, 44, 0.5",
-
                 marginTop: "-1%",
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
                 filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
               }}
             >
@@ -205,12 +193,8 @@ const Home = () => {
         {plain ? (
           <ParallaxLayer
             style={{
-              // background: "linear-gradient(180deg, #050c2c, #e74c3c)",
-              // background: `linear-gradient(180deg, ${plainColor1}, ${plainColor2})`,
-
               background: plainColor1,
-              filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
-              // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
+              filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`, // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
             }}
             factor={5.5}
             speed={1.5}
@@ -219,17 +203,12 @@ const Home = () => {
           <>
             <ParallaxLayer
               style={{
-                // backgroundImage: nightMode ? `url(${newMoon})` : `url(${sky4})`,
                 backgroundImage: nightMode ? `url(${newMoon})` : null,
-                // backgroundImage: nightMode ? `url(${newMoon})` : addMountains ? `url(${sky4})` : null,
                 backgroundColor: nightMode ? "black" : plainColor1,
 
                 backgroundSize: "cover",
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${color}deg)`,
                 filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
               }}
-              // factor={3.1}
               factor={3.3}
               speed={1.5}
             >
@@ -259,16 +238,11 @@ const Home = () => {
             <ParallaxLayer
               style={{
                 backgroundImage: addMountains ? `url(${lake})` : null,
-                // backgroundImage: null,
                 backgroundColor: nightMode ? "black" : plainColor1,
 
                 backgroundSize: "cover",
 
                 marginTop: "-350vh",
-                // marginTop: "-350vh",
-                // marginTop: "300px",
-                // width: "100vw",
-                // height: "1000px",
                 filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
               }}
               factor={1}
@@ -280,7 +254,6 @@ const Home = () => {
               style={{
                 marginTop: "-281vh",
                 background: nightMode || addMountains ? "#060A0E" : plainColor1,
-                // backgroundImage: addMountains ? `url(${lake})` : null,
                 filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
               }}
               factor={3.4}
@@ -295,7 +268,6 @@ const Home = () => {
                 backgroundSize: "cover",
                 left: "50vw",
                 filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
               factor={2}
               offset={0.4}
@@ -308,18 +280,15 @@ const Home = () => {
                 backgroundImage: addClouds ? `url(${clouds3})` : null,
                 backgroundSize: "cover",
                 filter: `saturate(${saturation}%) grayscale(60%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
               factor={2}
               offset={0.4}
-              // speed={1.5}
               speed={2.5}
             ></ParallaxLayer>
 
             <ParallaxLayer
               id={"clouds"}
               style={{
-                // backgroundImage: `url(${clouds3})`,
                 backgroundImage: addClouds ? `url(${clouds3})` : null,
                 backgroundSize: "contain",
                 left: "-70vw",
@@ -327,7 +296,6 @@ const Home = () => {
                 width: "200vw",
                 zIndex: 10000,
                 filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
               offset={0.9}
               speed={0.8}
@@ -337,7 +305,6 @@ const Home = () => {
             <ParallaxLayer
               id={"clouds"}
               style={{
-                // backgroundImage: `url(${clouds3})`,
                 backgroundImage: addClouds ? `url(${clouds3})` : null,
                 backgroundSize: "contain",
                 left: "-70vw",
@@ -345,7 +312,6 @@ const Home = () => {
                 width: "200vw",
                 zIndex: 10000,
                 filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
               offset={1}
               speed={0.8}
@@ -353,7 +319,6 @@ const Home = () => {
             <ParallaxLayer
               id={"clouds"}
               style={{
-                // backgroundImage: `url(${clouds3})`,
                 backgroundImage: addClouds ? `url(${clouds3})` : null,
                 backgroundSize: "contain",
                 left: "20vw",
@@ -361,7 +326,6 @@ const Home = () => {
                 width: "200vw",
                 zIndex: 10000,
                 filter: `saturate(${saturation}%) grayscale(70%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
               offset={0.9}
               speed={0.9}
@@ -369,7 +333,6 @@ const Home = () => {
             <ParallaxLayer
               id={"clouds"}
               style={{
-                // backgroundImage: `url(${clouds3})`,
                 backgroundImage:
                   addClouds && !addMountains ? `url(${clouds3})` : null,
                 backgroundSize: "contain",
@@ -378,7 +341,6 @@ const Home = () => {
                 width: "200vw",
                 zIndex: 10000,
                 filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
               offset={1.2}
               speed={0.8}
@@ -386,7 +348,6 @@ const Home = () => {
             <ParallaxLayer
               id={"clouds"}
               style={{
-                // backgroundImage: `url(${clouds3})`,
                 backgroundImage:
                   addClouds && !addMountains ? `url(${clouds3})` : null,
                 backgroundSize: "contain",
@@ -395,7 +356,6 @@ const Home = () => {
                 width: "200vw",
                 zIndex: 10000,
                 filter: `saturate(${saturation}%) grayscale(70%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
-                // filter: `saturate(${skySaturation}%) grayscale(${skyGrayscale}%) contrast(${skyContrast}%) brightness(${skyBrightness}%) hue-rotate(${skyColor}deg)`,
               }}
               offset={1.6}
               speed={1}
@@ -430,35 +390,9 @@ const Home = () => {
                   saturation - 200
                 }%) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayscale}%) hue-rotate(${skyColor}deg)`,
                 zIndex: 0,
-                //  position: "float",
-                //    right: "80px",
-                //   top: "1000px"
               }}
             />
-            ;
           </div>
-          {/* <div
-            id="about-me-layer"
-            style={{ display: "flex", gap: "0px", alignItems: "flex-start", marginTop: "20vh", left: "100px" }}
-          >
-            <img
-              alt="Patrick Kilcullen"
-              className="profilePic"
-              src={profilePic2}
-              style={{
-                float: "right", // Change to "right" if you want the image on the right
-                margin: "0 20px 20px 0",
-                // left: "100px",
-                filter: `saturate(${
-                  saturation - 200
-                }%) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayscale}%) hue-rotate(${skyColor}deg)`,
-                zIndex: 0,
-              }}
-            />
-            <h1 className="homeAbout" style={{ width: "70vw" }}>
-              {typedText}
-            </h1>
-          </div> */}
         </ParallaxLayer>
 
         {/* TECH */}
@@ -470,7 +404,6 @@ const Home = () => {
         <ParallaxLayer
           offset={1}
           factor={1}
-          // speed={3}
           speed={1.5}
           id="projects-layer"
           style={{
@@ -478,7 +411,7 @@ const Home = () => {
           }}
         >
           <div ref={projectsSectionRef}>
-            <Projects></Projects>
+            <Projects color={plainColor1} setHideNav={setHideNav}></Projects>
           </div>
         </ParallaxLayer>
       </Parallax>
