@@ -14,14 +14,12 @@ function ColorPicker({ plainColor1, setPlainColor1, handleShowColorPicker }) {
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <IconButton
-        // style={{ alignSelf: "flex-end", color: "white" }}
         style={{ color: "white", position: "relative", top: "20px", right: "-50%", }}
         onClick={handleShowColorPicker}
       >
         <CloseIcon sx={{background: "black", border: "2px solid white" }}/>
       </IconButton>
       <Sketch
-        // style={{ marginLeft: 20 }}
         color={hex}
         onChange={(color) => {
           setHex(color.hex);
