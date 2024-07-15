@@ -104,7 +104,6 @@ const ProjectModal = ({ open, close, project, color }) => {
   return (
     <Modal open={open} onClose={close}>
       <Box sx={{ ...style, backgroundColor: color }}>
-        
         <Box sx={closeButtonStyle}>
           <IconButton onClick={close}>
             <CloseIcon
@@ -141,8 +140,9 @@ const ProjectModal = ({ open, close, project, color }) => {
               opts={opts}
             ></YouTube>
           </Link>
-
-          <div className="projectAbout">{project.about}</div>
+          <Box sx={{fontSize: "20px", fontWeight: "bold"}}>
+            <div className="projectAbout">{project.about}</div>
+          </Box>
           {/* {project.about} */}
         </div>
         <div id="tech-and-buttons">
