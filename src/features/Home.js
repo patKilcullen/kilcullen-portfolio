@@ -77,9 +77,11 @@ const Home = () => {
 
   const [addClouds, setAddClouds] = useState(false);
   const [addMountains, setAddMountains] = useState(false);
+
+  const [hideNav, setHideNav] = useState(false)
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
-      <SideNav></SideNav>
+      {!hideNav && <SideNav></SideNav>}
 
       <Parallax pages={2.8}>
         <ParallaxLayer
@@ -409,7 +411,7 @@ const Home = () => {
           }}
         >
           <div ref={projectsSectionRef}>
-            <Projects color={plainColor1}></Projects>
+            <Projects color={plainColor1} setHideNav={setHideNav}></Projects>
           </div>
         </ParallaxLayer>
       </Parallax>

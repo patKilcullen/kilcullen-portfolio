@@ -176,18 +176,20 @@ import "../style/projects.css";
 import Button from "@mui/material/Button";
 import ProjectModal from "./ProjectModal";
 
-const Projects3 = ({ color }) => {
+const Projects3 = ({ color, setHideNav }) => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleOpenModal = (project) => {
     setSelectedProject(project);
     setOpenModal(true);
+    setHideNav(true)
   };
 
   const handleCloseModal = () => {
     setOpenModal(false);
     // setSelectedProject(null);
+     setHideNav(false);
   };
 
   return (
