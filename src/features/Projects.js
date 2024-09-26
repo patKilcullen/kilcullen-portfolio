@@ -9,11 +9,11 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleOpenModal = (project) => {
-    setSelectedProject(project);
-    setOpenModal(true);
-    setHideNav(true)
-  };
+  // const handleOpenModal = (project) => {
+  //   setSelectedProject(project);
+  //   setOpenModal(true);
+  //   setHideNav(true)
+  // };
 
   const handleCloseModal = () => {
     setOpenModal(false);
