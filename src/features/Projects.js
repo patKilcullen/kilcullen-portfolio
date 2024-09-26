@@ -36,12 +36,12 @@ const Projects3 = ({ color, setHideNav }) => {
                   display: "flex",
                   flexDirection: "column",
                 }}
-                onClick={() => handleOpenModal(project)}
+                // onClick={() => handleOpenModal(project)}
               >
                 <h1 className="project-name">{project.name}</h1>
                 <div id="inner-project-container">
                   <Link
-                    to={project.demo}
+                    to={project.liveSite ? project.liveSite :project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
                     id={
@@ -97,7 +97,7 @@ const Projects3 = ({ color, setHideNav }) => {
                     })}
                   </div>
 
-                  <div className="buttons">
+                  <div>
                     <Link
                       to={project.demo}
                       target="_blank"
@@ -117,13 +117,14 @@ const Projects3 = ({ color, setHideNav }) => {
                           border: "2px solid white",
                           zIndex: 1000,
                         }}
+                        disabled={project.name === "ProposalAI"}
                       >
                         {" "}
                         Demo
                       </Button>
                     </Link>
                     <Link
-                      to={project.code}
+                      to={project.liveSite ? project.liveSite : project.code}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -143,7 +144,8 @@ const Projects3 = ({ color, setHideNav }) => {
                         }}
                       >
                         {" "}
-                        Code
+                        {/*  */}
+                        {project.liveSite ? "Link" : "Code"}
                       </Button>
                     </Link>
                   </div>

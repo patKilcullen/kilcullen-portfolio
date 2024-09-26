@@ -47,10 +47,36 @@ const Home = () => {
     setBrightness(e.target.value);
   };
 
+const resetFilters = () => {
+
+  // setBrightness(70);
+  // setContrast(130);
+  // setGrayscale(20);
+  // setSaturation(300);
+setColor(0)
+setSkyColor(0)
+};
+const handleResetAll = () => {
+  setBrightness(70);
+  setContrast(130);
+  setGrayscale(20);
+  setSaturation(300);
+  setColor(0);
+  setSkyColor(0);
+  // setPlain(true)
+  setAddClouds(false);
+  setAddMountains(false);
+   setNightMode(false)
+   setPlainColor1("#858CAA");
+};
+console.log("BRIGHTNESS: ", brightness)
+
     const [plainColor1, setPlainColor1] = useState("#858CAA");
 
   const [color, setColor] = useState(0);
   const [skyColor, setSkyColor] = useState(0);
+
+  const [textColor, setTextColor] = useState("#d8a2a2")
   const handleColor = (e) => {
     setColor(e.target.value);
     setSkyColor(
@@ -113,6 +139,8 @@ const Home = () => {
                   setAddClouds={setAddClouds}
                   setAddMountains={setAddMountains}
                   setShowEditDesign={setShowEditDesign}
+                  resetFilters={resetFilters}
+                  handleResetAll={handleResetAll}
                 />
               </Box>
             </Box>
@@ -378,7 +406,13 @@ const Home = () => {
             id="about-me-layer"
             style={{ display: "flex", gap: "0px", alignItems: "center" }}
           >
-            <h1 className="homeAbout" style={{ width: "70vw" }}>
+            <h1
+              className="homeAbout"
+              style={{
+                width: "70vw",
+                filter: `saturate(${saturation}%) grayscale(70%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${textColor}deg)`,
+              }}
+            >
               {typedText}
             </h1>
             <img

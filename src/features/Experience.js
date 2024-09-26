@@ -9,6 +9,7 @@ import WorkIcon from "@material-ui/icons/Work";
 
 import fullstack from "../FullstackCertificate.png";
 import "../style/experience.css";
+import { Box } from "@mui/material";
 
 function Experience2() {
   useEffect(() => {
@@ -18,7 +19,12 @@ function Experience2() {
   return (
     <div className="experience">
       <h1 className="pageTitle">Experience</h1>
-      <div id="timelineBox">
+      <Box
+        id="timelineBox"
+        // sx={{
+        //   filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
+        // }}
+      >
         <VerticalTimeline lineColor="#3e497a">
           <VerticalTimelineElement
             className="experienceBox"
@@ -44,7 +50,7 @@ function Experience2() {
             iconStyle={{ background: "#e9d35b", color: "white" }}
             icon={<WorkIcon />}
           >
-            <div >
+            <div>
               <h3 className="vertical-timeline-element-title">
                 Memoir Writer/Editor
               </h3>
@@ -166,7 +172,7 @@ function Experience2() {
             <p> GPA - 3.7</p>
           </VerticalTimelineElement>
         </VerticalTimeline>
-      </div>
+      </Box>
     </div>
   );
 }

@@ -34,6 +34,8 @@ const EditDesign = ({
   setAddClouds,
   addMountains,
   setAddMountains,
+  resetFilters,
+  handleResetAll,
 }) => {
   const [themeSection, setThemeSection] = useState("dayMode");
   const [showColorPicker, setShowColorPicker] = useState(false);
@@ -85,10 +87,17 @@ const EditDesign = ({
 
         alignSelf: "felx-end",
         borderRadius: "20px",
-        border: "2px solid white"
+        border: "2px solid white",
       }}
     >
-      <Typography sx={{ color: "white", fontSize: "20px", fontWeight: "bold", textDecoration :"underline" }}>
+      <Typography
+        sx={{
+          color: "white",
+          fontSize: "20px",
+          fontWeight: "bold",
+          textDecoration: "underline",
+        }}
+      >
         Editor
       </Typography>
       <IconButton
@@ -216,6 +225,7 @@ const EditDesign = ({
             plainColor1={plainColor1}
             setPlainColor1={setPlainColor1}
             handleShowColorPicker={handleShowColorPicker}
+            resetFilters={resetFilters}
           />
         ) : (
           <Button variant="contained" onClick={handleShowColorPicker}>
@@ -224,6 +234,7 @@ const EditDesign = ({
         )}
         {/* </Box> */}
       </Box>
+      <Button onClick={handleResetAll}>Reset</Button>
       {/* </Box> */}
     </div>
   );

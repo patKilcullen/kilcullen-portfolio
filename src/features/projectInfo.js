@@ -1,6 +1,6 @@
 import  balderdashPic from '../BalderdashPic.png'
 import EZStackPic from '../EZ-StackPic.png'
-import GraceShopperPic from '../Grace-ShopperPic.png'
+// import GraceShopperPic from '../Grace-ShopperPic.png'
 // import JuniorPhasePic from './juniorPhasePic.png'
 
 
@@ -17,9 +17,56 @@ import GraceShopperPic from '../Grace-ShopperPic.png'
  import jwtIcon from "../jwtLogo.png"
  import socketIOIcon from "../socketIO.png"
 import awsLogo from "../awsLogo.png"
-
+import mongoDCIcon from "../mongodb-svgrepo-com.svg";
+import MongooseIcon from "../Mongoose.js.png"
+import ProposalAIScreenshot from "../ProposalAIScreenshot.png"
 
 import React from "react";
+
+
+const ProposalAIDescription = (
+  <div>
+    <p>
+      As a <strong>Full Stack Software Developer Intern</strong> at MixCommerce,
+      I have been responsible for developing all front and back-end
+      functionality for
+      <strong>ProposalAI</strong> utilizing a Crema UI template. I
+      have contributed over 500 GitHub commits, building AI-driven product
+      features that serve as a functional proof of concept.
+    </p>
+    <p>
+      My work includes developing secure authentication systems such as
+      user-specific authentication, Google auth, and OTP validation, ensuring
+      robust security for users. Additionally, I have created AI-driven features
+      for document generation and editing, enhancing user productivity.
+    </p>
+    <p>
+      I have implemented error handling with descriptive displays to improve
+      user feedback and troubleshooting capabilities. I also designed and
+      integrated email functionalities for client communication and document
+      signing processes.
+    </p>
+    <p>
+      I have built role-based permissions and workflows that allow various user
+      types to interact with documents accordingly. My contributions also extend
+      to developing profile and business creation features, including onboarding
+      steppers and dynamic form validation, which contribute to a seamless user
+      experience.
+    </p>
+    <p>
+      Throughout this project, I have utilized a variety of technologies,
+      including{" "}
+      <strong>
+        JavaScript, Node.js, Express, MongoDB, React, Redux, Redux-Toolkit,
+        Material-UI,
+      </strong>{" "}
+      and <strong>OpenAI</strong>.
+    </p>
+  </div>
+);
+
+
+
 
 const BalderdashDescription = (
   <div>
@@ -115,6 +162,34 @@ const EZStackDescription = (
 
 export const projects = [
   {
+    name: "ProposalAI",
+    description:
+      "A platform that utilizes AI to streamline business proposal generation, collaboration, and signing.",
+    about: ProposalAIDescription,
+    // "Balderdash, a game based on the card/board game of the same name, is a personal project that I built entirely by myself. I couldn’t find a digital version of the game, so I thought building something new would be a fun challenge. In the game, a player gets a random, unusual word and its definition. Other players can only see the word, and they write their own definitions for it. Players then guess the right word and earn points in various ways. I built it using the PERN (PostgreSQL, Express, React, Node) stack and utilized additional technology like Socket.io, OpenAI, and AWS.  I first developed APIS to get random words and definitions and built the basic game logic for a single-player version of the game. Then I built databases and modified the logic to incorporate multiple players, and I employed Socket.io to make live updates between multiple users. I build out the logic, React components, and sockets for each consecutive stage of the game, one stage at a time. I designed the UI to be as intuitive as possible and mimic an actual card game where people hold cards in their hands (the idea is they hold their phones instead of cards).  I used OpenAI to solve a problem that couldn’t be solved previously. If a player wrote a definition that they felt accurately defined a word, but wasn’t the exact definition, they could ask AI if it was a fitting definition. I set up the AI to respond yes or no, and if the answer was correct, the player earned a point. I also used AWS to store words and definitions from APIS that were fitting for the game, so they could be used in a final product. Balderdash was the first large project I built entirely by myself. There are definitely a few things I would do differently if I were to build it today, now that I know more about software development, but it was a great learning experience and I am proud of what I created.",
+    // "I based this app off the somewhat obscure word game also called Balderdash. Played alone, a user can see how many definition they can guess correctly out of a certain number. Played with others, one user sees the correct definition of the word, and the others have to guess. \n This app is currently under development. It was built as a challenge to see what I could build in a single weekend. It's current state was built in that time frame, but I look forward to adding to it.",
+    liveSite: "https://proposal.mixcommerce.co/",
+    demo: "https://www.youtube.com/watch?v=CF5TT-MY4oY",
+    youTubeCode: "CF5TT-MY4oY",
+    tech: "Node.js, PostgreSQL, Express, React, Redux",
+    tech2: [
+      { symbole: javascriptIcon, name: "JavaScript" },
+      { symbole: reactIcon, name: "React" },
+      { symbole: reduxIcon, name: "Redux" },
+      { symbole: mongoDCIcon, name: "MongoDB" },
+      { symbole: MongooseIcon, name: "Mongoose" },
+      { symbole: htmlIcon, name: "HTML" },
+      { symbole: cssIcon, name: "CSS" },
+      { symbole: nodeSVG, name: "Node" },
+      { symbole: materialIcon, name: "MaterialUI" },
+      { symbole: expressIcon, name: "Express" },
+      { symbole: jwtIcon, name: "JWT" },
+    ],
+    pic: ProposalAIScreenshot,
+    align: "right",
+  },
+
+  {
     name: "Balderdash",
     description: "An interactive word game to play alone or with friends.",
     about: BalderdashDescription,
@@ -131,13 +206,13 @@ export const projects = [
       { symbole: socketIOIcon, name: "Socket.io" },
       { symbole: awsLogo, name: "AWS" },
       { symbole: postgresIcon, name: "PostgreSQL" },
-      { symbole: htmlIcon, name: "HTML" },
+      // { symbole: htmlIcon, name: "HTML" },
       { symbole: cssIcon, name: "CSS" },
       { symbole: nodeSVG, name: "Node" },
       { symbole: materialIcon, name: "MaterialUI" },
       { symbole: sequelizeIcon, name: "Sequelize" },
-      { symbole: expressIcon, name: "Express" },
-      { symbole: jwtIcon, name: "JWT" },
+     { symbole: expressIcon, name: "Express" },
+      // { symbole: jwtIcon, name: "JWT" },
     ],
     pic: balderdashPic,
     align: "left",
@@ -147,7 +222,7 @@ export const projects = [
     name: "EZ-Stack",
     description: "An app that connects freelancers to clients.",
     about: EZStackDescription,
-      // "I worked extensively with my group to build this highly functional, sleek app from start to finish. I played an important role in the ideation of the app's many features, I put a lot of time into the database schema, which icluded 7 models, I spent most of my time implementing info from the database in React components, and I aided in the site's design. ",
+    // "I worked extensively with my group to build this highly functional, sleek app from start to finish. I played an important role in the ideation of the app's many features, I put a lot of time into the database schema, which icluded 7 models, I spent most of my time implementing info from the database in React components, and I aided in the site's design. ",
     code: "https://github.com/patKilcullen/EZ-Stack",
     demo: "https://youtu.be/4eurtRFDq0s",
     youTubeCode: "4eurtRFDq0s",
@@ -168,30 +243,30 @@ export const projects = [
     pic: EZStackPic,
     align: "right",
   },
-  {
-    name: "Grace-Shopper",
-    description: "The All-In-One E-Commerce Platform.",
-    about:
-      "My first substantial group project. I spent ample time working out the authentication features of the app, as well as the cart feature, which was the first time I worked extensively with a through table.",
-    code: "https://github.com/patKilcullen/Grace-Shopper1",
-    demo: "https://www.youtube.com/watch?v=lmXfjCeO7IA",
-    youTubeCode: "lmXfjCeO7IA",
-    tech: "Node.js, PostgreSQL, Express, React, Redux, Tailwind CSS, JWT",
-    tech2: [
-      { symbole: javascriptIcon, name: "JavaScript" },
-      { symbole: reactIcon, name: "React" },
-      { symbole: reduxIcon, name: "Redux" },
-      { symbole: postgresIcon, name: "PostgreSQL" },
-      { symbole: htmlIcon, name: "HTML" },
-      { symbole: cssIcon, name: "CSS" },
-      { symbole: nodeSVG, name: "Node" },
-      { symbole: materialIcon, name: "Material UI" },
-      { symbole: sequelizeIcon, name: "Sequelize" },
-      { symbole: expressIcon, name: "Express" },
-    ],
-    pic: GraceShopperPic,
-    align: "left",
-  },
+  // {
+  //   name: "Grace-Shopper",
+  //   description: "The All-In-One E-Commerce Platform.",
+  //   about:
+  //     "My first substantial group project. I spent ample time working out the authentication features of the app, as well as the cart feature, which was the first time I worked extensively with a through table.",
+  //   code: "https://github.com/patKilcullen/Grace-Shopper1",
+  //   demo: "https://www.youtube.com/watch?v=lmXfjCeO7IA",
+  //   youTubeCode: "lmXfjCeO7IA",
+  //   tech: "Node.js, PostgreSQL, Express, React, Redux, Tailwind CSS, JWT",
+  //   tech2: [
+  //     { symbole: javascriptIcon, name: "JavaScript" },
+  //     { symbole: reactIcon, name: "React" },
+  //     { symbole: reduxIcon, name: "Redux" },
+  //     { symbole: postgresIcon, name: "PostgreSQL" },
+  //     { symbole: htmlIcon, name: "HTML" },
+  //     { symbole: cssIcon, name: "CSS" },
+  //     { symbole: nodeSVG, name: "Node" },
+  //     { symbole: materialIcon, name: "Material UI" },
+  //     { symbole: sequelizeIcon, name: "Sequelize" },
+  //     { symbole: expressIcon, name: "Express" },
+  //   ],
+  //   pic: GraceShopperPic,
+  //   align: "left",
+  // },
 
   // {
   //   name: "Full Stack App",
