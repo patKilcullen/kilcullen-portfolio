@@ -15,6 +15,7 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
   //   setHideNav(true)
   // };
 
+  
   const handleCloseModal = () => {
     setOpenModal(false);
     setSelectedProject(null);
