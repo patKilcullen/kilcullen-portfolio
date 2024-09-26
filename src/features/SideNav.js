@@ -16,7 +16,7 @@ const SideNav = ({textColor}) => {
           href="https://github.com/patKilcullen"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: "red" }}
+ 
         >
           {" "}
           <GitHub style={{ color: textColor }} className="link-icon" />

@@ -73,6 +73,7 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
                     style={{
                       float: project.align,
                       order: project.align === "right" ? 1 : -1,
+                      color: textColor,
                     }}
                   >
                     Tech Stack:{" "}
@@ -94,7 +95,7 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
                           />
                           <h1
                             id="tech-text"
-                            style={{ color: "#d8a2a2", fontSize: "10px" }}
+                            style={{ color: textColor, fontSize: "10px" }}
                           >
                             {proj.name}
                           </h1>
@@ -115,7 +116,7 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
                         variant="contained"
                         sx={{
                           color: "#3e497a",
-                          backgroundColor: "#d8a2a2",
+                          backgroundColor: textColor,
                           fontWeight: "bold",
                           fontSize: "23px",
                           boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",
@@ -140,7 +141,8 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
                         variant="contained"
                         sx={{
                           color: "#3e497a",
-                          backgroundColor: "#d8a2a2",
+                          // backgroundColor: "#d8a2a2",
+                          backgroundColor: textColor,
                           fontWeight: "bold",
                           fontSize: "23px",
                           boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",
