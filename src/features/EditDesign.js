@@ -34,9 +34,14 @@ const EditDesign = ({
   setAddClouds,
   addMountains,
   setAddMountains,
+  resetFilters,
+  handleResetAll,
+  setTextColor,
 }) => {
   const [themeSection, setThemeSection] = useState("dayMode");
   const [showColorPicker, setShowColorPicker] = useState(false);
+
+   const [styleType, setStyleType] = useState("background");
 
   const handleThemeChange = (theme) => {
     setThemeSection(theme);
@@ -85,10 +90,17 @@ const EditDesign = ({
 
         alignSelf: "felx-end",
         borderRadius: "20px",
-        border: "2px solid white"
+        border: "2px solid white",
       }}
     >
-      <Typography sx={{ color: "white", fontSize: "20px", fontWeight: "bold", textDecoration :"underline" }}>
+      <Typography
+        sx={{
+          color: "white",
+          fontSize: "20px",
+          fontWeight: "bold",
+          textDecoration: "underline",
+        }}
+      >
         Editor
       </Typography>
       <IconButton
@@ -115,10 +127,37 @@ const EditDesign = ({
           exclusive
           onChange={(e) => handleThemeChange(e.target.value)}
         >
-          <ToggleButton value="dayMode" variant="outlined">
+          <ToggleButton
+            sx={{
+              backgroundColor: "#1976D2",
+              border: "blue",
+              color: "white", // Default color
+              "&.Mui-selected": {
+                color: "white", // Selected color
+                backgroundColor: "rgba(255, 255, 255, 0.2)", // Optional: Add a background to indicate selection
+                borderBottom: "2px solid white",
+              },
+            }}
+            value="dayMode"
+            variant="outlined"
+          >
             Day Mode
           </ToggleButton>
-          <ToggleButton value="nightMode">Night Mode</ToggleButton>
+          <ToggleButton
+            sx={{
+              backgroundColor: "#1976D2",
+              border: "blue",
+              color: "white", // Default color
+              "&.Mui-selected": {
+                color: "white", // Selected color
+                backgroundColor: "rgba(255, 255, 255, 0.2)", // Optional: Add a background to indicate selection
+                borderBottom: "2px solid white",
+              },
+            }}
+            value="nightMode"
+          >
+            Night Mode
+          </ToggleButton>
         </ToggleButtonGroup>
       </Box>
       {/* <Box
@@ -212,11 +251,58 @@ const EditDesign = ({
       </Box>
       <Box sx={{ mt: 2 }}>
         {showColorPicker ? (
-          <ColorPicker
-            plainColor1={plainColor1}
-            setPlainColor1={setPlainColor1}
-            handleShowColorPicker={handleShowColorPicker}
-          />
+          <>
+            <ToggleButtonGroup
+              variant="outline"
+              // color="secondary"
+
+              sx={{
+                backgroundColor: "#1976D2",
+                border: "blue",
+                height: "20px",
+                color: "white",
+              }}
+              value={styleType}
+              exclusive
+              onChange={(e) => setStyleType(e.target.value)}
+            >
+              <ToggleButton
+                sx={{
+                  color: "white", // Default color
+                  "&.Mui-selected": {
+                    color: "white", // Selected color
+                    backgroundColor: "rgba(255, 255, 255, 0.2)", // Optional: Add a background to indicate selection\
+                    borderBottom: "2px solid white",
+                  },
+                }}
+                value="background"
+                variant="outlined"
+              >
+                Background
+              </ToggleButton>
+              <ToggleButton
+                sx={{
+                  color: "white", // Default color
+                  "&.Mui-selected": {
+                    color: "white", // Selected color
+                    backgroundColor: "rgba(255, 255, 255, 0.2)", // Optional: Add a background to indicate selection
+                    borderBottom: "2px solid white",
+                  },
+                }}
+                value="text"
+              >
+                Text
+              </ToggleButton>
+            </ToggleButtonGroup>
+            <ColorPicker
+              plainColor1={plainColor1}
+              setPlainColor1={setPlainColor1}
+              handleShowColorPicker={handleShowColorPicker}
+              resetFilters={resetFilters}
+              setTextColor={setTextColor}
+              styleType={styleType}
+            />
+          </>
         ) : (
           <Button variant="contained" onClick={handleShowColorPicker}>
             Change Color
@@ -224,6 +310,7 @@ const EditDesign = ({
         )}
         {/* </Box> */}
       </Box>
+      <Button onClick={handleResetAll}>Reset</Button>
       {/* </Box> */}
     </div>
   );

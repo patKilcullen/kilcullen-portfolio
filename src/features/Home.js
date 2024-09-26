@@ -47,17 +47,48 @@ const Home = () => {
     setBrightness(e.target.value);
   };
 
+const resetFilters = () => {
+
+  // setBrightness(70);
+  // setContrast(130);
+  // setGrayscale(20);
+  // setSaturation(300);
+setColor(0)
+setSkyColor(0)
+};
+const handleResetAll = () => {
+  setBrightness(70);
+  setContrast(130);
+  setGrayscale(20);
+  setSaturation(300);
+  setColor(0);
+  setSkyColor(0);
+  // setPlain(true)
+  setAddClouds(false);
+  setAddMountains(false);
+   setNightMode(false)
+   setPlainColor1("#858CAA");
+   setTextColor("#d8a2a2");
+};
+console.log("BRIGHTNESS: ", brightness)
+
     const [plainColor1, setPlainColor1] = useState("#858CAA");
 
   const [color, setColor] = useState(0);
   const [skyColor, setSkyColor] = useState(0);
+
+  const [textColor, setTextColor] = useState("#d8a2a2")
+  
   const handleColor = (e) => {
+
     setColor(e.target.value);
     setSkyColor(
       e.target.value > 0
         ? `-${e.target.value}`
         : Number(e.target.value) + Math.abs(Number(e.target.value)) * 2
     );
+
+    
   };
 
   const [nightMode, setNightMode] = useState(false);
@@ -79,9 +110,11 @@ const Home = () => {
   const [addMountains, setAddMountains] = useState(false);
 
   const [hideNav, setHideNav] = useState(false)
+
+  console.log("TEXT COLORL ", textColor)
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
-      {!hideNav && <SideNav></SideNav>}
+      {!hideNav && <SideNav textColor={textColor}></SideNav>}
 
       <Parallax pages={2.8}>
         <ParallaxLayer
@@ -113,6 +146,9 @@ const Home = () => {
                   setAddClouds={setAddClouds}
                   setAddMountains={setAddMountains}
                   setShowEditDesign={setShowEditDesign}
+                  resetFilters={resetFilters}
+                  handleResetAll={handleResetAll}
+                  setTextColor={setTextColor}
                 />
               </Box>
             </Box>
@@ -161,6 +197,7 @@ const Home = () => {
                 style={{
                   backgroundColor: "black",
                   left: "-5vw",
+                  color: textColor,
                 }}
                 className="name-in-text-left"
               >
@@ -170,6 +207,7 @@ const Home = () => {
               <span
                 style={{
                   backgroundColor: "black",
+                  color: textColor,
                 }}
                 className="name-in-text-right"
               >
@@ -181,10 +219,19 @@ const Home = () => {
               style={{
                 backgroundClip: "rgba(5, 12, 44, 0.5",
                 marginTop: "-1%",
-                filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
+                // filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
               }}
             >
-              <span className="software-engineer">Software Developer</span>
+              <span
+                className="software-engineer"
+                style={{
+                  // backgroundColor: "black",
+                  color: textColor,
+                  //  opacity: "85%"
+                }}
+              >
+                Software Developer
+              </span>
             </div>
           </div>
         </ParallaxLayer>
@@ -378,7 +425,14 @@ const Home = () => {
             id="about-me-layer"
             style={{ display: "flex", gap: "0px", alignItems: "center" }}
           >
-            <h1 className="homeAbout" style={{ width: "70vw" }}>
+            <h1
+              className="homeAbout"
+              style={{
+                width: "70vw",
+                filter: `saturate(${saturation}%) grayscale(70%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${textColor}deg)`,
+                color: textColor,
+              }}
+            >
               {typedText}
             </h1>
             <img
@@ -397,7 +451,7 @@ const Home = () => {
 
         {/* TECH */}
         <ParallaxLayer offset={0.3} speed={1.5} id="tech-layer">
-          <Tech></Tech>
+          <Tech textColor={textColor}></Tech>
         </ParallaxLayer>
 
         {/* PROJECTS */}
@@ -411,7 +465,11 @@ const Home = () => {
           }}
         >
           <div ref={projectsSectionRef}>
-            <Projects color={plainColor1} setHideNav={setHideNav}></Projects>
+            <Projects
+              color={plainColor1}
+              setHideNav={setHideNav}
+              textColor={textColor}
+            ></Projects>
           </div>
         </ParallaxLayer>
       </Parallax>

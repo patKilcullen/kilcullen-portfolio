@@ -5,7 +5,7 @@ import "../style/projects.css";
 import Button from "@mui/material/Button";
 import ProjectModal from "./ProjectModal";
 
-const Projects3 = ({ color, setHideNav }) => {
+const Projects3 = ({ color, setHideNav, textColor }) => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -24,7 +24,9 @@ const Projects3 = ({ color, setHideNav }) => {
   return (
     <div id="main-projects">
       <div id="projectsPage">
-        <h1 className="projectsPageTitle">Projects</h1>
+        <h1 className="projectsPageTitle" style={{color: textColor}}>
+          Projects
+        </h1>
         <div className="mainProjectContainer">
           {projects.map((project, idx) => {
             return (
@@ -36,12 +38,14 @@ const Projects3 = ({ color, setHideNav }) => {
                   display: "flex",
                   flexDirection: "column",
                 }}
-                onClick={() => handleOpenModal(project)}
+                // onClick={() => handleOpenModal(project)}
               >
-                <h1 className="project-name">{project.name}</h1>
-                <div id="inner-project-container">
+                <h1 className="project-name" style={{ color: textColor }}>
+                  {project.name}
+                </h1>
+                <div style={{ color: textColor }} id="inner-project-container">
                   <Link
-                    to={project.demo}
+                    to={project.liveSite ? project.liveSite : project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
                     id={
@@ -58,7 +62,9 @@ const Projects3 = ({ color, setHideNav }) => {
                     />
                   </Link>
 
-                  <div className="projectAbout">{project.about}</div>
+                  <div className="projectAbout" style={{ color: textColor }}>
+                    {project.about}
+                  </div>
                   {/* {project.about} */}
                 </div>
                 <div id="tech-and-buttons">
@@ -67,6 +73,7 @@ const Projects3 = ({ color, setHideNav }) => {
                     style={{
                       float: project.align,
                       order: project.align === "right" ? 1 : -1,
+                      color: textColor,
                     }}
                   >
                     Tech Stack:{" "}
@@ -88,7 +95,7 @@ const Projects3 = ({ color, setHideNav }) => {
                           />
                           <h1
                             id="tech-text"
-                            style={{ color: "#d8a2a2", fontSize: "10px" }}
+                            style={{ color: textColor, fontSize: "10px" }}
                           >
                             {proj.name}
                           </h1>
@@ -97,7 +104,7 @@ const Projects3 = ({ color, setHideNav }) => {
                     })}
                   </div>
 
-                  <div className="buttons">
+                  <div>
                     <Link
                       to={project.demo}
                       target="_blank"
@@ -109,7 +116,7 @@ const Projects3 = ({ color, setHideNav }) => {
                         variant="contained"
                         sx={{
                           color: "#3e497a",
-                          backgroundColor: "#d8a2a2",
+                          backgroundColor: textColor,
                           fontWeight: "bold",
                           fontSize: "23px",
                           boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",
@@ -117,13 +124,14 @@ const Projects3 = ({ color, setHideNav }) => {
                           border: "2px solid white",
                           zIndex: 1000,
                         }}
+                        disabled={project.name === "ProposalAI"}
                       >
                         {" "}
                         Demo
                       </Button>
                     </Link>
                     <Link
-                      to={project.code}
+                      to={project.liveSite ? project.liveSite : project.code}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -133,7 +141,8 @@ const Projects3 = ({ color, setHideNav }) => {
                         variant="contained"
                         sx={{
                           color: "#3e497a",
-                          backgroundColor: "#d8a2a2",
+                          // backgroundColor: "#d8a2a2",
+                          backgroundColor: textColor,
                           fontWeight: "bold",
                           fontSize: "23px",
                           boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",
@@ -143,7 +152,8 @@ const Projects3 = ({ color, setHideNav }) => {
                         }}
                       >
                         {" "}
-                        Code
+                        {/*  */}
+                        {project.liveSite ? "Link" : "Code"}
                       </Button>
                     </Link>
                   </div>
