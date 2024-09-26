@@ -16,7 +16,7 @@ import mongoDCIcon from "../mongodb-svgrepo-com.svg"
 
 import { useInView } from "react-intersection-observer";
 
-const Tech = () => {
+const Tech = ({textColor}) => {
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
@@ -46,7 +46,12 @@ const Tech = () => {
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        
+      }}
     >
       <h1
         ref={ref}
@@ -54,6 +59,7 @@ const Tech = () => {
         style={{
           animation: slide ? "slideInAnimationLeft 1s forwards" : null,
           visibility: !inView ? "hidden" : null,
+          color: textColor
         }}
       >
         {" "}
@@ -80,7 +86,7 @@ const Tech = () => {
                   src={symbol.symbole}
                   style={{ filter: "saturate(30%)" }}
                 />
-                <h1 id="tech-text" style={{ color: "#d8a2a2" }}>
+                <h1 id="tech-text" style={{color: textColor }}>
                   {symbol.name}
                 </h1>
               </div>

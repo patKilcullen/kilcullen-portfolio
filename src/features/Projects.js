@@ -5,7 +5,7 @@ import "../style/projects.css";
 import Button from "@mui/material/Button";
 import ProjectModal from "./ProjectModal";
 
-const Projects3 = ({ color, setHideNav }) => {
+const Projects3 = ({ color, setHideNav, textColor }) => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -24,7 +24,9 @@ const Projects3 = ({ color, setHideNav }) => {
   return (
     <div id="main-projects">
       <div id="projectsPage">
-        <h1 className="projectsPageTitle">Projects</h1>
+        <h1 className="projectsPageTitle" style={{color: textColor}}>
+          Projects
+        </h1>
         <div className="mainProjectContainer">
           {projects.map((project, idx) => {
             return (
@@ -38,10 +40,12 @@ const Projects3 = ({ color, setHideNav }) => {
                 }}
                 // onClick={() => handleOpenModal(project)}
               >
-                <h1 className="project-name">{project.name}</h1>
-                <div id="inner-project-container">
+                <h1 className="project-name" style={{ color: textColor }}>
+                  {project.name}
+                </h1>
+                <div style={{ color: textColor }} id="inner-project-container">
                   <Link
-                    to={project.liveSite ? project.liveSite :project.demo}
+                    to={project.liveSite ? project.liveSite : project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
                     id={
@@ -58,7 +62,9 @@ const Projects3 = ({ color, setHideNav }) => {
                     />
                   </Link>
 
-                  <div className="projectAbout">{project.about}</div>
+                  <div className="projectAbout" style={{ color: textColor }}>
+                    {project.about}
+                  </div>
                   {/* {project.about} */}
                 </div>
                 <div id="tech-and-buttons">

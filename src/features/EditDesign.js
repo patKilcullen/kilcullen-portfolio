@@ -36,9 +36,12 @@ const EditDesign = ({
   setAddMountains,
   resetFilters,
   handleResetAll,
+  setTextColor,
 }) => {
   const [themeSection, setThemeSection] = useState("dayMode");
   const [showColorPicker, setShowColorPicker] = useState(false);
+
+   const [styleType, setStyleType] = useState("background");
 
   const handleThemeChange = (theme) => {
     setThemeSection(theme);
@@ -159,6 +162,20 @@ const EditDesign = ({
           width: "75%",
         }}
       >
+        <ToggleButtonGroup
+          variant="outline"
+          color="secondary"
+          sx={{ backgroundColor: "#1976D2", border: "blue", height: "20px" }}
+          value={styleType}
+          exclusive
+          onChange={(e) => setStyleType(e.target.value)}
+        >
+          <ToggleButton value="background" variant="outlined">
+            Background
+          </ToggleButton>
+          <ToggleButton value="text">Text</ToggleButton>
+        </ToggleButtonGroup>
+
         <Box sx={{ display: "flex", gap: "5px" }}>
           <Typography sx={{ color: "white" }}>Hue: </Typography>
 
@@ -226,6 +243,8 @@ const EditDesign = ({
             setPlainColor1={setPlainColor1}
             handleShowColorPicker={handleShowColorPicker}
             resetFilters={resetFilters}
+            setTextColor={setTextColor}
+            styleType={styleType}
           />
         ) : (
           <Button variant="contained" onClick={handleShowColorPicker}>

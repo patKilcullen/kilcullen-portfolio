@@ -2,18 +2,15 @@ import React from 'react'
 import { Email, GitHub, LinkedIn, Person } from '@material-ui/icons'
 import "../style/sideBar.css"
 
-const SideNav = () => {
+const SideNav = ({textColor}) => {
 
 
 
 
   return (
     <div className="sideBar" style={{ zIndex: "1000000" }}>
-      <div
-        className="socialMedia"
-
-      >
-        <p style={{marginLeft: "10px"}}>Connect:</p>
+      <div className="socialMedia">
+        <p style={{ marginLeft: "10px", color: textColor }}>Connect:</p>
 
         <a
           href="https://github.com/patKilcullen"
@@ -22,7 +19,7 @@ const SideNav = () => {
           style={{ color: "red" }}
         >
           {" "}
-          <GitHub style={{ color: "#d8a2a2" }} className="link-icon" />
+          <GitHub style={{ color: textColor }} className="link-icon" />
           <span className="hover-text">GitHub</span>
         </a>
         <a
@@ -31,11 +28,11 @@ const SideNav = () => {
           rel="noopener noreferrer"
         >
           {" "}
-          <LinkedIn style={{ color: "#d8a2a2" }} />
+          <LinkedIn style={{ color: textColor }} />
           <span className="hover-text">LinkedIn</span>
         </a>
         <a href="mailto:patrickjkilcullen@gmail.com">
-          <Email style={{ color: "#d8a2a2" }} />
+          <Email style={{ color: textColor }} />
           <span className="hover-text">Email</span>
         </a>
         <a
@@ -45,7 +42,7 @@ const SideNav = () => {
         >
           {" "}
           {/* <Box> */}
-          <Person style={{ color: "#d8a2a2" }} />
+          <Person style={{ color: textColor }} />
           <span className="hover-text">Resume</span>
           {/* </Box> */}
         </a>

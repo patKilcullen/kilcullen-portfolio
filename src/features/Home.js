@@ -68,6 +68,7 @@ const handleResetAll = () => {
   setAddMountains(false);
    setNightMode(false)
    setPlainColor1("#858CAA");
+   setTextColor("#d8a2a2");
 };
 console.log("BRIGHTNESS: ", brightness)
 
@@ -77,13 +78,17 @@ console.log("BRIGHTNESS: ", brightness)
   const [skyColor, setSkyColor] = useState(0);
 
   const [textColor, setTextColor] = useState("#d8a2a2")
+  
   const handleColor = (e) => {
+
     setColor(e.target.value);
     setSkyColor(
       e.target.value > 0
         ? `-${e.target.value}`
         : Number(e.target.value) + Math.abs(Number(e.target.value)) * 2
     );
+
+    
   };
 
   const [nightMode, setNightMode] = useState(false);
@@ -105,9 +110,11 @@ console.log("BRIGHTNESS: ", brightness)
   const [addMountains, setAddMountains] = useState(false);
 
   const [hideNav, setHideNav] = useState(false)
+
+  console.log("TEXT COLORL ", textColor)
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
-      {!hideNav && <SideNav></SideNav>}
+      {!hideNav && <SideNav textColor={textColor}></SideNav>}
 
       <Parallax pages={2.8}>
         <ParallaxLayer
@@ -141,6 +148,7 @@ console.log("BRIGHTNESS: ", brightness)
                   setShowEditDesign={setShowEditDesign}
                   resetFilters={resetFilters}
                   handleResetAll={handleResetAll}
+                  setTextColor={setTextColor}
                 />
               </Box>
             </Box>
@@ -189,6 +197,7 @@ console.log("BRIGHTNESS: ", brightness)
                 style={{
                   backgroundColor: "black",
                   left: "-5vw",
+                  color: textColor,
                 }}
                 className="name-in-text-left"
               >
@@ -198,6 +207,7 @@ console.log("BRIGHTNESS: ", brightness)
               <span
                 style={{
                   backgroundColor: "black",
+                  color: textColor,
                 }}
                 className="name-in-text-right"
               >
@@ -209,10 +219,19 @@ console.log("BRIGHTNESS: ", brightness)
               style={{
                 backgroundClip: "rgba(5, 12, 44, 0.5",
                 marginTop: "-1%",
-                filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
+                // filter: `saturate(${saturation}%) grayscale(${grayscale}%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${color}deg)`,
               }}
             >
-              <span className="software-engineer">Software Developer</span>
+              <span
+                className="software-engineer"
+                style={{
+                  // backgroundColor: "black",
+                  color: textColor,
+                  //  opacity: "85%"
+                }}
+              >
+                Software Developer
+              </span>
             </div>
           </div>
         </ParallaxLayer>
@@ -411,6 +430,7 @@ console.log("BRIGHTNESS: ", brightness)
               style={{
                 width: "70vw",
                 filter: `saturate(${saturation}%) grayscale(70%) contrast(${contrast}%) brightness(${brightness}%) hue-rotate(${textColor}deg)`,
+                color: textColor,
               }}
             >
               {typedText}
@@ -431,7 +451,7 @@ console.log("BRIGHTNESS: ", brightness)
 
         {/* TECH */}
         <ParallaxLayer offset={0.3} speed={1.5} id="tech-layer">
-          <Tech></Tech>
+          <Tech textColor={textColor}></Tech>
         </ParallaxLayer>
 
         {/* PROJECTS */}
@@ -445,7 +465,11 @@ console.log("BRIGHTNESS: ", brightness)
           }}
         >
           <div ref={projectsSectionRef}>
-            <Projects color={plainColor1} setHideNav={setHideNav}></Projects>
+            <Projects
+              color={plainColor1}
+              setHideNav={setHideNav}
+              textColor={textColor}
+            ></Projects>
           </div>
         </ParallaxLayer>
       </Parallax>

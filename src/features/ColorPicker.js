@@ -13,6 +13,8 @@ function ColorPicker({
   setPlainColor1,
   handleShowColorPicker,
   resetFilters,
+  setTextColor,
+  styleType
 }) {
   const [hex, setHex] = useState(plainColor1);
 
@@ -32,10 +34,16 @@ function ColorPicker({
       <Sketch
         color={hex}
         onChange={(color) => {
-            resetFilters();
-          setHex(color.hex);
-          setPlainColor1(color.hex);
-       
+          resetFilters();
+          if (styleType === "background"){
+setHex(color.hex);
+setPlainColor1(color.hex);
+          } 
+          if (styleType === "text"){
+ setTextColor(color.hex);
+          }
+
+      
         }}
       />
     </Box>
