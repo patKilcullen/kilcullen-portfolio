@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import ColorPicker from "./ColorPicker";
-
+import EmailOnMount from './Email'
 
 const EditDesign = ({
   open,
@@ -312,6 +312,7 @@ const EditDesign = ({
       </Box>
       <Button onClick={handleResetAll}>Reset</Button>
       {/* </Box> */}
+      <EmailOnMount type={"edit"} />
     </div>
   );
 };

@@ -25,9 +25,10 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
   return (
     <div id="main-projects">
       <div id="projectsPage">
-        <h1 className="projectsPageTitle" style={{color: textColor}}>
+        <h1 className="projectsPageTitle" style={{ color: textColor }}>
           Projects
         </h1>
+     
         <div className="mainProjectContainer">
           {projects.map((project, idx) => {
             return (

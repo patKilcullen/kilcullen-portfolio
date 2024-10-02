@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
@@ -17,6 +17,10 @@ import newMoon from "./backgrounds/newMoon.png";
 
 import {Box, Button} from "@mui/material";
 
+import { sendEmail } from "./Email";
+
+import EmailOnMount from "./Email";
+import { AmbientLight } from "three";
 const Home = () => {
   const projectsSectionRef = useRef(null);
 
@@ -70,7 +74,7 @@ const handleResetAll = () => {
    setPlainColor1("#858CAA");
    setTextColor("#d8a2a2");
 };
-console.log("BRIGHTNESS: ", brightness)
+
 
     const [plainColor1, setPlainColor1] = useState("#858CAA");
 
@@ -111,7 +115,7 @@ console.log("BRIGHTNESS: ", brightness)
 
   const [hideNav, setHideNav] = useState(false)
 
-  console.log("TEXT COLORL ", textColor)
+
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
       {!hideNav && <SideNav textColor={textColor}></SideNav>}
@@ -171,7 +175,6 @@ console.log("BRIGHTNESS: ", brightness)
             </label>
           )}
         </ParallaxLayer>
-
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -235,7 +238,6 @@ console.log("BRIGHTNESS: ", brightness)
             </div>
           </div>
         </ParallaxLayer>
-
         {/* PLAIN LAYER */}
         {plain ? (
           <ParallaxLayer
@@ -409,7 +411,6 @@ console.log("BRIGHTNESS: ", brightness)
             ></ParallaxLayer>
           </>
         )}
-
         {/* ABOUT ME */}
         <ParallaxLayer
           offset={0.5}
@@ -448,12 +449,10 @@ console.log("BRIGHTNESS: ", brightness)
             />
           </div>
         </ParallaxLayer>
-
         {/* TECH */}
         <ParallaxLayer offset={0.3} speed={1.5} id="tech-layer">
           <Tech textColor={textColor}></Tech>
         </ParallaxLayer>
-
         {/* PROJECTS */}
         <ParallaxLayer
           offset={1}
@@ -473,6 +472,9 @@ console.log("BRIGHTNESS: ", brightness)
           </div>
         </ParallaxLayer>
       </Parallax>
+      <Box>
+        <EmailOnMount type={"homepage"} />
+      </Box>
     </div>
   );
 };
