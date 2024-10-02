@@ -2,20 +2,23 @@ import React, { useState, useRef } from "react";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
+// components
 import Projects from "./Projects";
-
 import SideNav from "./SideNav";
 import Tech from "./Tech";
 import EditDesign from "./EditDesign";
+import EmailOnMount from "./Email";
 
+// images
 import profilePic2 from "../profile-pic.jpeg";
 import mountains from "./backgrounds/mountains.png";
 import clouds3 from "./backgrounds/clouds3.png";
 import lake from "./backgrounds/lake.png";
 import newMoon from "./backgrounds/newMoon.png";
 
+// mui
+import { Box, Button } from "@mui/material";
 
-import {Box, Button} from "@mui/material";
 
 const Home = () => {
   const projectsSectionRef = useRef(null);
@@ -23,9 +26,7 @@ const Home = () => {
   const textToType =
     "I'm a full stack software developer based in Chicago, Il. I think of Software development as a creative outlet, and I’m passionate about bringing unique and innovative ideas to life. Beyond coding, I enjoy writing, reading, movies, and cooking.";
 
-
   const typedText = textToType;
-
 
   const [saturation, setSaturation] = useState(300);
   const handleSaturation = (e) => {
@@ -47,48 +48,38 @@ const Home = () => {
     setBrightness(e.target.value);
   };
 
-const resetFilters = () => {
+  const resetFilters = () => {
+    setColor(0);
+    setSkyColor(0);
+  };
+  const handleResetAll = () => {
+    setBrightness(70);
+    setContrast(130);
+    setGrayscale(20);
+    setSaturation(300);
+    setColor(0);
+    setSkyColor(0);
+    setAddClouds(false);
+    setAddMountains(false);
+    setNightMode(false);
+    setPlainColor1("#858CAA");
+    setTextColor("#d8a2a2");
+  };
 
-  // setBrightness(70);
-  // setContrast(130);
-  // setGrayscale(20);
-  // setSaturation(300);
-setColor(0)
-setSkyColor(0)
-};
-const handleResetAll = () => {
-  setBrightness(70);
-  setContrast(130);
-  setGrayscale(20);
-  setSaturation(300);
-  setColor(0);
-  setSkyColor(0);
-  // setPlain(true)
-  setAddClouds(false);
-  setAddMountains(false);
-   setNightMode(false)
-   setPlainColor1("#858CAA");
-   setTextColor("#d8a2a2");
-};
-console.log("BRIGHTNESS: ", brightness)
-
-    const [plainColor1, setPlainColor1] = useState("#858CAA");
+  const [plainColor1, setPlainColor1] = useState("#858CAA");
 
   const [color, setColor] = useState(0);
   const [skyColor, setSkyColor] = useState(0);
 
-  const [textColor, setTextColor] = useState("#d8a2a2")
-  
-  const handleColor = (e) => {
+  const [textColor, setTextColor] = useState("#d8a2a2");
 
+  const handleColor = (e) => {
     setColor(e.target.value);
     setSkyColor(
       e.target.value > 0
         ? `-${e.target.value}`
         : Number(e.target.value) + Math.abs(Number(e.target.value)) * 2
     );
-
-    
   };
 
   const [nightMode, setNightMode] = useState(false);
@@ -109,9 +100,8 @@ console.log("BRIGHTNESS: ", brightness)
   const [addClouds, setAddClouds] = useState(false);
   const [addMountains, setAddMountains] = useState(false);
 
-  const [hideNav, setHideNav] = useState(false)
+  const [hideNav, setHideNav] = useState(false);
 
-  console.log("TEXT COLORL ", textColor)
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
       {!hideNav && <SideNav textColor={textColor}></SideNav>}
@@ -171,7 +161,6 @@ console.log("BRIGHTNESS: ", brightness)
             </label>
           )}
         </ParallaxLayer>
-
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -235,7 +224,6 @@ console.log("BRIGHTNESS: ", brightness)
             </div>
           </div>
         </ParallaxLayer>
-
         {/* PLAIN LAYER */}
         {plain ? (
           <ParallaxLayer
@@ -409,7 +397,6 @@ console.log("BRIGHTNESS: ", brightness)
             ></ParallaxLayer>
           </>
         )}
-
         {/* ABOUT ME */}
         <ParallaxLayer
           offset={0.5}
@@ -448,12 +435,10 @@ console.log("BRIGHTNESS: ", brightness)
             />
           </div>
         </ParallaxLayer>
-
         {/* TECH */}
         <ParallaxLayer offset={0.3} speed={1.5} id="tech-layer">
           <Tech textColor={textColor}></Tech>
         </ParallaxLayer>
-
         {/* PROJECTS */}
         <ParallaxLayer
           offset={1}
@@ -473,10 +458,11 @@ console.log("BRIGHTNESS: ", brightness)
           </div>
         </ParallaxLayer>
       </Parallax>
+      <Box>
+        <EmailOnMount type={"homepage"} />
+      </Box>
     </div>
   );
 };
 
 export default Home;
-
-
