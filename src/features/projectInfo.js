@@ -169,7 +169,7 @@ export const projects = [
     // "Balderdash, a game based on the card/board game of the same name, is a personal project that I built entirely by myself. I couldn’t find a digital version of the game, so I thought building something new would be a fun challenge. In the game, a player gets a random, unusual word and its definition. Other players can only see the word, and they write their own definitions for it. Players then guess the right word and earn points in various ways. I built it using the PERN (PostgreSQL, Express, React, Node) stack and utilized additional technology like Socket.io, OpenAI, and AWS.  I first developed APIS to get random words and definitions and built the basic game logic for a single-player version of the game. Then I built databases and modified the logic to incorporate multiple players, and I employed Socket.io to make live updates between multiple users. I build out the logic, React components, and sockets for each consecutive stage of the game, one stage at a time. I designed the UI to be as intuitive as possible and mimic an actual card game where people hold cards in their hands (the idea is they hold their phones instead of cards).  I used OpenAI to solve a problem that couldn’t be solved previously. If a player wrote a definition that they felt accurately defined a word, but wasn’t the exact definition, they could ask AI if it was a fitting definition. I set up the AI to respond yes or no, and if the answer was correct, the player earned a point. I also used AWS to store words and definitions from APIS that were fitting for the game, so they could be used in a final product. Balderdash was the first large project I built entirely by myself. There are definitely a few things I would do differently if I were to build it today, now that I know more about software development, but it was a great learning experience and I am proud of what I created.",
     // "I based this app off the somewhat obscure word game also called Balderdash. Played alone, a user can see how many definition they can guess correctly out of a certain number. Played with others, one user sees the correct definition of the word, and the others have to guess. \n This app is currently under development. It was built as a challenge to see what I could build in a single weekend. It's current state was built in that time frame, but I look forward to adding to it.",
     liveSite: "https://proposal.mixcommerce.co/",
-    demo: "https://www.youtube.com/watch?v=CF5TT-MY4oY",
+    demo: "https://www.youtube.com/watch?v=hMCZRq2nJ4Q",
     youTubeCode: "CF5TT-MY4oY",
     tech: "Node.js, PostgreSQL, Express, React, Redux",
     tech2: [
@@ -211,7 +211,7 @@ export const projects = [
       { symbole: nodeSVG, name: "Node" },
       { symbole: materialIcon, name: "MaterialUI" },
       { symbole: sequelizeIcon, name: "Sequelize" },
-     { symbole: expressIcon, name: "Express" },
+      { symbole: expressIcon, name: "Express" },
       // { symbole: jwtIcon, name: "JWT" },
     ],
     pic: balderdashPic,

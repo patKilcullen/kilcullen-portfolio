@@ -9,6 +9,8 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
+
+  // OPEN PROJECT INFO MODAL
   // const handleOpenModal = (project) => {
   //   setSelectedProject(project);
   //   setOpenModal(true);
@@ -126,7 +128,7 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
                           border: "2px solid white",
                           zIndex: 1000,
                         }}
-                        disabled={project.name === "ProposalAI"}
+                
                       >
                         {" "}
                         Demo
