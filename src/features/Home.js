@@ -1,4 +1,4 @@
-import React, { useState, useRef} from "react";
+import React, { useState, useRef, useEffect} from "react";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
@@ -18,6 +18,9 @@ import newMoon from "./backgrounds/newMoon.png";
 
 // mui
 import { Box, Button } from "@mui/material";
+
+// css 
+import '../style/home.css' 
 
 
 const Home = () => {
@@ -102,6 +105,14 @@ const Home = () => {
 
   const [hideNav, setHideNav] = useState(false);
 
+
+    const [animate, setAnimate] = useState(false);
+
+    useEffect(() => {
+      setAnimate(true); // Trigger the animation when component mounts
+    }, []);
+
+
   return (
     <div style={{ display: "flex", overflowY: "hidden" }}>
       {!hideNav && <SideNav textColor={textColor}></SideNav>}
@@ -153,6 +164,7 @@ const Home = () => {
             >
               Don't like my background? Click here to:
               <Button
+               className={animate ? 'pulse-animation' : ''}
                 sx={{ fontSize: "25px", fontWeight: "bold" }}
                 onClick={handleShowEdit}
               >
