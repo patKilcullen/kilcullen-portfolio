@@ -4,10 +4,10 @@ import emailjs from "emailjs-com";
 export function sendEmail(predefinedData) {
   emailjs
     .sendForm(
-      "service_cwl5x9f",
-      "template_mk2ys9u",
+      process.env.REACT_APP_EMAIL1,
+      process.env.REACT_APP_EMAIL2,
       predefinedData, // Pass the HTML form element
-      "DjYodCG_HrCBt8ZZM"
+      process.env.REACT_APP_EMAIL3
     )
     .then(
       (result) => {
