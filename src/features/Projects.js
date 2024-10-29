@@ -128,7 +128,6 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
                           border: "2px solid white",
                           zIndex: 1000,
                         }}
-                
                       >
                         {" "}
                         Demo
@@ -160,6 +159,30 @@ const Projects3 = ({ color, setHideNav, textColor }) => {
                         {project.liveSite ? "Link" : "Code"}
                       </Button>
                     </Link>
+                   {project.new && <Link
+                      to={project.new}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {" "}
+                      <Button
+                        className="button"
+                        variant="contained"
+                        sx={{
+                          color: "#3e497a",
+                          backgroundColor: textColor,
+                          fontWeight: "bold",
+                          fontSize: "23px",
+                          boxShadow: "4px 4px 8px 4px rgba(234, 238, 111, 0.5)",
+                          borderRadius: "20px",
+                          border: "2px solid white",
+                          zIndex: 1000,
+                        }}
+                      >
+                        {" "}
+                        New!
+                      </Button>
+                    </Link>}
                   </div>
                 </div>
               </div>

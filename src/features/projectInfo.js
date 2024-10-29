@@ -216,6 +216,7 @@ export const projects = [
     ],
     pic: balderdashPic,
     align: "left",
+    new: "https://www.youtube.com/watch?v=EoAr5e6a12E"
   },
 
   {
